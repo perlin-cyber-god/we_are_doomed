@@ -1,0 +1,7 @@
++ riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -mno-relax -msmall-data-limit=0 -ffreestanding -fno-builtin -fno-pic -fno-pie -fno-stack-protector -fno-omit-frame-pointer -O0 -g -Wall -Wextra -Wpedantic -Werror -Wconversion -Wshadow -std=c11 -c guest/guest.c -o build/guest.o
++ riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -mno-relax -c guest/start.S -o build/start.o
++ riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -nostdlib -nostartfiles -static -Wl,-T,guest/linker.ld -Wl,--no-relax -Wl,--build-id=none -Wl,-Map,build/guest.map build/start.o build/guest.o -o build/guest.elf
+/usr/lib/gcc/riscv64-unknown-elf/14.2.0/../../../riscv64-unknown-elf/bin/ld: warning: build/guest.elf has a LOAD segment with RWX permissions
++ riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -nostdlib -nostartfiles -static -Wl,-T,guest/linker.ld -Wl,--no-relax -Wl,--build-id=none -Wl,--oformat=binary build/start.o build/guest.o -o build/guest.bin
+/usr/lib/gcc/riscv64-unknown-elf/14.2.0/../../../riscv64-unknown-elf/bin/ld: error: cannot change output format whilst linking RISC-V binaries
+collect2: error: ld returned 1 exit status
