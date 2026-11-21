@@ -1,0 +1,6 @@
++ riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -mno-relax -msmall-data-limit=0 -ffreestanding -fno-builtin -fno-pic -fno-pie -fno-stack-protector -fno-omit-frame-pointer -O0 -g -Wall -Wextra -Wpedantic -Werror -Wconversion -Wshadow -std=c11 -c guest/guest.c -o build/guest.o
++ riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -mno-relax -c guest/start.S -o build/start.o
++ riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -nostdlib -nostartfiles -static -Wl,-T,guest/linker.ld -Wl,--no-relax -Wl,--build-id=none -Wl,-Map,build/guest.map build/start.o build/guest.o -o build/guest.elf
++ [[ riscv64-unknown-elf-gcc == *gcc ]]
++ copier=riscv64-unknown-elf-objcopy
++ riscv64-unknown-elf-objcopy -O binary build/guest.elf build/guest.bin
