@@ -1,0 +1,29 @@
+Running the demo program
+step 1: pc=0x00000000 word=0x06400093 rd=x1 rs1=x0 imm=100 src=0 result=100 next_pc=0x00000004
+step 2: pc=0x00000004 word=0xFFC08113 rd=x2 rs1=x1 imm=-4 src=100 result=96 next_pc=0x00000008
+
+Stopped by the host-side test limit (2 instructions); this is not a guest HALT.
+
+Final checks
+  PASS x1           = 100
+  PASS x2           = 96
+  PASS x0           = 0
+  PASS PC           = 8
+  PASS RAM[100]     = 5
+
+Test: ADDI cannot change x0
+  PASS step status  = 0
+  PASS rd decoded   = 0
+  PASS raw result   = 107
+  PASS x0           = 0
+  PASS x1           = 100
+  PASS pc           = 4
+
+Test: rejecting bad instructions and fetches
+  opcode 0x33 (add)          -> unsupported instruction (only ADDI exists)
+  OP-IMM funct3=4 (xori)     -> unsupported instruction (only ADDI exists)
+  misaligned pc=2            -> instruction fetch is not 4-byte aligned
+  pc=256 (past RAM)          -> instruction fetch is outside guest RAM
+  pc=0xFFFFFFFC              -> instruction fetch is outside guest RAM
+
+All checks passed
