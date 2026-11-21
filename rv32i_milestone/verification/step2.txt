@@ -1,0 +1,93 @@
+Running the demo program
+step 1: pc=0x00000000 word=0x06400093 ADDI x1, x0, 100 | src=0 | reg write: x1 = 100 | next_pc=0x00000004
+step 2: pc=0x00000004 word=0x0000C183 LBU  x3, 0(x1) | ea=100 | read RAM[100]=5 | reg write: x3 = 5 | next_pc=0x00000008
+step 3: pc=0x00000008 word=0x0C800113 ADDI x2, x0, 200 | src=0 | reg write: x2 = 200 | next_pc=0x0000000C
+step 4: pc=0x0000000C word=0x00310023 SB   x3, 0(x2) | ea=200 | wrote RAM[200]=5 (rs2=5) | reg write: none | next_pc=0x00000010
+
+Stopped by the host-side test limit (4 instructions); this is not a guest HALT.
+
+Final checks
+  PASS x1                     = 100
+  PASS x2                     = 200
+  PASS x3                     = 5
+  PASS x0                     = 0
+  PASS PC                     = 16
+  PASS RAM[100]               = 5
+  PASS RAM[200]               = 5
+  PASS RAM[199] sentinel      = 165
+  PASS RAM[201] sentinel      = 165
+
+Test 0: test encoders reproduce the spec's words
+  PASS addi x1,x0,100         = 104857747
+  PASS lbu x3,0(x1)           = 49539
+  PASS addi x2,x0,200         = 209715475
+  PASS sb x3,0(x2)            = 3211299
+
+Test (step 1): ADDI cannot change x0
+  PASS step status            = 0
+  PASS raw result             = 107
+  PASS x0                     = 0
+  PASS x1                     = 100
+  PASS pc                     = 4
+
+Test (step 1 + new): rejecting bad instructions and fetches
+  opcode 0x33 (add)              -> unsupported instruction (only ADDI, LBU, SB exist) [state unchanged]
+  OP-IMM funct3=4 (xori)         -> unsupported instruction (only ADDI, LBU, SB exist) [state unchanged]
+  load funct3=0 (lb)             -> unsupported instruction (only ADDI, LBU, SB exist) [state unchanged]
+  load funct3=2 (lw)             -> unsupported instruction (only ADDI, LBU, SB exist) [state unchanged]
+  store funct3=1 (sh)            -> unsupported instruction (only ADDI, LBU, SB exist) [state unchanged]
+  store funct3=2 (sw)            -> unsupported instruction (only ADDI, LBU, SB exist) [state unchanged]
+  misaligned pc=2                -> instruction fetch is not 4-byte aligned [state unchanged]
+  pc=256 (past RAM)              -> instruction fetch is outside guest RAM [state unchanged]
+  pc=0xFFFFFFFC                  -> instruction fetch is outside guest RAM [state unchanged]
+
+Test 1: LBU of 0xF0 produces 240 (not a negative number)
+  PASS step status            = 0
+  PASS x3                     = 240
+  PASS RAM[50] unchanged      = 240
+
+Test 2: SB of 0x123456AB stores only 0xAB
+  PASS step status            = 0
+  PASS RAM[200]               = 171
+  PASS RAM[199]               = 165
+  PASS RAM[201]               = 165
+  PASS x3 unchanged           = 305419947
+
+Test 3: offset -4 works for LBU and SB
+  PASS LBU status             = 0
+  PASS LBU ea                 = 100
+  PASS LBU x3                 = 126
+  PASS SB status              = 0
+  PASS SB ea                  = 100
+  PASS RAM[100]               = 66
+  PASS RAM[99]                = 165
+  PASS RAM[101]               = 165
+
+Test 4: SB with nonzero bits 11:7 changes no register
+  PASS word bits 11:7         = 5
+  PASS step status            = 0
+  PASS decoded imm            = 37
+  PASS ea (100+37)            = 137
+  PASS RAM[137]               = 68
+  PASS RAM[105] untouched     = 0
+  PASS registers changed      = 0
+
+Test 5: byte address 255 works; 256 and 0xFFFFFFFF are rejected
+  PASS LBU@255 status         = 0
+  PASS LBU@255 x3             = 119
+  PASS SB@255 status          = 0
+  PASS RAM[255]               = 153
+  PASS RAM[254] untouched     = 165
+  LBU @256                       -> data address is outside guest RAM [state unchanged]
+  LBU @0xFFFFFFFF                -> data address is outside guest RAM [state unchanged]
+  SB @256                        -> data address is outside guest RAM [state unchanged]
+  SB @0xFFFFFFFF                 -> data address is outside guest RAM [state unchanged]
+
+Test 6: loads targeting x0
+  invalid load to x0             -> data address is outside guest RAM [state unchanged]
+  PASS valid load status      = 0
+  PASS byte was read          = 5
+  PASS x0 still zero          = 0
+  PASS pc                     = 4
+
+All checks passed
