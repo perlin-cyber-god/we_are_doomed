@@ -1,0 +1,2 @@
+step4 nested calls: 12 instructions; a0=6 t0=6 sp=256 ra=12 pc=16
+step4: all nested-call and edge checks passed
