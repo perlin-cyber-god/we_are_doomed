@@ -1,0 +1,4 @@
+doom/engine/w_file.c: In function 'W_OpenFile':
+doom/engine/w_file.c:72:19: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+   72 |     for (i = 0; i < arrlen(wad_file_classes); ++i)
+      |                   ^
