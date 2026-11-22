@@ -1,0 +1,7 @@
+doom/engine/p_spec.c: In function 'DonutOverrun':
+doom/engine/p_spec.c:1179:34: warning: unused parameter 'line' [-Wunused-parameter]
+ 1179 |                          line_t *line, sector_t *pillar_sector)
+      |                          ~~~~~~~~^~~~
+doom/engine/p_spec.c:1179:50: warning: unused parameter 'pillar_sector' [-Wunused-parameter]
+ 1179 |                          line_t *line, sector_t *pillar_sector)
+      |                                        ~~~~~~~~~~^~~~~~~~~~~~~
