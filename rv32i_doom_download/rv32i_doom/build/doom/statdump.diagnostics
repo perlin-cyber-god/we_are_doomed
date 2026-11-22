@@ -1,0 +1,6 @@
+doom/engine/statdump.c:39:18: warning: 'doom2_par_times' defined but not used [-Wunused-const-variable=]
+   39 | static const int doom2_par_times[] =
+      |                  ^~~~~~~~~~~~~~~
+doom/engine/statdump.c:33:18: warning: 'doom1_par_times' defined but not used [-Wunused-const-variable=]
+   33 | static const int doom1_par_times[] =
+      |                  ^~~~~~~~~~~~~~~
