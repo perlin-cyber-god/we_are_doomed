@@ -1,0 +1,12 @@
+doom/engine/d_iwad.c: In function 'D_FindAllIWADs':
+doom/engine/d_iwad.c:767:16: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  767 |     for (i=0; i<arrlen(iwads); ++i)
+      |                ^
+doom/engine/d_iwad.c: In function 'D_SuggestIWADName':
+doom/engine/d_iwad.c:822:19: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  822 |     for (i = 0; i < arrlen(iwads); ++i)
+      |                   ^
+doom/engine/d_iwad.c: In function 'D_SuggestGameName':
+doom/engine/d_iwad.c:837:19: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  837 |     for (i = 0; i < arrlen(iwads); ++i)
+      |                   ^
