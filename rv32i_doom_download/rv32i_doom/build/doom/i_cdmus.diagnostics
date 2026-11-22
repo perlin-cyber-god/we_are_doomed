@@ -1,0 +1,12 @@
+doom/engine/i_cdmus.c: In function 'I_CDMusPlay':
+doom/engine/i_cdmus.c:107:21: warning: unused parameter 'track' [-Wunused-parameter]
+  107 | int I_CDMusPlay(int track)
+      |                 ~~~~^~~~~
+doom/engine/i_cdmus.c: In function 'I_CDMusSetVolume':
+doom/engine/i_cdmus.c:160:26: warning: unused parameter 'volume' [-Wunused-parameter]
+  160 | int I_CDMusSetVolume(int volume)
+      |                      ~~~~^~~~~~
+doom/engine/i_cdmus.c: In function 'I_CDMusTrackLength':
+doom/engine/i_cdmus.c:219:28: warning: unused parameter 'track_num' [-Wunused-parameter]
+  219 | int I_CDMusTrackLength(int track_num)
+      |                        ~~~~^~~~~~~~~
