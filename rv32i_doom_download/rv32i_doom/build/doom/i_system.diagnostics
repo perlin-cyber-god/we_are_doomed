@@ -1,0 +1,10 @@
+doom/engine/i_system.c: In function 'I_Tactile':
+doom/engine/i_system.c:87:20: warning: unused parameter 'on' [-Wunused-parameter]
+   87 | void I_Tactile(int on, int off, int total)
+      |                ~~~~^~
+doom/engine/i_system.c:87:28: warning: unused parameter 'off' [-Wunused-parameter]
+   87 | void I_Tactile(int on, int off, int total)
+      |                        ~~~~^~~
+doom/engine/i_system.c:87:37: warning: unused parameter 'total' [-Wunused-parameter]
+   87 | void I_Tactile(int on, int off, int total)
+      |                                 ~~~~^~~~~
