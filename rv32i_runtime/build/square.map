@@ -1,0 +1,109 @@
+
+Discarded input sections
+
+ .comment       0x00000000       0x19 build/square.o
+ .note.GNU-stack
+                0x00000000        0x0 build/square.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+APP              0x00000000         0x00008000         xrw
+FRAME            0x00010000         0x0000fa00         rw
+STACK            0x0003f000         0x00001000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x00000000      0x218
+ *(.text.start)
+ .text.start    0x00000000       0x44 build/square-start.o
+                0x00000000                _start
+ *(.text .text.*)
+ .text          0x00000044       0x10 build/square-start.o
+                0x00000044                platform_call
+ .text          0x00000054      0x1c4 build/square.o
+                0x00000054                square_main
+
+.rela.dyn       0x00000218        0x0
+ .rela.text.start
+                0x00000218        0x0 build/square-start.o
+
+.rodata
+ *(.rodata .rodata.*)
+
+.data           0x00000218        0x0
+ *(.data .data.* .sdata .sdata.*)
+ .data          0x00000218        0x0 build/square-start.o
+ .data          0x00000218        0x0 build/square.o
+                0x00000a18                        __global_pointer$ = (ADDR (.data) + 0x800)
+
+.bss            0x00000218        0x0
+                0x00000218                        . = ALIGN (0x4)
+                0x00000218                        __bss_start = .
+ *(.bss .bss.* .sbss .sbss.*)
+ .bss           0x00000218        0x0 build/square-start.o
+ .bss           0x00000218        0x0 build/square.o
+ *(COMMON)
+                0x00000218                        . = ALIGN (0x4)
+                0x00000218                        __bss_end = .
+
+.frame          0x00010000     0xfa00
+                0x0001fa00                        . = (. + 0xfa00)
+ *fill*         0x00010000     0xfa00 
+
+.stack          0x0003f000     0x1000
+                0x00040000                        . = (. + 0x1000)
+ *fill*         0x0003f000     0x1000 
+                0x00040000                        __stack_top = .
+
+/DISCARD/
+ *(.comment .note.* .eh_frame*)
+                0x00000001                        ASSERT ((__bss_end <= 0x8000), program overlaps reserved gap)
+LOAD build/square-start.o
+LOAD build/square.o
+OUTPUT(build/square.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x1c
+ .riscv.attributes
+                0x00000000       0x1a build/square-start.o
+ .riscv.attributes
+                0x0000001a       0x1c build/square.o
+
+.debug_info     0x00000000      0x27c
+ .debug_info    0x00000000      0x27c build/square.o
+
+.debug_abbrev   0x00000000      0x17f
+ .debug_abbrev  0x00000000      0x17f build/square.o
+
+.debug_loclists
+                0x00000000       0xdb
+ .debug_loclists
+                0x00000000       0xdb build/square.o
+
+.debug_aranges  0x00000000       0x20
+ .debug_aranges
+                0x00000000       0x20 build/square.o
+
+.debug_rnglists
+                0x00000000       0x3d
+ .debug_rnglists
+                0x00000000       0x3d build/square.o
+
+.debug_line     0x00000000      0x2b0
+ .debug_line    0x00000000      0x2b0 build/square.o
+
+.debug_str      0x00000000      0x138
+ .debug_str     0x00000000      0x138 build/square.o
+                                0x174 (size before relaxing)
+
+.debug_line_str
+                0x00000000       0x8c
+ .debug_line_str
+                0x00000000       0x8c build/square.o
+                                 0xca (size before relaxing)
+
+.debug_frame    0x00000000       0x5c
+ .debug_frame   0x00000000       0x5c build/square.o
