@@ -1,0 +1,8 @@
+doom/engine/d_loop.c: In function 'D_StartNetGame':
+doom/engine/d_loop.c:341:48: warning: unused parameter 'callback' [-Wunused-parameter]
+  341 |                     netgame_startup_callback_t callback)
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+doom/engine/d_loop.c: In function 'SinglePlayerClear':
+doom/engine/d_loop.c:695:15: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+  695 |         if (i != localplayer)
+      |               ^~
