@@ -1,0 +1,4 @@
+doom/engine/p_doors.c: In function 'P_SpawnDoorRaiseIn5Mins':
+doom/engine/p_doors.c:544:17: warning: unused parameter 'secnum' [-Wunused-parameter]
+  544 |   int           secnum )
+      |   ~~~~~~~~~~~~~~^~~~~~
