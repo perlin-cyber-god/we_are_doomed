@@ -1,0 +1,7 @@
+doom/engine/d_main.c: In function 'SetMissionForPackName':
+doom/engine/d_main.c:699:19: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  699 |     for (i = 0; i < arrlen(packs); ++i)
+      |                   ^
+doom/engine/d_main.c:710:19: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  710 |     for (i = 0; i < arrlen(packs); ++i)
+      |                   ^
