@@ -1,0 +1,4 @@
+doom/engine/wi_stuff.c: In function 'WI_Responder':
+doom/engine/wi_stuff.c:409:31: warning: unused parameter 'ev' [-Wunused-parameter]
+  409 | boolean WI_Responder(event_t* ev)
+      |                      ~~~~~~~~~^~
