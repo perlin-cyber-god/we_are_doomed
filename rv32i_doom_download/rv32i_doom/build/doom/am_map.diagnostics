@@ -1,0 +1,20 @@
+doom/engine/am_map.c: In function 'AM_initVariables':
+doom/engine/am_map.c:427:5: warning: missing initializer for field 'data4' of 'event_t' [-Wmissing-field-initializers]
+  427 |     static event_t st_notify = { ev_keyup, AM_MSGENTERED, 0, 0 };
+      |     ^~~~~~
+In file included from doom/engine/st_stuff.h:25,
+                 from doom/engine/am_map.c:27:
+doom/engine/d_event.h:67:30: note: 'data4' declared here
+   67 |     int data1, data2, data3, data4;
+      |                              ^~~~~
+doom/engine/am_map.c: In function 'AM_Stop':
+doom/engine/am_map.c:543:5: warning: missing initializer for field 'data4' of 'event_t' [-Wmissing-field-initializers]
+  543 |     static event_t st_notify = { 0, ev_keyup, AM_MSGEXITED, 0 };
+      |     ^~~~~~
+doom/engine/d_event.h:67:30: note: 'data4' declared here
+   67 |     int data1, data2, data3, data4;
+      |                              ^~~~~
+doom/engine/am_map.c: In function 'AM_drawThings':
+doom/engine/am_map.c:1293:9: warning: unused parameter 'colorrange' [-Wunused-parameter]
+ 1293 |   int   colorrange)
+      |   ~~~~~~^~~~~~~~~~
