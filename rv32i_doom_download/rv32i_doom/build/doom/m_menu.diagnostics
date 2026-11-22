@@ -1,0 +1,52 @@
+doom/engine/m_menu.c: In function 'M_LoadGame':
+doom/engine/m_menu.c:585:22: warning: unused parameter 'choice' [-Wunused-parameter]
+  585 | void M_LoadGame (int choice)
+      |                  ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_SaveGame':
+doom/engine/m_menu.c:650:22: warning: unused parameter 'choice' [-Wunused-parameter]
+  650 | void M_SaveGame (int choice)
+      |                  ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_Sound':
+doom/engine/m_menu.c:845:18: warning: unused parameter 'choice' [-Wunused-parameter]
+  845 | void M_Sound(int choice)
+      |              ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_NewGame':
+doom/engine/m_menu.c:908:20: warning: unused parameter 'choice' [-Wunused-parameter]
+  908 | void M_NewGame(int choice)
+      |                ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_VerifyNightmare':
+doom/engine/m_menu.c:940:22: warning: implicit conversion from 'enum <anonymous>' to 'skill_t' [-Wenum-conversion]
+  940 |     G_DeferedInitNew(nightmare,epi+1,1);
+      |                      ^~~~~~~~~
+doom/engine/m_menu.c: In function 'M_Options':
+doom/engine/m_menu.c:1007:20: warning: unused parameter 'choice' [-Wunused-parameter]
+ 1007 | void M_Options(int choice)
+      |                ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_ChangeMessages':
+doom/engine/m_menu.c:1017:27: warning: parameter 'choice' set but not used [-Wunused-but-set-parameter]
+ 1017 | void M_ChangeMessages(int choice)
+      |                       ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_EndGame':
+doom/engine/m_menu.c:1045:20: warning: parameter 'choice' set but not used [-Wunused-but-set-parameter]
+ 1045 | void M_EndGame(int choice)
+      |                ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_ReadThis':
+doom/engine/m_menu.c:1069:21: warning: parameter 'choice' set but not used [-Wunused-but-set-parameter]
+ 1069 | void M_ReadThis(int choice)
+      |                 ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_ReadThis2':
+doom/engine/m_menu.c:1075:22: warning: parameter 'choice' set but not used [-Wunused-but-set-parameter]
+ 1075 | void M_ReadThis2(int choice)
+      |                  ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_FinishReadThis':
+doom/engine/m_menu.c:1093:27: warning: parameter 'choice' set but not used [-Wunused-but-set-parameter]
+ 1093 | void M_FinishReadThis(int choice)
+      |                       ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_QuitDOOM':
+doom/engine/m_menu.c:1168:21: warning: unused parameter 'choice' [-Wunused-parameter]
+ 1168 | void M_QuitDOOM(int choice)
+      |                 ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_ChangeDetail':
+doom/engine/m_menu.c:1197:25: warning: parameter 'choice' set but not used [-Wunused-but-set-parameter]
+ 1197 | void M_ChangeDetail(int choice)
+      |                     ~~~~^~~~~~
