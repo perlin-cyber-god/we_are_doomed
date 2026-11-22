@@ -1,0 +1,8 @@
+doom/engine/w_wad.c: In function 'ExtendLumpInfo':
+doom/engine/w_wad.c:102:35: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+  102 |     for (i = 0; i < numlumps && i < newnumlumps; ++i)
+      |                                   ^
+doom/engine/w_wad.c: In function 'W_CheckCorrectIWAD':
+doom/engine/w_wad.c:591:19: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  591 |     for (i = 0; i < arrlen(unique_lumps); ++i)
+      |                   ^
