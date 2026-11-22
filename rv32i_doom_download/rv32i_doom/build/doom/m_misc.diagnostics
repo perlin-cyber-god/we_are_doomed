@@ -1,0 +1,4 @@
+doom/engine/m_misc.c: In function 'M_vsnprintf':
+doom/engine/m_misc.c:498:30: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'unsigned int'} [-Wsign-compare]
+  498 |     if (result < 0 || result >= buf_len)
+      |                              ^~
