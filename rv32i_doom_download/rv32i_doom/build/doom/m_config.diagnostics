@@ -1,0 +1,12 @@
+doom/engine/m_config.c: In function 'SaveDefaultCollection':
+doom/engine/m_config.c:1609:57: warning: unused parameter 'collection' [-Wunused-parameter]
+ 1609 | static void SaveDefaultCollection(default_collection_t *collection)
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+doom/engine/m_config.c: In function 'LoadDefaultCollection':
+doom/engine/m_config.c:1771:57: warning: unused parameter 'collection' [-Wunused-parameter]
+ 1771 | static void LoadDefaultCollection(default_collection_t *collection)
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+doom/engine/m_config.c: In function 'M_GetSaveGameDir':
+doom/engine/m_config.c:2087:30: warning: unused parameter 'iwadname' [-Wunused-parameter]
+ 2087 | char *M_GetSaveGameDir(char *iwadname)
+      |                        ~~~~~~^~~~~~~~
