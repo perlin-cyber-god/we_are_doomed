@@ -1,0 +1,4 @@
+doom/engine/p_tick.c: In function 'P_AllocateThinker':
+doom/engine/p_tick.c:85:41: warning: unused parameter 'thinker' [-Wunused-parameter]
+   85 | void P_AllocateThinker (thinker_t*      thinker)
+      |                         ~~~~~~~~~~~~~~~~^~~~~~~
