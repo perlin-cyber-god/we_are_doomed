@@ -1,0 +1,22 @@
+doom/engine/g_game.c: In function 'G_NextWeapon':
+doom/engine/g_game.c:297:16: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  297 |     for (i=0; i<arrlen(weapon_order_table); ++i)
+      |                ^
+doom/engine/g_game.c: In function 'G_BuildTiccmd':
+doom/engine/g_game.c:458:20: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  458 |         for (i=0; i<arrlen(weapon_keys); ++i)
+      |                    ^
+doom/engine/g_game.c: In function 'G_WorldDone':
+doom/engine/g_game.c:1507:16: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 1507 |             if (!secretexit)
+      |                ^
+doom/engine/g_game.c:1509:11: note: here
+ 1509 |           case 6:
+      |           ^~~~
+doom/engine/g_game.c: In function 'G_VanillaVersionCode':
+doom/engine/g_game.c:2045:13: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 2045 |             I_Error("Doom 1.2 does not have a version code!");
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+doom/engine/g_game.c:2046:9: note: here
+ 2046 |         case exe_doom_1_666:
+      |         ^~~~
