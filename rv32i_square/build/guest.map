@@ -1,0 +1,109 @@
+
+Discarded input sections
+
+ .comment       0x00000000       0x19 build/guest.o
+ .note.GNU-stack
+                0x00000000        0x0 build/guest.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+APP              0x00000000         0x0000c000         xrw
+SIGNATURE        0x0000c000         0x00000040         rw
+STACK            0x0000f000         0x00001000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x00000000      0x250
+ *(.text.start)
+ .text.start    0x00000000       0x60 build/start.o
+                0x00000000                _start
+ *(.text .text.*)
+ .text          0x00000060        0x0 build/start.o
+ .text          0x00000060      0x1f0 build/guest.o
+                0x00000060                inner
+                0x000000b0                outer
+                0x000000ec                guest_main
+
+.rela.dyn       0x00000250        0x0
+ .rela.text.start
+                0x00000250        0x0 build/start.o
+
+.rodata
+ *(.rodata .rodata.*)
+
+.data           0x00000250        0x4
+                0x00000250                        . = ALIGN (0x4)
+                0x00000250                        __data_start = .
+ *(.sdata .sdata.* .data .data.*)
+ .data          0x00000250        0x0 build/start.o
+ .data          0x00000250        0x4 build/guest.o
+                0x00000250                initialized_global
+                0x00000254                        __data_end = .
+                0x00000a50                        __global_pointer$ = (__data_start + 0x800)
+
+.bss            0x00000254       0x20
+                0x00000254                        . = ALIGN (0x4)
+                0x00000254                        __bss_start = .
+ *(.sbss .sbss.* .bss .bss.*)
+ .bss           0x00000254        0x0 build/start.o
+ .bss           0x00000254       0x20 build/guest.o
+                0x00000254                zero_global
+                0x00000258                values
+                0x00000270                nested_count
+ *(COMMON)
+                0x00000274                        . = ALIGN (0x4)
+                0x00000274                        __bss_end = .
+
+.signature      0x0000c000       0x40
+                0x0000c040                        . = (. + 0x40)
+ *fill*         0x0000c000       0x40 
+
+.stack          0x0000f000     0x1000
+                0x0000f000                        __stack_bottom = .
+                0x00010000                        . = (. + 0x1000)
+ *fill*         0x0000f000     0x1000 
+                0x00010000                        __stack_top = .
+
+/DISCARD/
+ *(.comment .note.* .eh_frame .eh_frame.*)
+                0x00000001                        ASSERT ((__bss_end <= (ORIGIN (APP) + LENGTH (APP))), program overlaps signature)
+                0x00000001                        ASSERT ((__stack_top == 0x10000), unexpected stack address)
+LOAD build/start.o
+LOAD build/guest.o
+OUTPUT(build/guest.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x1c
+ .riscv.attributes
+                0x00000000       0x1a build/start.o
+ .riscv.attributes
+                0x0000001a       0x1c build/guest.o
+
+.debug_info     0x00000000      0x1a1
+ .debug_info    0x00000000      0x1a1 build/guest.o
+
+.debug_abbrev   0x00000000       0xfd
+ .debug_abbrev  0x00000000       0xfd build/guest.o
+
+.debug_aranges  0x00000000       0x20
+ .debug_aranges
+                0x00000000       0x20 build/guest.o
+
+.debug_line     0x00000000      0x1a9
+ .debug_line    0x00000000      0x1a9 build/guest.o
+
+.debug_str      0x00000000      0x188
+ .debug_str     0x00000000      0x188 build/guest.o
+                                0x1bc (size before relaxing)
+
+.debug_line_str
+                0x00000000       0x78
+ .debug_line_str
+                0x00000000       0x78 build/guest.o
+                                 0xb3 (size before relaxing)
+
+.debug_frame    0x00000000       0x88
+ .debug_frame   0x00000000       0x88 build/guest.o
