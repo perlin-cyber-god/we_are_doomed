@@ -1,0 +1,25 @@
+doom/engine/p_ceilng.c: In function 'T_MoveCeiling':
+doom/engine/p_ceilng.c:83:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   83 |                 S_StartSound(&ceiling->sector->soundorg, sfx_pstop);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+doom/engine/p_ceilng.c:84:15: note: here
+   84 |               case fastCrushAndRaise:
+      |               ^~~~
+doom/engine/p_ceilng.c:118:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  118 |                 S_StartSound(&ceiling->sector->soundorg, sfx_pstop);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+doom/engine/p_ceilng.c:119:15: note: here
+  119 |               case crushAndRaise:
+      |               ^~~~
+doom/engine/p_ceilng.c:120:32: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  120 |                 ceiling->speed = CEILSPEED;
+doom/engine/p_ceilng.c:121:15: note: here
+  121 |               case fastCrushAndRaise:
+      |               ^~~~
+doom/engine/p_ceilng.c: In function 'EV_DoCeiling':
+doom/engine/p_ceilng.c:212:32: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  212 |             ceiling->topheight = sec->ceilingheight;
+      |             ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+doom/engine/p_ceilng.c:213:11: note: here
+  213 |           case lowerAndCrush:
+      |           ^~~~
