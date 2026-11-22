@@ -1,0 +1,4 @@
+doom/engine/d_net.c: In function 'LoadGameSettings':
+doom/engine/d_net.c:132:29: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+  132 |         playeringame[i] = i < settings->num_players;
+      |                             ^
