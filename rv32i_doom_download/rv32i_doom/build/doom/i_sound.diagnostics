@@ -1,0 +1,7 @@
+doom/engine/i_sound.c: In function 'I_BindSoundVariables':
+doom/engine/i_sound.c:398:18: warning: unused variable 'libsamplerate_scale' [-Wunused-variable]
+  398 |     extern float libsamplerate_scale;
+      |                  ^~~~~~~~~~~~~~~~~~~
+doom/engine/i_sound.c:397:16: warning: unused variable 'use_libsamplerate' [-Wunused-variable]
+  397 |     extern int use_libsamplerate;
+      |                ^~~~~~~~~~~~~~~~~
