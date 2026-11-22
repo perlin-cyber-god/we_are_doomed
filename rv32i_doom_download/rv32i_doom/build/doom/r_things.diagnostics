@@ -1,0 +1,26 @@
+doom/engine/r_things.c: In function 'R_DrawVisSprite':
+doom/engine/r_things.c:391:25: warning: unused parameter 'x1' [-Wunused-parameter]
+  391 |   int                   x1,
+      |   ~~~~~~~~~~~~~~~~~~~~~~^~
+doom/engine/r_things.c:392:25: warning: unused parameter 'x2' [-Wunused-parameter]
+  392 |   int                   x2 )
+      |   ~~~~~~~~~~~~~~~~~~~~~~^~
+doom/engine/r_things.c: In function 'R_SortVisSprites':
+doom/engine/r_things.c:803:27: warning: storing the address of local variable 'unsorted' in '*<unknown>.next' [-Wdangling-pointer=]
+  803 |     (vissprite_p-1)->next = &unsorted;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+doom/engine/r_things.c:785:25: note: 'unsorted' declared here
+  785 |     vissprite_t         unsorted;
+      |                         ^~~~~~~~
+doom/engine/r_things.c:282:17: note: 'vissprite_p' declared here
+  282 | vissprite_t*    vissprite_p;
+      |                 ^~~~~~~~~~~
+doom/engine/r_things.c:801:24: warning: storing the address of local variable 'unsorted' in 'vissprites[0].prev' [-Wdangling-pointer=]
+  801 |     vissprites[0].prev = &unsorted;
+      |     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+doom/engine/r_things.c:785:25: note: 'unsorted' declared here
+  785 |     vissprite_t         unsorted;
+      |                         ^~~~~~~~
+doom/engine/r_things.c:281:17: note: 'vissprites' declared here
+  281 | vissprite_t     vissprites[MAXVISSPRITES];
+      |                 ^~~~~~~~~~
