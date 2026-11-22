@@ -1,0 +1,20 @@
+doom/engine/i_video.c: In function 'I_InitGraphics':
+doom/engine/i_video.c:283:38: warning: comparison of integer expressions of different signedness: 'long unsigned int' and 'int' [-Wsign-compare]
+  283 |         if (s_Fb.yres / SCREENHEIGHT < fb_scaling)
+      |                                      ^
+doom/engine/i_video.c: In function 'I_FinishUpdate':
+doom/engine/i_video.c:324:19: warning: variable 'y_offset' set but not used [-Wunused-but-set-variable]
+  324 |     int x_offset, y_offset, x_offset_end;
+      |                   ^~~~~~~~
+doom/engine/i_video.c: In function 'I_SetGrabMouseCallback':
+doom/engine/i_video.c:477:51: warning: unused parameter 'func' [-Wunused-parameter]
+  477 | void I_SetGrabMouseCallback (grabmouse_callback_t func)
+      |                              ~~~~~~~~~~~~~~~~~~~~~^~~~
+doom/engine/i_video.c: In function 'I_DisplayFPSDots':
+doom/engine/i_video.c:489:32: warning: unused parameter 'dots_on' [-Wunused-parameter]
+  489 | void I_DisplayFPSDots (boolean dots_on)
+      |                        ~~~~~~~~^~~~~~~
+doom/engine/i_video.c: At top level:
+doom/engine/i_video.c:26:1: warning: 'rcsid' defined but not used [-Wunused-const-variable=]
+   26 | rcsid[] = "$Id: i_x.c,v 1.6 1997/02/03 22:45:10 b1 Exp $";
+      | ^~~~~
