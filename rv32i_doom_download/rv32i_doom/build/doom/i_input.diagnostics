@@ -1,0 +1,8 @@
+doom/engine/i_input.c: In function 'GetTypedChar':
+doom/engine/i_input.c:250:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  250 |         if (key >= 0 && key < arrlen(shiftxform))
+      |                 ^~
+doom/engine/i_input.c: At top level:
+doom/engine/i_input.c:51:19: warning: 'at_to_doom' defined but not used [-Wunused-const-variable=]
+   51 | static const char at_to_doom[] =
+      |                   ^~~~~~~~~~
