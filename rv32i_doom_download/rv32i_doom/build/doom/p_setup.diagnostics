@@ -1,0 +1,7 @@
+doom/engine/p_setup.c: In function 'P_SetupLevel':
+doom/engine/p_setup.c:747:17: warning: unused parameter 'playermask' [-Wunused-parameter]
+  747 |   int           playermask,
+      |   ~~~~~~~~~~~~~~^~~~~~~~~~
+doom/engine/p_setup.c:748:17: warning: unused parameter 'skill' [-Wunused-parameter]
+  748 |   skill_t       skill)
+      |   ~~~~~~~~~~~~~~^~~~~
