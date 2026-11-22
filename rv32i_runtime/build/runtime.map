@@ -1,0 +1,378 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o)
+                              build/rt-math.o (__divdi3)
+/usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_moddi3.o)
+                              build/rt-checks.o (__moddi3)
+/usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
+                              build/rt-heap.o (__mulsi3)
+/usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(multi3.o)
+                              build/rt-math.o (__muldi3)
+/usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(div.o)
+                              build/rt-checks.o (__divsi3)
+/usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_clz.o)
+                              /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o) (__clz_tab)
+
+Discarded input sections
+
+ .comment       0x00000000       0x19 build/rt-memory.o
+ .note.GNU-stack
+                0x00000000        0x0 build/rt-memory.o
+ .comment       0x00000000       0x19 build/rt-heap.o
+ .note.GNU-stack
+                0x00000000        0x0 build/rt-heap.o
+ .comment       0x00000000       0x19 build/rt-assets.o
+ .note.GNU-stack
+                0x00000000        0x0 build/rt-assets.o
+ .comment       0x00000000       0x19 build/rt-math.o
+ .note.GNU-stack
+                0x00000000        0x0 build/rt-math.o
+ .comment       0x00000000       0x19 build/rt-checks.o
+ .note.GNU-stack
+                0x00000000        0x0 build/rt-checks.o
+ .comment       0x00000000       0x19 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o)
+ .eh_frame      0x00000000       0x64 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o)
+ .comment       0x00000000       0x19 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_moddi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_moddi3.o)
+ .eh_frame      0x00000000       0x68 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_moddi3.o)
+ .comment       0x00000000       0x19 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(multi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(multi3.o)
+ .comment       0x00000000       0x19 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_clz.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_clz.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+APP              0x00000000         0x00010000         xrw
+REPORT           0x00010000         0x00001000         rw
+ASSET            0x00020000         0x00001000         r
+HEAP             0x00030000         0x00040000         rw
+STACK            0x0007f000         0x00001000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x00000000     0x3650
+ *(.text.start)
+ .text.start    0x00000000       0x60 build/rt-start.o
+                0x00000000                _start
+ *(.text .text.*)
+ .text          0x00000060        0x0 build/rt-start.o
+ .text          0x00000060      0x1a8 build/rt-memory.o
+                0x00000060                memcpy
+                0x00000088                memmove
+                0x000000cc                memset
+                0x000000e8                memcmp
+                0x0000012c                strlen
+                0x00000158                strcmp
+                0x00000184                rt_strlcpy
+ .text          0x00000208      0x760 build/rt-heap.o
+                0x000003b8                rt_heap_init
+                0x0000041c                rt_heap_errors
+                0x00000428                rt_heap_available
+                0x000004d8                malloc
+                0x000005f8                free
+                0x00000738                calloc
+                0x00000868                realloc
+ .text          0x00000968      0x35c build/rt-assets.o
+                0x00000994                rt_read_at
+                0x000009f0                rt_wad_open
+                0x00000c08                rt_wad_find
+ .text          0x00000cc4      0x108 build/rt-math.o
+                0x00000cc4                rt_fixed_mul
+                0x00000d60                rt_fixed_div
+ .text          0x00000dcc     0x1b2c build/rt-checks.o
+                0x00000dcc                runtime_main
+ .text          0x000028f8      0x680 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o)
+                0x000028f8                __divdi3
+ .text          0x00002f78      0x56c /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_moddi3.o)
+                0x00002f78                __moddi3
+ .text          0x000034e4       0x24 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
+                0x000034e4                __mulsi3
+ .text          0x00003508       0x94 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(multi3.o)
+                0x00003508                __muldi3
+ .text          0x0000359c       0xb4 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(div.o)
+                0x0000359c                __divsi3
+                0x000035a4                __hidden___udivsi3
+                0x000035a4                __udivsi3
+                0x000035ec                __umodsi3
+                0x00003620                __modsi3
+ .text          0x00003650        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_clz.o)
+
+.rodata         0x00003650      0x184
+ *(.rodata .rodata.*)
+ .rodata.str1.4
+                0x00003650       0x84 build/rt-assets.o
+                                  0xd (size before relaxing)
+ .rodata.str1.4
+                0x000036d4        0x0 build/rt-checks.o
+                                 0x78 (size before relaxing)
+ .rodata        0x000036d4      0x100 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_clz.o)
+                0x000036d4                __clz_tab
+
+.rela.dyn       0x000037d4        0x0
+ .rela.text.start
+                0x000037d4        0x0 build/rt-start.o
+
+.data           0x000037d4        0x0
+ *(.data .data.* .sdata .sdata.*)
+ .data          0x000037d4        0x0 build/rt-start.o
+ .data          0x000037d4        0x0 build/rt-memory.o
+ .data          0x000037d4        0x0 build/rt-heap.o
+ .data          0x000037d4        0x0 build/rt-assets.o
+ .data          0x000037d4        0x0 build/rt-math.o
+ .data          0x000037d4        0x0 build/rt-checks.o
+ .data          0x000037d4        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o)
+ .data          0x000037d4        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_moddi3.o)
+ .data          0x000037d4        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
+ .data          0x000037d4        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(multi3.o)
+ .data          0x000037d4        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .data          0x000037d4        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_clz.o)
+                0x00003fd4                        __global_pointer$ = (ADDR (.data) + 0x800)
+
+.bss            0x000037d4       0x18
+                0x000037d4                        . = ALIGN (0x4)
+                0x000037d4                        __bss_start = .
+ *(.bss .bss.* .sbss .sbss.*)
+ .bss           0x000037d4        0x0 build/rt-start.o
+ .bss           0x000037d4        0x0 build/rt-memory.o
+ .bss           0x000037d4        0xc build/rt-heap.o
+ .bss           0x000037e0        0x0 build/rt-assets.o
+ .bss           0x000037e0        0x0 build/rt-math.o
+ .bss           0x000037e0        0xc build/rt-checks.o
+ .bss           0x000037ec        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o)
+ .bss           0x000037ec        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_moddi3.o)
+ .bss           0x000037ec        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
+ .bss           0x000037ec        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(multi3.o)
+ .bss           0x000037ec        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .bss           0x000037ec        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_clz.o)
+ *(COMMON)
+                0x000037ec                        . = ALIGN (0x4)
+                0x000037ec                        __bss_end = .
+
+.report         0x00010000     0x1000
+                0x00011000                        . = (. + 0x1000)
+ *fill*         0x00010000     0x1000 
+
+.asset          0x00020000     0x1000
+                0x00021000                        . = (. + 0x1000)
+ *fill*         0x00020000     0x1000 
+
+.heap           0x00030000    0x40000
+                0x00070000                        . = (. + 0x40000)
+ *fill*         0x00030000    0x40000 
+
+.stack          0x0007f000     0x1000
+                0x00080000                        . = (. + 0x1000)
+ *fill*         0x0007f000     0x1000 
+                0x00080000                        __stack_top = .
+
+/DISCARD/
+ *(.comment .note.* .eh_frame*)
+                0x00000001                        ASSERT ((__bss_end <= 0x10000), program exceeds APP region)
+LOAD build/rt-start.o
+LOAD build/rt-memory.o
+LOAD build/rt-heap.o
+LOAD build/rt-assets.o
+LOAD build/rt-math.o
+LOAD build/rt-checks.o
+LOAD /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a
+OUTPUT(build/runtime.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x1c
+ .riscv.attributes
+                0x00000000       0x1a build/rt-start.o
+ .riscv.attributes
+                0x0000001a       0x1c build/rt-memory.o
+ .riscv.attributes
+                0x00000036       0x1c build/rt-heap.o
+ .riscv.attributes
+                0x00000052       0x1c build/rt-assets.o
+ .riscv.attributes
+                0x0000006e       0x1c build/rt-math.o
+ .riscv.attributes
+                0x0000008a       0x1c build/rt-checks.o
+ .riscv.attributes
+                0x000000a6       0x1c /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o)
+ .riscv.attributes
+                0x000000c2       0x1c /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_moddi3.o)
+ .riscv.attributes
+                0x000000de       0x1a /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
+ .riscv.attributes
+                0x000000f8       0x1c /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(multi3.o)
+ .riscv.attributes
+                0x00000114       0x1a /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .riscv.attributes
+                0x0000012e       0x1c /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_clz.o)
+
+.debug_info     0x00000000     0x3a8d
+ .debug_info    0x00000000      0x381 build/rt-memory.o
+ .debug_info    0x00000381      0x66e build/rt-heap.o
+ .debug_info    0x000009ef      0x440 build/rt-assets.o
+ .debug_info    0x00000e2f      0x179 build/rt-math.o
+ .debug_info    0x00000fa8     0x1445 build/rt-checks.o
+ .debug_info    0x000023ed      0x979 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o)
+ .debug_info    0x00002d66      0x980 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_moddi3.o)
+ .debug_info    0x000036e6       0x31 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
+ .debug_info    0x00003717      0x238 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(multi3.o)
+ .debug_info    0x0000394f       0x5f /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .debug_info    0x000039ae       0xdf /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_clz.o)
+
+.debug_abbrev   0x00000000      0xce3
+ .debug_abbrev  0x00000000      0x141 build/rt-memory.o
+ .debug_abbrev  0x00000141      0x217 build/rt-heap.o
+ .debug_abbrev  0x00000358      0x15e build/rt-assets.o
+ .debug_abbrev  0x000004b6       0xb4 build/rt-math.o
+ .debug_abbrev  0x0000056a      0x1e2 build/rt-checks.o
+ .debug_abbrev  0x0000074c      0x1de /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o)
+ .debug_abbrev  0x0000092a      0x1e0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_moddi3.o)
+ .debug_abbrev  0x00000b0a       0x28 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
+ .debug_abbrev  0x00000b32      0x119 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(multi3.o)
+ .debug_abbrev  0x00000c4b       0x28 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .debug_abbrev  0x00000c73       0x70 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_clz.o)
+
+.debug_loclists
+                0x00000000     0x1cb8
+ .debug_loclists
+                0x00000000      0x334 build/rt-memory.o
+ .debug_loclists
+                0x00000334      0x549 build/rt-heap.o
+ .debug_loclists
+                0x0000087d      0x451 build/rt-assets.o
+ .debug_loclists
+                0x00000cce      0x11f build/rt-math.o
+ .debug_loclists
+                0x00000ded      0x2b8 build/rt-checks.o
+ .debug_loclists
+                0x000010a5      0x614 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o)
+ .debug_loclists
+                0x000016b9      0x53f /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_moddi3.o)
+ .debug_loclists
+                0x00001bf8       0xc0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(multi3.o)
+
+.debug_aranges  0x00000000      0x158
+ .debug_aranges
+                0x00000000       0x20 build/rt-memory.o
+ .debug_aranges
+                0x00000020       0x20 build/rt-heap.o
+ .debug_aranges
+                0x00000040       0x20 build/rt-assets.o
+ .debug_aranges
+                0x00000060       0x20 build/rt-math.o
+ .debug_aranges
+                0x00000080       0x20 build/rt-checks.o
+ .debug_aranges
+                0x000000a0       0x20 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o)
+ .debug_aranges
+                0x000000c0       0x20 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_moddi3.o)
+ .debug_aranges
+                0x000000e0       0x20 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
+ .debug_aranges
+                0x00000100       0x20 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(multi3.o)
+ .debug_aranges
+                0x00000120       0x20 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .debug_aranges
+                0x00000140       0x18 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_clz.o)
+
+.debug_rnglists
+                0x00000000      0x243
+ .debug_rnglists
+                0x00000000       0x17 build/rt-memory.o
+ .debug_rnglists
+                0x00000017       0x7d build/rt-heap.o
+ .debug_rnglists
+                0x00000094       0x2d build/rt-assets.o
+ .debug_rnglists
+                0x000000c1       0x76 build/rt-checks.o
+ .debug_rnglists
+                0x00000137       0xa0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o)
+ .debug_rnglists
+                0x000001d7       0x6c /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_moddi3.o)
+
+.debug_line     0x00000000     0x48d4
+ .debug_line    0x00000000      0x435 build/rt-memory.o
+ .debug_line    0x00000435      0xa5f build/rt-heap.o
+ .debug_line    0x00000e94      0x398 build/rt-assets.o
+ .debug_line    0x0000122c      0x19c build/rt-math.o
+ .debug_line    0x000013c8     0x1c3c build/rt-checks.o
+ .debug_line    0x00003004      0xa9c /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o)
+ .debug_line    0x00003aa0      0xa08 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_moddi3.o)
+ .debug_line    0x000044a8       0x7a /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
+ .debug_line    0x00004522      0x220 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(multi3.o)
+ .debug_line    0x00004742      0x153 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .debug_line    0x00004895       0x3f /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_clz.o)
+
+.debug_str      0x00000000      0x70f
+ .debug_str     0x00000000      0x70f build/rt-memory.o
+                                0x199 (size before relaxing)
+ .debug_str     0x0000070f        0x0 build/rt-heap.o
+                                0x241 (size before relaxing)
+ .debug_str     0x0000070f        0x0 build/rt-assets.o
+                                0x1dc (size before relaxing)
+ .debug_str     0x0000070f        0x0 build/rt-math.o
+                                0x18c (size before relaxing)
+ .debug_str     0x0000070f        0x0 build/rt-checks.o
+                                0x368 (size before relaxing)
+ .debug_str     0x0000070f        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o)
+                                0x26b (size before relaxing)
+ .debug_str     0x0000070f        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_moddi3.o)
+                                0x26b (size before relaxing)
+ .debug_str     0x0000070f        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
+                                 0xbc (size before relaxing)
+ .debug_str     0x0000070f        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(multi3.o)
+                                0x20a (size before relaxing)
+ .debug_str     0x0000070f        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(div.o)
+                                 0xe9 (size before relaxing)
+ .debug_str     0x0000070f        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_clz.o)
+                                0x190 (size before relaxing)
+
+.debug_line_str
+                0x00000000      0x226
+ .debug_line_str
+                0x00000000      0x226 build/rt-memory.o
+                                 0xc5 (size before relaxing)
+ .debug_line_str
+                0x00000226        0x0 build/rt-heap.o
+                                 0xc9 (size before relaxing)
+ .debug_line_str
+                0x00000226        0x0 build/rt-assets.o
+                                 0xcf (size before relaxing)
+ .debug_line_str
+                0x00000226        0x0 build/rt-math.o
+                                 0xb6 (size before relaxing)
+ .debug_line_str
+                0x00000226        0x0 build/rt-checks.o
+                                 0xec (size before relaxing)
+ .debug_line_str
+                0x00000226        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_divdi3.o)
+                                0x146 (size before relaxing)
+ .debug_line_str
+                0x00000226        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_moddi3.o)
+                                0x146 (size before relaxing)
+ .debug_line_str
+                0x00000226        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
+                                 0xa5 (size before relaxing)
+ .debug_line_str
+                0x00000226        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(multi3.o)
+                                0x17e (size before relaxing)
+ .debug_line_str
+                0x00000226        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(div.o)
+                                 0xa2 (size before relaxing)
+ .debug_line_str
+                0x00000226        0x0 /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(_clz.o)
+                                0x146 (size before relaxing)
+
+.debug_frame    0x00000000      0x544
+ .debug_frame   0x00000000       0xac build/rt-memory.o
+ .debug_frame   0x000000ac      0x238 build/rt-heap.o
+ .debug_frame   0x000002e4      0x144 build/rt-assets.o
+ .debug_frame   0x00000428       0x54 build/rt-math.o
+ .debug_frame   0x0000047c       0x9c build/rt-checks.o
+ .debug_frame   0x00000518       0x2c /usr/lib/gcc/riscv64-unknown-elf/14.2.0/rv32i/ilp32/libgcc.a(multi3.o)
