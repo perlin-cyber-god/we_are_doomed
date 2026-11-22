@@ -1,0 +1,20 @@
+doom/engine/p_enemy.c: In function 'A_OpenShotgun2':
+doom/engine/p_enemy.c:1778:17: warning: unused parameter 'psp' [-Wunused-parameter]
+ 1778 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_enemy.c: In function 'A_LoadShotgun2':
+doom/engine/p_enemy.c:1786:17: warning: unused parameter 'psp' [-Wunused-parameter]
+ 1786 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_enemy.c: In function 'A_BrainAwake':
+doom/engine/p_enemy.c:1811:28: warning: unused parameter 'mo' [-Wunused-parameter]
+ 1811 | void A_BrainAwake (mobj_t* mo)
+      |                    ~~~~~~~~^~
+doom/engine/p_enemy.c: In function 'A_BrainPain':
+doom/engine/p_enemy.c:1841:33: warning: unused parameter 'mo' [-Wunused-parameter]
+ 1841 | void A_BrainPain (mobj_t*       mo)
+      |                   ~~~~~~~~~~~~~~^~
+doom/engine/p_enemy.c: In function 'A_BrainDie':
+doom/engine/p_enemy.c:1894:33: warning: unused parameter 'mo' [-Wunused-parameter]
+ 1894 | void A_BrainDie (mobj_t*        mo)
+      |                  ~~~~~~~~~~~~~~~^~
