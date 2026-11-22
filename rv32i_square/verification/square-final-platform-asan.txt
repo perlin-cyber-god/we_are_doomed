@@ -1,0 +1,2 @@
+PASS guest frames, movement, release, opposing keys, all edges, sleep, quit (16612328 CPU instructions)
+PASS wrapping clock, bounded slices, unknown ECALL, illegal instruction and loader bounds
