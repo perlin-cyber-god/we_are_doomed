@@ -1,0 +1,4 @@
+doom/engine/i_endoom.c: In function 'I_Endoom':
+doom/engine/i_endoom.c:42:21: warning: unused parameter 'endoom_data' [-Wunused-parameter]
+   42 | void I_Endoom(byte *endoom_data)
+      |               ~~~~~~^~~~~~~~~~~
