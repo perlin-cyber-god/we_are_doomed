@@ -1,0 +1,7 @@
+doom/engine/p_floor.c: In function 'EV_DoFloor':
+doom/engine/p_floor.c:309:26: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  309 |             floor->crush = true;
+      |                          ^
+doom/engine/p_floor.c:310:11: note: here
+  310 |           case raiseFloor:
+      |           ^~~~
