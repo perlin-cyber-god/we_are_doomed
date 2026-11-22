@@ -1,0 +1,12 @@
+doom/engine/d_mode.c: In function 'D_ValidGameMode':
+doom/engine/d_mode.c:54:16: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+   54 |     for (i=0; i<arrlen(valid_modes); ++i)
+      |                ^
+doom/engine/d_mode.c: In function 'D_ValidEpisodeMap':
+doom/engine/d_mode.c:86:16: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+   86 |     for (i=0; i<arrlen(valid_modes); ++i)
+      |                ^
+doom/engine/d_mode.c: In function 'D_ValidGameVersion':
+doom/engine/d_mode.c:147:16: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  147 |     for (i=0; i<arrlen(valid_versions); ++i)
+      |                ^
