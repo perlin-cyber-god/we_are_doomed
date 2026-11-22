@@ -1,0 +1,456 @@
+doom/engine/am_map.c: In function 'AM_initVariables':
+doom/engine/am_map.c:427:5: warning: missing initializer for field 'data4' of 'event_t' [-Wmissing-field-initializers]
+  427 |     static event_t st_notify = { ev_keyup, AM_MSGENTERED, 0, 0 };
+      |     ^~~~~~
+In file included from doom/engine/st_stuff.h:25,
+                 from doom/engine/am_map.c:27:
+doom/engine/d_event.h:67:30: note: 'data4' declared here
+   67 |     int data1, data2, data3, data4;
+      |                              ^~~~~
+doom/engine/am_map.c: In function 'AM_Stop':
+doom/engine/am_map.c:543:5: warning: missing initializer for field 'data4' of 'event_t' [-Wmissing-field-initializers]
+  543 |     static event_t st_notify = { 0, ev_keyup, AM_MSGEXITED, 0 };
+      |     ^~~~~~
+doom/engine/d_event.h:67:30: note: 'data4' declared here
+   67 |     int data1, data2, data3, data4;
+      |                              ^~~~~
+doom/engine/am_map.c: In function 'AM_drawThings':
+doom/engine/am_map.c:1293:9: warning: unused parameter 'colorrange' [-Wunused-parameter]
+ 1293 |   int   colorrange)
+      |   ~~~~~~^~~~~~~~~~
+doom/engine/d_iwad.c: In function 'D_FindAllIWADs':
+doom/engine/d_iwad.c:767:16: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  767 |     for (i=0; i<arrlen(iwads); ++i)
+      |                ^
+doom/engine/d_iwad.c: In function 'D_SuggestIWADName':
+doom/engine/d_iwad.c:822:19: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  822 |     for (i = 0; i < arrlen(iwads); ++i)
+      |                   ^
+doom/engine/d_iwad.c: In function 'D_SuggestGameName':
+doom/engine/d_iwad.c:837:19: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  837 |     for (i = 0; i < arrlen(iwads); ++i)
+      |                   ^
+doom/engine/d_loop.c: In function 'D_StartNetGame':
+doom/engine/d_loop.c:341:48: warning: unused parameter 'callback' [-Wunused-parameter]
+  341 |                     netgame_startup_callback_t callback)
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+doom/engine/d_loop.c: In function 'SinglePlayerClear':
+doom/engine/d_loop.c:695:15: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+  695 |         if (i != localplayer)
+      |               ^~
+doom/engine/d_main.c: In function 'SetMissionForPackName':
+doom/engine/d_main.c:699:19: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  699 |     for (i = 0; i < arrlen(packs); ++i)
+      |                   ^
+doom/engine/d_main.c:710:19: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  710 |     for (i = 0; i < arrlen(packs); ++i)
+      |                   ^
+doom/engine/d_mode.c: In function 'D_ValidGameMode':
+doom/engine/d_mode.c:54:16: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+   54 |     for (i=0; i<arrlen(valid_modes); ++i)
+      |                ^
+doom/engine/d_mode.c: In function 'D_ValidEpisodeMap':
+doom/engine/d_mode.c:86:16: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+   86 |     for (i=0; i<arrlen(valid_modes); ++i)
+      |                ^
+doom/engine/d_mode.c: In function 'D_ValidGameVersion':
+doom/engine/d_mode.c:147:16: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  147 |     for (i=0; i<arrlen(valid_versions); ++i)
+      |                ^
+doom/engine/d_net.c: In function 'LoadGameSettings':
+doom/engine/d_net.c:132:29: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+  132 |         playeringame[i] = i < settings->num_players;
+      |                             ^
+doom/engine/f_wipe.c: In function 'wipe_initColorXForm':
+doom/engine/f_wipe.c:68:9: warning: unused parameter 'ticks' [-Wunused-parameter]
+   68 |   int   ticks )
+      |   ~~~~~~^~~~~
+doom/engine/f_wipe.c: In function 'wipe_exitColorXForm':
+doom/engine/f_wipe.c:122:9: warning: unused parameter 'width' [-Wunused-parameter]
+  122 | ( int   width,
+      |   ~~~~~~^~~~~
+doom/engine/f_wipe.c:123:9: warning: unused parameter 'height' [-Wunused-parameter]
+  123 |   int   height,
+      |   ~~~~~~^~~~~~
+doom/engine/f_wipe.c:124:9: warning: unused parameter 'ticks' [-Wunused-parameter]
+  124 |   int   ticks )
+      |   ~~~~~~^~~~~
+doom/engine/f_wipe.c: In function 'wipe_initMelt':
+doom/engine/f_wipe.c:136:9: warning: unused parameter 'ticks' [-Wunused-parameter]
+  136 |   int   ticks )
+      |   ~~~~~~^~~~~
+doom/engine/f_wipe.c: In function 'wipe_exitMelt':
+doom/engine/f_wipe.c:220:9: warning: unused parameter 'width' [-Wunused-parameter]
+  220 | ( int   width,
+      |   ~~~~~~^~~~~
+doom/engine/f_wipe.c:221:9: warning: unused parameter 'height' [-Wunused-parameter]
+  221 |   int   height,
+      |   ~~~~~~^~~~~~
+doom/engine/f_wipe.c:222:9: warning: unused parameter 'ticks' [-Wunused-parameter]
+  222 |   int   ticks )
+      |   ~~~~~~^~~~~
+doom/engine/f_wipe.c: In function 'wipe_StartScreen':
+doom/engine/f_wipe.c:232:9: warning: unused parameter 'x' [-Wunused-parameter]
+  232 | ( int   x,
+      |   ~~~~~~^
+doom/engine/f_wipe.c:233:9: warning: unused parameter 'y' [-Wunused-parameter]
+  233 |   int   y,
+      |   ~~~~~~^
+doom/engine/f_wipe.c:234:9: warning: unused parameter 'width' [-Wunused-parameter]
+  234 |   int   width,
+      |   ~~~~~~^~~~~
+doom/engine/f_wipe.c:235:9: warning: unused parameter 'height' [-Wunused-parameter]
+  235 |   int   height )
+      |   ~~~~~~^~~~~~
+doom/engine/f_wipe.c: In function 'wipe_ScreenWipe':
+doom/engine/f_wipe.c:258:9: warning: unused parameter 'x' [-Wunused-parameter]
+  258 |   int   x,
+      |   ~~~~~~^
+doom/engine/f_wipe.c:259:9: warning: unused parameter 'y' [-Wunused-parameter]
+  259 |   int   y,
+      |   ~~~~~~^
+doom/engine/g_game.c: In function 'G_NextWeapon':
+doom/engine/g_game.c:297:16: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  297 |     for (i=0; i<arrlen(weapon_order_table); ++i)
+      |                ^
+doom/engine/g_game.c: In function 'G_BuildTiccmd':
+doom/engine/g_game.c:458:20: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  458 |         for (i=0; i<arrlen(weapon_keys); ++i)
+      |                    ^
+doom/engine/g_game.c: In function 'G_WorldDone':
+doom/engine/g_game.c:1507:16: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 1507 |             if (!secretexit)
+      |                ^
+doom/engine/g_game.c:1509:11: note: here
+ 1509 |           case 6:
+      |           ^~~~
+doom/engine/g_game.c: In function 'G_VanillaVersionCode':
+doom/engine/g_game.c:2045:13: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 2045 |             I_Error("Doom 1.2 does not have a version code!");
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+doom/engine/g_game.c:2046:9: note: here
+ 2046 |         case exe_doom_1_666:
+      |         ^~~~
+doom/engine/i_cdmus.c: In function 'I_CDMusPlay':
+doom/engine/i_cdmus.c:107:21: warning: unused parameter 'track' [-Wunused-parameter]
+  107 | int I_CDMusPlay(int track)
+      |                 ~~~~^~~~~
+doom/engine/i_cdmus.c: In function 'I_CDMusSetVolume':
+doom/engine/i_cdmus.c:160:26: warning: unused parameter 'volume' [-Wunused-parameter]
+  160 | int I_CDMusSetVolume(int volume)
+      |                      ~~~~^~~~~~
+doom/engine/i_cdmus.c: In function 'I_CDMusTrackLength':
+doom/engine/i_cdmus.c:219:28: warning: unused parameter 'track_num' [-Wunused-parameter]
+  219 | int I_CDMusTrackLength(int track_num)
+      |                        ~~~~^~~~~~~~~
+doom/engine/i_endoom.c: In function 'I_Endoom':
+doom/engine/i_endoom.c:42:21: warning: unused parameter 'endoom_data' [-Wunused-parameter]
+   42 | void I_Endoom(byte *endoom_data)
+      |               ~~~~~~^~~~~~~~~~~
+doom/engine/i_sound.c: In function 'I_BindSoundVariables':
+doom/engine/i_sound.c:398:18: warning: unused variable 'libsamplerate_scale' [-Wunused-variable]
+  398 |     extern float libsamplerate_scale;
+      |                  ^~~~~~~~~~~~~~~~~~~
+doom/engine/i_sound.c:397:16: warning: unused variable 'use_libsamplerate' [-Wunused-variable]
+  397 |     extern int use_libsamplerate;
+      |                ^~~~~~~~~~~~~~~~~
+doom/engine/i_system.c: In function 'I_Tactile':
+doom/engine/i_system.c:87:20: warning: unused parameter 'on' [-Wunused-parameter]
+   87 | void I_Tactile(int on, int off, int total)
+      |                ~~~~^~
+doom/engine/i_system.c:87:28: warning: unused parameter 'off' [-Wunused-parameter]
+   87 | void I_Tactile(int on, int off, int total)
+      |                        ~~~~^~~
+doom/engine/i_system.c:87:37: warning: unused parameter 'total' [-Wunused-parameter]
+   87 | void I_Tactile(int on, int off, int total)
+      |                                 ~~~~^~~~~
+doom/engine/i_timer.c: In function 'I_WaitVBL':
+doom/engine/i_timer.c:84:20: warning: unused parameter 'count' [-Wunused-parameter]
+   84 | void I_WaitVBL(int count)
+      |                ~~~~^~~~~
+doom/engine/m_argv.c: In function 'LoadResponseFile':
+doom/engine/m_argv.c:75:34: warning: unused parameter 'argv_index' [-Wunused-parameter]
+   75 | static void LoadResponseFile(int argv_index)
+      |                              ~~~~^~~~~~~~~~
+doom/engine/m_config.c: In function 'SaveDefaultCollection':
+doom/engine/m_config.c:1609:57: warning: unused parameter 'collection' [-Wunused-parameter]
+ 1609 | static void SaveDefaultCollection(default_collection_t *collection)
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+doom/engine/m_config.c: In function 'LoadDefaultCollection':
+doom/engine/m_config.c:1771:57: warning: unused parameter 'collection' [-Wunused-parameter]
+ 1771 | static void LoadDefaultCollection(default_collection_t *collection)
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+doom/engine/m_config.c: In function 'M_GetSaveGameDir':
+doom/engine/m_config.c:2087:30: warning: unused parameter 'iwadname' [-Wunused-parameter]
+ 2087 | char *M_GetSaveGameDir(char *iwadname)
+      |                        ~~~~~~^~~~~~~~
+doom/engine/m_menu.c: In function 'M_LoadGame':
+doom/engine/m_menu.c:585:22: warning: unused parameter 'choice' [-Wunused-parameter]
+  585 | void M_LoadGame (int choice)
+      |                  ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_SaveGame':
+doom/engine/m_menu.c:650:22: warning: unused parameter 'choice' [-Wunused-parameter]
+  650 | void M_SaveGame (int choice)
+      |                  ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_Sound':
+doom/engine/m_menu.c:845:18: warning: unused parameter 'choice' [-Wunused-parameter]
+  845 | void M_Sound(int choice)
+      |              ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_NewGame':
+doom/engine/m_menu.c:908:20: warning: unused parameter 'choice' [-Wunused-parameter]
+  908 | void M_NewGame(int choice)
+      |                ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_VerifyNightmare':
+doom/engine/m_menu.c:940:22: warning: implicit conversion from 'enum <anonymous>' to 'skill_t' [-Wenum-conversion]
+  940 |     G_DeferedInitNew(nightmare,epi+1,1);
+      |                      ^~~~~~~~~
+doom/engine/m_menu.c: In function 'M_Options':
+doom/engine/m_menu.c:1007:20: warning: unused parameter 'choice' [-Wunused-parameter]
+ 1007 | void M_Options(int choice)
+      |                ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_ChangeMessages':
+doom/engine/m_menu.c:1017:27: warning: parameter 'choice' set but not used [-Wunused-but-set-parameter]
+ 1017 | void M_ChangeMessages(int choice)
+      |                       ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_EndGame':
+doom/engine/m_menu.c:1045:20: warning: parameter 'choice' set but not used [-Wunused-but-set-parameter]
+ 1045 | void M_EndGame(int choice)
+      |                ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_ReadThis':
+doom/engine/m_menu.c:1069:21: warning: parameter 'choice' set but not used [-Wunused-but-set-parameter]
+ 1069 | void M_ReadThis(int choice)
+      |                 ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_ReadThis2':
+doom/engine/m_menu.c:1075:22: warning: parameter 'choice' set but not used [-Wunused-but-set-parameter]
+ 1075 | void M_ReadThis2(int choice)
+      |                  ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_FinishReadThis':
+doom/engine/m_menu.c:1093:27: warning: parameter 'choice' set but not used [-Wunused-but-set-parameter]
+ 1093 | void M_FinishReadThis(int choice)
+      |                       ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_QuitDOOM':
+doom/engine/m_menu.c:1168:21: warning: unused parameter 'choice' [-Wunused-parameter]
+ 1168 | void M_QuitDOOM(int choice)
+      |                 ~~~~^~~~~~
+doom/engine/m_menu.c: In function 'M_ChangeDetail':
+doom/engine/m_menu.c:1197:25: warning: parameter 'choice' set but not used [-Wunused-but-set-parameter]
+ 1197 | void M_ChangeDetail(int choice)
+      |                     ~~~~^~~~~~
+doom/engine/m_misc.c: In function 'M_vsnprintf':
+doom/engine/m_misc.c:498:30: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'unsigned int'} [-Wsign-compare]
+  498 |     if (result < 0 || result >= buf_len)
+      |                              ^~
+doom/engine/p_ceilng.c: In function 'T_MoveCeiling':
+doom/engine/p_ceilng.c:83:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   83 |                 S_StartSound(&ceiling->sector->soundorg, sfx_pstop);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+doom/engine/p_ceilng.c:84:15: note: here
+   84 |               case fastCrushAndRaise:
+      |               ^~~~
+doom/engine/p_ceilng.c:118:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  118 |                 S_StartSound(&ceiling->sector->soundorg, sfx_pstop);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+doom/engine/p_ceilng.c:119:15: note: here
+  119 |               case crushAndRaise:
+      |               ^~~~
+doom/engine/p_ceilng.c:120:32: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  120 |                 ceiling->speed = CEILSPEED;
+doom/engine/p_ceilng.c:121:15: note: here
+  121 |               case fastCrushAndRaise:
+      |               ^~~~
+doom/engine/p_ceilng.c: In function 'EV_DoCeiling':
+doom/engine/p_ceilng.c:212:32: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  212 |             ceiling->topheight = sec->ceilingheight;
+      |             ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+doom/engine/p_ceilng.c:213:11: note: here
+  213 |           case lowerAndCrush:
+      |           ^~~~
+doom/engine/p_doors.c: In function 'P_SpawnDoorRaiseIn5Mins':
+doom/engine/p_doors.c:544:17: warning: unused parameter 'secnum' [-Wunused-parameter]
+  544 |   int           secnum )
+      |   ~~~~~~~~~~~~~~^~~~~~
+doom/engine/p_enemy.c: In function 'A_OpenShotgun2':
+doom/engine/p_enemy.c:1778:17: warning: unused parameter 'psp' [-Wunused-parameter]
+ 1778 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_enemy.c: In function 'A_LoadShotgun2':
+doom/engine/p_enemy.c:1786:17: warning: unused parameter 'psp' [-Wunused-parameter]
+ 1786 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_enemy.c: In function 'A_BrainAwake':
+doom/engine/p_enemy.c:1811:28: warning: unused parameter 'mo' [-Wunused-parameter]
+ 1811 | void A_BrainAwake (mobj_t* mo)
+      |                    ~~~~~~~~^~
+doom/engine/p_enemy.c: In function 'A_BrainPain':
+doom/engine/p_enemy.c:1841:33: warning: unused parameter 'mo' [-Wunused-parameter]
+ 1841 | void A_BrainPain (mobj_t*       mo)
+      |                   ~~~~~~~~~~~~~~^~
+doom/engine/p_enemy.c: In function 'A_BrainDie':
+doom/engine/p_enemy.c:1894:33: warning: unused parameter 'mo' [-Wunused-parameter]
+ 1894 | void A_BrainDie (mobj_t*        mo)
+      |                  ~~~~~~~~~~~~~~~^~
+doom/engine/p_floor.c: In function 'EV_DoFloor':
+doom/engine/p_floor.c:309:26: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  309 |             floor->crush = true;
+      |                          ^
+doom/engine/p_floor.c:310:11: note: here
+  310 |           case raiseFloor:
+      |           ^~~~
+doom/engine/p_pspr.c: In function 'A_ReFire':
+doom/engine/p_pspr.c:336:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  336 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_CheckReload':
+doom/engine/p_pspr.c:359:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  359 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_GunFlash':
+doom/engine/p_pspr.c:442:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  442 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_Punch':
+doom/engine/p_pspr.c:461:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  461 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_Saw':
+doom/engine/p_pspr.c:495:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  495 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_FireMissile':
+doom/engine/p_pspr.c:561:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  561 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_FireBFG':
+doom/engine/p_pspr.c:574:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  574 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_FirePlasma':
+doom/engine/p_pspr.c:589:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  589 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_FirePistol':
+doom/engine/p_pspr.c:658:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  658 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_FireShotgun':
+doom/engine/p_pspr.c:680:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  680 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_FireShotgun2':
+doom/engine/p_pspr.c:707:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  707 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_Light0':
+doom/engine/p_pspr.c:770:44: warning: unused parameter 'psp' [-Wunused-parameter]
+  770 | void A_Light0 (player_t *player, pspdef_t *psp)
+      |                                  ~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_Light1':
+doom/engine/p_pspr.c:775:44: warning: unused parameter 'psp' [-Wunused-parameter]
+  775 | void A_Light1 (player_t *player, pspdef_t *psp)
+      |                                  ~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_Light2':
+doom/engine/p_pspr.c:780:44: warning: unused parameter 'psp' [-Wunused-parameter]
+  780 | void A_Light2 (player_t *player, pspdef_t *psp)
+      |                                  ~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_BFGsound':
+doom/engine/p_pspr.c:829:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  829 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_setup.c: In function 'P_SetupLevel':
+doom/engine/p_setup.c:747:17: warning: unused parameter 'playermask' [-Wunused-parameter]
+  747 |   int           playermask,
+      |   ~~~~~~~~~~~~~~^~~~~~~~~~
+doom/engine/p_setup.c:748:17: warning: unused parameter 'skill' [-Wunused-parameter]
+  748 |   skill_t       skill)
+      |   ~~~~~~~~~~~~~~^~~~~
+doom/engine/p_spec.c: In function 'DonutOverrun':
+doom/engine/p_spec.c:1179:34: warning: unused parameter 'line' [-Wunused-parameter]
+ 1179 |                          line_t *line, sector_t *pillar_sector)
+      |                          ~~~~~~~~^~~~
+doom/engine/p_spec.c:1179:50: warning: unused parameter 'pillar_sector' [-Wunused-parameter]
+ 1179 |                          line_t *line, sector_t *pillar_sector)
+      |                                        ~~~~~~~~~~^~~~~~~~~~~~~
+doom/engine/p_tick.c: In function 'P_AllocateThinker':
+doom/engine/p_tick.c:85:41: warning: unused parameter 'thinker' [-Wunused-parameter]
+   85 | void P_AllocateThinker (thinker_t*      thinker)
+      |                         ~~~~~~~~~~~~~~~~^~~~~~~
+doom/engine/r_things.c: In function 'R_DrawVisSprite':
+doom/engine/r_things.c:391:25: warning: unused parameter 'x1' [-Wunused-parameter]
+  391 |   int                   x1,
+      |   ~~~~~~~~~~~~~~~~~~~~~~^~
+doom/engine/r_things.c:392:25: warning: unused parameter 'x2' [-Wunused-parameter]
+  392 |   int                   x2 )
+      |   ~~~~~~~~~~~~~~~~~~~~~~^~
+doom/engine/r_things.c: In function 'R_SortVisSprites':
+doom/engine/r_things.c:803:27: warning: storing the address of local variable 'unsorted' in '*<unknown>.next' [-Wdangling-pointer=]
+  803 |     (vissprite_p-1)->next = &unsorted;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+doom/engine/r_things.c:785:25: note: 'unsorted' declared here
+  785 |     vissprite_t         unsorted;
+      |                         ^~~~~~~~
+doom/engine/r_things.c:282:17: note: 'vissprite_p' declared here
+  282 | vissprite_t*    vissprite_p;
+      |                 ^~~~~~~~~~~
+doom/engine/r_things.c:801:24: warning: storing the address of local variable 'unsorted' in 'vissprites[0].prev' [-Wdangling-pointer=]
+  801 |     vissprites[0].prev = &unsorted;
+      |     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+doom/engine/r_things.c:785:25: note: 'unsorted' declared here
+  785 |     vissprite_t         unsorted;
+      |                         ^~~~~~~~
+doom/engine/r_things.c:281:17: note: 'vissprites' declared here
+  281 | vissprite_t     vissprites[MAXVISSPRITES];
+      |                 ^~~~~~~~~~
+doom/engine/statdump.c:39:18: warning: 'doom2_par_times' defined but not used [-Wunused-const-variable=]
+   39 | static const int doom2_par_times[] =
+      |                  ^~~~~~~~~~~~~~~
+doom/engine/statdump.c:33:18: warning: 'doom1_par_times' defined but not used [-Wunused-const-variable=]
+   33 | static const int doom1_par_times[] =
+      |                  ^~~~~~~~~~~~~~~
+doom/engine/st_lib.c: In function 'STlib_drawNum':
+doom/engine/st_lib.c:86:17: warning: unused parameter 'refresh' [-Wunused-parameter]
+   86 |   boolean       refresh )
+      |   ~~~~~~~~~~~~~~^~~~~~~
+doom/engine/wi_stuff.c: In function 'WI_Responder':
+doom/engine/wi_stuff.c:409:31: warning: unused parameter 'ev' [-Wunused-parameter]
+  409 | boolean WI_Responder(event_t* ev)
+      |                      ~~~~~~~~~^~
+doom/engine/w_file.c: In function 'W_OpenFile':
+doom/engine/w_file.c:72:19: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+   72 |     for (i = 0; i < arrlen(wad_file_classes); ++i)
+      |                   ^
+doom/engine/w_wad.c: In function 'ExtendLumpInfo':
+doom/engine/w_wad.c:102:35: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+  102 |     for (i = 0; i < numlumps && i < newnumlumps; ++i)
+      |                                   ^
+doom/engine/w_wad.c: In function 'W_CheckCorrectIWAD':
+doom/engine/w_wad.c:591:19: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  591 |     for (i = 0; i < arrlen(unique_lumps); ++i)
+      |                   ^
+doom/engine/i_input.c: In function 'GetTypedChar':
+doom/engine/i_input.c:250:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  250 |         if (key >= 0 && key < arrlen(shiftxform))
+      |                 ^~
+doom/engine/i_input.c: At top level:
+doom/engine/i_input.c:51:19: warning: 'at_to_doom' defined but not used [-Wunused-const-variable=]
+   51 | static const char at_to_doom[] =
+      |                   ^~~~~~~~~~
+doom/engine/i_video.c: In function 'I_InitGraphics':
+doom/engine/i_video.c:283:38: warning: comparison of integer expressions of different signedness: 'long unsigned int' and 'int' [-Wsign-compare]
+  283 |         if (s_Fb.yres / SCREENHEIGHT < fb_scaling)
+      |                                      ^
+doom/engine/i_video.c: In function 'I_FinishUpdate':
+doom/engine/i_video.c:324:19: warning: variable 'y_offset' set but not used [-Wunused-but-set-variable]
+  324 |     int x_offset, y_offset, x_offset_end;
+      |                   ^~~~~~~~
+doom/engine/i_video.c: In function 'I_SetGrabMouseCallback':
+doom/engine/i_video.c:477:51: warning: unused parameter 'func' [-Wunused-parameter]
+  477 | void I_SetGrabMouseCallback (grabmouse_callback_t func)
+      |                              ~~~~~~~~~~~~~~~~~~~~~^~~~
+doom/engine/i_video.c: In function 'I_DisplayFPSDots':
+doom/engine/i_video.c:489:32: warning: unused parameter 'dots_on' [-Wunused-parameter]
+  489 | void I_DisplayFPSDots (boolean dots_on)
+      |                        ~~~~~~~~^~~~~~~
+doom/engine/i_video.c: At top level:
+doom/engine/i_video.c:26:1: warning: 'rcsid' defined but not used [-Wunused-const-variable=]
+   26 | rcsid[] = "$Id: i_x.c,v 1.6 1997/02/03 22:45:10 b1 Exp $";
+      | ^~~~~
