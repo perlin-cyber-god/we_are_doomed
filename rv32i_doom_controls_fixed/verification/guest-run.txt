@@ -1,0 +1,6 @@
+loaded 596 bytes at 0; RAM=65536 budget=1000000 retired=565 PC=0x0000005c
+signature: checksum=90 count=6 initialized=7 BSS_before=0 nested_calls=6
+PASS compiled guest signature
+PASS real guest exact budget=565; budget=564 fails
+PASS changing guest data 7 -> 9 computes checksum 102; host rejects mismatch
+PASS missing guest BSS clear produces guest FAIL with poisoned host RAM
