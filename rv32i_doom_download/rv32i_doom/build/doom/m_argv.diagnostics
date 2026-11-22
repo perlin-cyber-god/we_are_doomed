@@ -1,0 +1,4 @@
+doom/engine/m_argv.c: In function 'LoadResponseFile':
+doom/engine/m_argv.c:75:34: warning: unused parameter 'argv_index' [-Wunused-parameter]
+   75 | static void LoadResponseFile(int argv_index)
+      |                              ~~~~^~~~~~~~~~
