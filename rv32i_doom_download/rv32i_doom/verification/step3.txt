@@ -1,0 +1,208 @@
+Running the demo program (stop at PC=36, budget 100 steps)
+step  1: pc=0x00000000 word=0x06400093 ADDI x1, x0, 100 | src=0 | reg write: x1 = 100 | next_pc=0x00000004
+step  2: pc=0x00000004 word=0x0C800113 ADDI x2, x0, 200 | src=0 | reg write: x2 = 200 | next_pc=0x00000008
+step  3: pc=0x00000008 word=0x00300213 ADDI x4, x0, 3 | src=0 | reg write: x4 = 3 | next_pc=0x0000000C
+step  4: pc=0x0000000C word=0x0000C183 LBU  x3, 0(x1) | ea=100 | read RAM[100]=5 | reg write: x3 = 5 | next_pc=0x00000010
+step  5: pc=0x00000010 word=0x00310023 SB   x3, 0(x2) | ea=200 | wrote RAM[200]=5 (rs2=5) | reg write: none | next_pc=0x00000014
+step  6: pc=0x00000014 word=0x00108093 ADDI x1, x1, 1 | src=100 | reg write: x1 = 101 | next_pc=0x00000018
+step  7: pc=0x00000018 word=0x00110113 ADDI x2, x2, 1 | src=200 | reg write: x2 = 201 | next_pc=0x0000001C
+step  8: pc=0x0000001C word=0xFFF20213 ADDI x4, x4, -1 | src=3 | reg write: x4 = 2 | next_pc=0x00000020
+step  9: pc=0x00000020 word=0xFE0216E3 BNE  x4, x0 | x4=2 x0=0 | offset=-20 target=0x0000000C | TAKEN | reg write: none | next_pc=0x0000000C
+step 10: pc=0x0000000C word=0x0000C183 LBU  x3, 0(x1) | ea=101 | read RAM[101]=7 | reg write: x3 = 7 | next_pc=0x00000010
+step 11: pc=0x00000010 word=0x00310023 SB   x3, 0(x2) | ea=201 | wrote RAM[201]=7 (rs2=7) | reg write: none | next_pc=0x00000014
+step 12: pc=0x00000014 word=0x00108093 ADDI x1, x1, 1 | src=101 | reg write: x1 = 102 | next_pc=0x00000018
+step 13: pc=0x00000018 word=0x00110113 ADDI x2, x2, 1 | src=201 | reg write: x2 = 202 | next_pc=0x0000001C
+step 14: pc=0x0000001C word=0xFFF20213 ADDI x4, x4, -1 | src=2 | reg write: x4 = 1 | next_pc=0x00000020
+step 15: pc=0x00000020 word=0xFE0216E3 BNE  x4, x0 | x4=1 x0=0 | offset=-20 target=0x0000000C | TAKEN | reg write: none | next_pc=0x0000000C
+step 16: pc=0x0000000C word=0x0000C183 LBU  x3, 0(x1) | ea=102 | read RAM[102]=9 | reg write: x3 = 9 | next_pc=0x00000010
+step 17: pc=0x00000010 word=0x00310023 SB   x3, 0(x2) | ea=202 | wrote RAM[202]=9 (rs2=9) | reg write: none | next_pc=0x00000014
+step 18: pc=0x00000014 word=0x00108093 ADDI x1, x1, 1 | src=102 | reg write: x1 = 103 | next_pc=0x00000018
+step 19: pc=0x00000018 word=0x00110113 ADDI x2, x2, 1 | src=202 | reg write: x2 = 203 | next_pc=0x0000001C
+step 20: pc=0x0000001C word=0xFFF20213 ADDI x4, x4, -1 | src=1 | reg write: x4 = 0 | next_pc=0x00000020
+step 21: pc=0x00000020 word=0xFE0216E3 BNE  x4, x0 | x4=0 x0=0 | offset=-20 target=0x0000000C | not taken | reg write: none | next_pc=0x00000024
+
+PC reached 36 after 21 completed instructions. This is the host demonstration completion point, not a guest HALT.
+
+Final checks
+  PASS instructions completed     = 21
+  PASS x1                         = 103
+  PASS x2                         = 203
+  PASS x4                         = 0
+  PASS x3                         = 9
+  PASS x0                         = 0
+  PASS PC                         = 36
+  PASS RAM[200]                   = 5
+  PASS RAM[201]                   = 7
+  PASS RAM[202]                   = 9
+  PASS RAM[100] source            = 5
+  PASS RAM[101] source            = 7
+  PASS RAM[102] source            = 9
+  PASS RAM[199] sentinel          = 165
+  PASS RAM[203] sentinel          = 165
+  PASS stores performed           = 3
+  PASS branches executed          = 3
+  PASS branch 1 taken             = 1
+  PASS branch 2 taken             = 1
+  PASS branch 3 taken             = 0
+
+Test 0: test encoders reproduce the demo program's words
+  PASS addi x1,x0,100             = 104857747
+  PASS addi x2,x0,200             = 209715475
+  PASS addi x4,x0,3               = 3146259
+  PASS lbu x3,0(x1)               = 49539
+  PASS sb x3,0(x2)                = 3211299
+  PASS addi x1,x1,1               = 1081491
+  PASS addi x2,x2,1               = 1114387
+  PASS addi x4,x4,-1              = 4294050323
+  PASS bne x4,x0,-20              = 4261549795
+
+Test (step 1): ADDI cannot change x0
+  PASS step status                = 0
+  PASS raw result                 = 107
+  PASS x0                         = 0
+  PASS x1                         = 100
+  PASS pc                         = 4
+
+Test (steps 1-2): rejecting bad instructions and fetches
+  opcode 0x33 (add)                  -> unsupported instruction (only ADDI, LBU, SB, BNE exist) [state unchanged]
+  OP-IMM funct3=4 (xori)             -> unsupported instruction (only ADDI, LBU, SB, BNE exist) [state unchanged]
+  load funct3=0 (lb)                 -> unsupported instruction (only ADDI, LBU, SB, BNE exist) [state unchanged]
+  load funct3=2 (lw)                 -> unsupported instruction (only ADDI, LBU, SB, BNE exist) [state unchanged]
+  store funct3=1 (sh)                -> unsupported instruction (only ADDI, LBU, SB, BNE exist) [state unchanged]
+  store funct3=2 (sw)                -> unsupported instruction (only ADDI, LBU, SB, BNE exist) [state unchanged]
+  misaligned pc=2                    -> instruction fetch is not 4-byte aligned [state unchanged]
+  pc=256 (past RAM)                  -> instruction fetch is outside guest RAM [state unchanged]
+  pc=0xFFFFFFFC                      -> instruction fetch is outside guest RAM [state unchanged]
+
+Test (step 2) 1: LBU of 0xF0 produces 240 (not a negative number)
+  PASS step status                = 0
+  PASS x3                         = 240
+  PASS RAM[50] unchanged          = 240
+
+Test (step 2) 2: SB of 0x123456AB stores only 0xAB
+  PASS step status                = 0
+  PASS RAM[200]                   = 171
+  PASS RAM[199]                   = 165
+  PASS RAM[201]                   = 165
+  PASS x3 unchanged               = 305419947
+
+Test (step 2) 3: offset -4 works for LBU and SB
+  PASS LBU status                 = 0
+  PASS LBU ea                     = 100
+  PASS LBU x3                     = 126
+  PASS SB status                  = 0
+  PASS SB ea                      = 100
+  PASS RAM[100]                   = 66
+  PASS RAM[99]                    = 165
+  PASS RAM[101]                   = 165
+
+Test (step 2) 4: SB with nonzero bits 11:7 changes no register
+  PASS word bits 11:7             = 5
+  PASS step status                = 0
+  PASS decoded imm                = 37
+  PASS ea (100+37)                = 137
+  PASS RAM[137]                   = 68
+  PASS RAM[105] untouched         = 0
+  PASS registers changed          = 0
+
+Test (step 2) 5: byte address 255 works; 256 and 0xFFFFFFFF are rejected
+  PASS LBU@255 status             = 0
+  PASS LBU@255 x3                 = 119
+  PASS SB@255 status              = 0
+  PASS RAM[255]                   = 153
+  PASS RAM[254] untouched         = 165
+  LBU @256                           -> data address is outside guest RAM [state unchanged]
+  LBU @0xFFFFFFFF                    -> data address is outside guest RAM [state unchanged]
+  SB @256                            -> data address is outside guest RAM [state unchanged]
+  SB @0xFFFFFFFF                     -> data address is outside guest RAM [state unchanged]
+
+Test (step 2) 6: loads targeting x0
+  invalid load to x0                 -> data address is outside guest RAM [state unchanged]
+  PASS valid load status          = 0
+  PASS byte was read              = 5
+  PASS x0 still zero              = 0
+  PASS pc                         = 4
+
+Test B0: B-type immediate decoding
+  PASS imm of 0xFE0216E3          = 4294967276
+  PASS imm of 0x000010E3 (+2048)  = 2048
+  PASS imm of 0x7E001FE3 (+4094)  = 4094
+  PASS imm of 0x80001063 (-4096)  = 4294963200
+  PASS round-trip mismatches      = 0
+  PASS bit 0 of any offset        = 0
+
+Test B1: BNE taken and not taken
+  PASS taken: status              = 0
+  PASS taken: flag                = 1
+  PASS taken: pc                  = 8
+  PASS not taken: status          = 0
+  PASS not taken: flag            = 0
+  PASS not taken: pc              = 4
+  PASS high-bit-only diff: status = 0
+  PASS high-bit-only diff: taken  = 1
+  PASS high-bit-only diff: pc     = 8
+
+Test B2: forward and backward targets
+  PASS forward status             = 0
+  PASS forward offset             = 8
+  PASS forward pc                 = 24
+  PASS backward status            = 0
+  PASS backward offset            = 4294967284
+  PASS backward pc                = 4
+
+Test B3: a nonzero-numbered rs2 register (x6)
+  PASS equal: status              = 0
+  PASS equal: rs2 decoded         = 6
+  PASS equal: pc (not taken)      = 4
+  PASS differ: status             = 0
+  PASS differ: src2 value         = 10
+  PASS differ: pc (taken)         = 8
+  PASS x0 vs x6: status           = 0
+  PASS x0 vs x6: src1             = 0
+  PASS x0 vs x6: pc (taken)       = 8
+
+Test B4: BNE changes no register and no RAM (only PC)
+  PASS taken: status              = 0
+  PASS taken: wrote reg           = 0
+  PASS taken: regs+RAM same       = 1
+  PASS taken: pc moved            = 8
+  PASS untaken: status            = 0
+  PASS untaken: wrote reg         = 0
+  PASS untaken: regs+RAM same     = 1
+  PASS untaken: pc moved          = 4
+
+Test B5: misaligned targets (taken rejected, untaken accepted)
+  taken, offset +6                   -> taken branch target is not 4-byte aligned [state unchanged]
+  taken, offset -2 at pc 8           -> taken branch target is not 4-byte aligned [state unchanged]
+  taken, wraps to 0xFFFFFFFE         -> taken branch target is not 4-byte aligned [state unchanged]
+  PASS untaken misaligned: status = 0
+  PASS untaken misaligned: taken  = 0
+  PASS untaken misaligned: pc     = 4
+  PASS untaken +2: status         = 0
+  PASS untaken +2: pc             = 4
+
+Test B6: out-of-RAM targets are rejected when fetched
+  PASS branch to 256: status      = 0
+  PASS pc is now                  = 256
+  fetch at pc=256                    -> instruction fetch is outside guest RAM [state unchanged]
+  PASS branch to 0xFFFFFFFC       = 0
+  PASS pc is now                  = 4294967292
+  fetch at pc=0xFFFFFFFC             -> instruction fetch is outside guest RAM [state unchanged]
+
+Test B7: unsupported branch types are rejected
+  funct3=0 (beq)                     -> unsupported instruction (only ADDI, LBU, SB, BNE exist) [state unchanged]
+  funct3=2 (invalid)                 -> unsupported instruction (only ADDI, LBU, SB, BNE exist) [state unchanged]
+  funct3=3 (invalid)                 -> unsupported instruction (only ADDI, LBU, SB, BNE exist) [state unchanged]
+  funct3=4 (blt)                     -> unsupported instruction (only ADDI, LBU, SB, BNE exist) [state unchanged]
+  funct3=5 (bge)                     -> unsupported instruction (only ADDI, LBU, SB, BNE exist) [state unchanged]
+  funct3=6 (bltu)                    -> unsupported instruction (only ADDI, LBU, SB, BNE exist) [state unchanged]
+  funct3=7 (bgeu)                    -> unsupported instruction (only ADDI, LBU, SB, BNE exist) [state unchanged]
+
+Test B8: step budget catches infinite loops
+  PASS infinite loop: result is BUDGET = 1
+  PASS infinite loop: steps used  = 50
+  PASS demo, budget 20: BUDGET    = 1
+  PASS demo, budget 21: DONE      = 0
+  PASS demo, budget 21: steps     = 21
+
+All checks passed
