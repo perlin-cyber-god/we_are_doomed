@@ -1,0 +1,4 @@
+doom/engine/i_timer.c: In function 'I_WaitVBL':
+doom/engine/i_timer.c:84:20: warning: unused parameter 'count' [-Wunused-parameter]
+   84 | void I_WaitVBL(int count)
+      |                ~~~~^~~~~
