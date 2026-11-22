@@ -1,0 +1,60 @@
+doom/engine/p_pspr.c: In function 'A_ReFire':
+doom/engine/p_pspr.c:336:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  336 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_CheckReload':
+doom/engine/p_pspr.c:359:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  359 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_GunFlash':
+doom/engine/p_pspr.c:442:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  442 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_Punch':
+doom/engine/p_pspr.c:461:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  461 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_Saw':
+doom/engine/p_pspr.c:495:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  495 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_FireMissile':
+doom/engine/p_pspr.c:561:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  561 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_FireBFG':
+doom/engine/p_pspr.c:574:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  574 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_FirePlasma':
+doom/engine/p_pspr.c:589:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  589 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_FirePistol':
+doom/engine/p_pspr.c:658:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  658 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_FireShotgun':
+doom/engine/p_pspr.c:680:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  680 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_FireShotgun2':
+doom/engine/p_pspr.c:707:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  707 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_Light0':
+doom/engine/p_pspr.c:770:44: warning: unused parameter 'psp' [-Wunused-parameter]
+  770 | void A_Light0 (player_t *player, pspdef_t *psp)
+      |                                  ~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_Light1':
+doom/engine/p_pspr.c:775:44: warning: unused parameter 'psp' [-Wunused-parameter]
+  775 | void A_Light1 (player_t *player, pspdef_t *psp)
+      |                                  ~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_Light2':
+doom/engine/p_pspr.c:780:44: warning: unused parameter 'psp' [-Wunused-parameter]
+  780 | void A_Light2 (player_t *player, pspdef_t *psp)
+      |                                  ~~~~~~~~~~^~~
+doom/engine/p_pspr.c: In function 'A_BFGsound':
+doom/engine/p_pspr.c:829:17: warning: unused parameter 'psp' [-Wunused-parameter]
+  829 |   pspdef_t*     psp )
+      |   ~~~~~~~~~~~~~~^~~
