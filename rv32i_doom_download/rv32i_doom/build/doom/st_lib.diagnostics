@@ -1,0 +1,4 @@
+doom/engine/st_lib.c: In function 'STlib_drawNum':
+doom/engine/st_lib.c:86:17: warning: unused parameter 'refresh' [-Wunused-parameter]
+   86 |   boolean       refresh )
+      |   ~~~~~~~~~~~~~~^~~~~~~
