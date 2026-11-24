@@ -1,0 +1,2 @@
+$ /home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/trace-reference /home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/infinite_prefix.bin 2048 20 /home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/infinite_prefix.trace 0
+reference budget-prefix=20 pc=00000000 (not guest HALT)
