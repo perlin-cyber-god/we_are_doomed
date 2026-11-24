@@ -1,0 +1,19 @@
+$ xsim tb_core_reset -runall
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Tue Nov 24 23:25:58 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_core_reset/xsim_script.tcl
+# xsim {tb_core_reset} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS RTL_CORE_RESET: canceled pending fetch/store; one store after restart
+$finish called at time : 276 ns : File "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_core_reset.sv" Line 49
+exit
+INFO: xsimkernel Simulation Memory Usage: 281040 KB (Peak: 338312 KB), Simulation CPU Usage: 850 ms
+INFO: [Common 17-206] Exiting xsim at Tue Nov 24 23:26:00 2026...
