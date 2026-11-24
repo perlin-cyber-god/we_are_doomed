@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_core_demo/xsimk -runall -simmode gui -testplusarg VCD=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/tb_core_demo.vcd -wdb tb_core_demo.wdb -simrunnum 0 -socket 34961
+Design successfully loaded
+Design Loading Memory Usage: 199056 KB (Peak: 199056 KB)
+Design Loading CPU Usage: 850 ms
+Simulation completed
+Simulation Memory Usage: 289764 KB (Peak: 338324 KB)
+Simulation CPU Usage: 850 ms
