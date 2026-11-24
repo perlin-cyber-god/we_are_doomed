@@ -1,0 +1,439 @@
+$date
+	Mon Nov 23 02:06:13 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_decode_demo $end
+$var wire 32 ! x6_value [31:0] $end
+$var wire 1 " write_enable $end
+$var wire 5 # rs2 [4:0] $end
+$var wire 5 $ rs1 [4:0] $end
+$var wire 32 % result [31:0] $end
+$var wire 5 & rd [4:0] $end
+$var wire 32 ' r2 [31:0] $end
+$var wire 32 ( r1 [31:0] $end
+$var wire 4 ) op [3:0] $end
+$var wire 4 * kind [3:0] $end
+$var wire 32 + imm [31:0] $end
+$var wire 1 , illegal $end
+$var wire 1 - can_execute $end
+$var reg 1 . clk $end
+$var reg 1 / commit $end
+$var reg 32 0 instruction [31:0] $end
+$var reg 32 1 pc [31:0] $end
+$var reg 1 2 reset $end
+$scope module dut $end
+$var wire 1 - can_execute_o $end
+$var wire 1 . clk_i $end
+$var wire 1 / commit_i $end
+$var wire 32 3 instruction_i [31:0] $end
+$var wire 32 4 pc_i [31:0] $end
+$var wire 1 2 reset_i $end
+$var wire 1 " write_enable_o $end
+$var wire 1 5 write_intent $end
+$var wire 1 6 use_rs2 $end
+$var wire 1 7 use_rs1 $end
+$var wire 32 8 rs2_value_o [31:0] $end
+$var wire 5 9 rs2_o [4:0] $end
+$var wire 32 : rs1_value_o [31:0] $end
+$var wire 5 ; rs1_o [4:0] $end
+$var wire 5 < rd_o [4:0] $end
+$var wire 2 = memory_size [1:0] $end
+$var wire 1 > ltu $end
+$var wire 1 ? lts $end
+$var wire 1 @ load_unsigned $end
+$var wire 4 A kind_o [3:0] $end
+$var wire 32 B immediate_o [31:0] $end
+$var wire 3 C imm_format [2:0] $end
+$var wire 1 , illegal_o $end
+$var wire 1 D eq $end
+$var wire 3 E branch_f3 [2:0] $end
+$var wire 1 F alu_valid $end
+$var wire 32 G alu_result_o [31:0] $end
+$var wire 4 H alu_op_o [3:0] $end
+$var wire 1 I alu_immediate $end
+$var wire 32 J alu_b [31:0] $end
+$var wire 32 K alu_a [31:0] $end
+$scope module u_alu $end
+$var wire 32 L a_i [31:0] $end
+$var wire 32 M b_i [31:0] $end
+$var wire 5 N shift_amount [4:0] $end
+$var wire 4 O op_i [3:0] $end
+$var wire 1 > less_unsigned_o $end
+$var wire 1 ? less_signed_o $end
+$var wire 1 D equal_o $end
+$var reg 1 F op_valid_o $end
+$var reg 32 P result_o [31:0] $end
+$upscope $end
+$scope module u_decode $end
+$var wire 32 Q instruction_i [31:0] $end
+$var wire 5 R rs2_o [4:0] $end
+$var wire 5 S rs1_o [4:0] $end
+$var wire 5 T rd_o [4:0] $end
+$var wire 7 U opcode [6:0] $end
+$var wire 32 V immediate_o [31:0] $end
+$var wire 1 , illegal_o $end
+$var wire 7 W funct7 [6:0] $end
+$var wire 3 X funct3 [2:0] $end
+$var reg 1 I alu_immediate_o $end
+$var reg 4 Y alu_op_o [3:0] $end
+$var reg 3 Z branch_funct3_o [2:0] $end
+$var reg 3 [ immediate_format_o [2:0] $end
+$var reg 4 \ kind_o [3:0] $end
+$var reg 1 @ load_unsigned_o $end
+$var reg 2 ] memory_size_o [1:0] $end
+$var reg 1 5 reg_write_o $end
+$var reg 1 7 uses_rs1_o $end
+$var reg 1 6 uses_rs2_o $end
+$scope module u_immediate $end
+$var wire 3 ^ format_i [2:0] $end
+$var wire 32 _ instruction_i [31:0] $end
+$var wire 32 ` immediate_o [31:0] $end
+$upscope $end
+$upscope $end
+$scope module u_rf $end
+$var wire 1 . clk_i $end
+$var wire 5 a raddr_a_i [4:0] $end
+$var wire 5 b raddr_b_i [4:0] $end
+$var wire 1 2 reset_i $end
+$var wire 5 c waddr_i [4:0] $end
+$var wire 32 d wdata_i [31:0] $end
+$var wire 1 " write_i $end
+$var wire 32 e rdata_b_o [31:0] $end
+$var wire 32 f rdata_a_o [31:0] $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 g index [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin $unm_blk_30 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 g
+b0 f
+b0 e
+b0 d
+b0 c
+b0 b
+b0 a
+b0 `
+b0 _
+b0 ^
+b0 ]
+b0 \
+b0 [
+b0 Z
+b0 Y
+b0 X
+b0 W
+b0 V
+b0 U
+b0 T
+b0 S
+b0 R
+b0 Q
+b0 P
+b0 O
+b0 N
+b0 M
+b0 L
+b0 K
+b0 J
+0I
+b0 H
+b0 G
+1F
+b0 E
+1D
+b0 C
+b0 B
+b0 A
+0@
+0?
+0>
+b0 =
+b0 <
+b0 ;
+b0 :
+b0 9
+b0 8
+07
+06
+05
+b1000000000000 4
+b0 3
+12
+b1000000000000 1
+b0 0
+0/
+0.
+0-
+1,
+b0 +
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+0"
+bx !
+$end
+#5000
+b0 !
+b100000 g
+1.
+#10000
+1"
+b1000 N
+b101000 %
+b101000 G
+b101000 P
+b101000 d
+1-
+0D
+1?
+1>
+b101000 J
+b101000 M
+b101000 +
+b101000 B
+b101000 V
+b101000 `
+15
+17
+1I
+b1 C
+b1 [
+b1 ^
+0,
+b1 *
+b1 A
+b1 \
+b10011 U
+b1 W
+b1000 #
+b1000 9
+b1000 R
+b1000 b
+b110 &
+b110 <
+b110 T
+b110 c
+b10100000000000001100010011 0
+b10100000000000001100010011 3
+b10100000000000001100010011 Q
+b10100000000000001100010011 _
+1/
+02
+0.
+#15000
+b101000 !
+1.
+#20000
+b101000 K
+b101000 L
+0"
+b11111 N
+b100111 %
+b100111 G
+b100111 P
+b100111 d
+b101000 (
+b101000 :
+b101000 f
+0?
+b11111111111111111111111111111111 J
+b11111111111111111111111111111111 M
+b11111111111111111111111111111111 +
+b11111111111111111111111111111111 B
+b11111111111111111111111111111111 V
+b11111111111111111111111111111111 `
+b1111111 W
+b110 $
+b110 ;
+b110 S
+b110 a
+b11111 #
+b11111 9
+b11111 R
+b11111 b
+15
+17
+1I
+b1 C
+b1 [
+b1 ^
+0,
+b1 *
+b1 A
+b1 \
+b11111111111100110000001100010011 0
+b11111111111100110000001100010011 3
+b11111111111100110000001100010011 Q
+b11111111111100110000001100010011 _
+0/
+0.
+#25000
+1.
+#30000
+0.
+#35000
+1.
+#40000
+1"
+1/
+0.
+#45000
+15
+17
+1I
+b1 C
+b1 [
+b1 ^
+0,
+b1 *
+b1 A
+b1 \
+b100110 %
+b100110 G
+b100110 P
+b100110 d
+b100111 K
+b100111 L
+b100111 (
+b100111 :
+b100111 f
+b100111 !
+1.
+#50000
+0"
+0-
+1D
+b0 K
+b0 L
+b0 N
+b0 %
+b0 G
+b0 P
+b0 d
+b10 =
+b10 ]
+b0 (
+b0 :
+b0 f
+0>
+b0 J
+b0 M
+b0 +
+b0 B
+b0 V
+b0 `
+b11 U
+b10 X
+b0 W
+b0 $
+b0 ;
+b0 S
+b0 a
+b0 #
+b0 9
+b0 R
+b0 b
+15
+17
+0I
+b1 C
+b1 [
+b1 ^
+0,
+b10 *
+b10 A
+b10 \
+b10001100000011 0
+b10001100000011 3
+b10001100000011 Q
+b10001100000011 _
+0.
+#55000
+1.
+#60000
+b1110011 U
+b0 X
+b0 &
+b0 <
+b0 T
+b0 c
+05
+07
+b0 =
+b0 ]
+b0 C
+b0 [
+b0 ^
+0,
+b1010 *
+b1010 A
+b1010 \
+b1110011 0
+b1110011 3
+b1110011 Q
+b1110011 _
+0.
+#65000
+1.
+#70000
+b100111 K
+b100111 L
+b111 N
+b1001110 %
+b1001110 G
+b1001110 P
+b1001110 d
+1D
+0?
+0>
+b100111 J
+b100111 M
+b100111 (
+b100111 :
+b100111 f
+b100111 '
+b100111 8
+b100111 e
+b110011 U
+b1 W
+b110 $
+b110 ;
+b110 S
+b110 a
+b110 #
+b110 9
+b110 R
+b110 b
+b110 &
+b110 <
+b110 T
+b110 c
+1,
+b0 *
+b0 A
+b0 \
+b10011000110000001100110011 0
+b10011000110000001100110011 3
+b10011000110000001100110011 Q
+b10011000110000001100110011 _
+0.
+#75000
+1.
+#76000
+0/
