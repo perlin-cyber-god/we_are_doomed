@@ -1,0 +1,1 @@
+xsim {tb_core_reset2} -testplusarg IMAGE=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/reset_pc_misaligned.mem -testplusarg TRACE=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/reset_pc_misaligned.trace -testplusarg RAM_BYTES=2048 -testplusarg STALL=1 -autoloadwcfg -runall
