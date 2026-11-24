@@ -1,0 +1,2 @@
+$ /workspace/scratch/6bae74b1c81c/toolchains/rtl-step1-tools/local/usr/bin/vvp /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/tb_core.vvp +IMAGE=/workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/partial_lh_fault.mem +TRACE=/workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/partial_lh_fault.trace +RAM_BYTES=2047 +STALL=1
+PASS RTL_CORE retired=2 cycles=22 transactions=4 stores=0 checks=2269 stall=1 TRAP=5
