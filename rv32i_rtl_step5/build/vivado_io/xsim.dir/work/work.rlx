@@ -1,0 +1,12 @@
+0.7
+2020.2
+Nov 14 2025
+12:36:23
+/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_alu.sv,1795553652,systemVerilog,,/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_regfile.sv,,rv32_alu,,,,,,,,
+/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_core.sv,1795553652,systemVerilog,,/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_mmio.sv,,rv32_core,,,,,,,,
+/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_decode.sv,1795553652,systemVerilog,,/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_core.sv,,rv32_decode,,,,,,,,
+/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_immediate.sv,1795553652,systemVerilog,,/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_decode.sv,,rv32_immediate,,,,,,,,
+/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_mmio.sv,1795553654,systemVerilog,,/home/perlin/Documents/DOOMed/rv32i_rtl_step5/tb/tb_mmio_unit.sv,,rv32_mmio,,,,,,,,
+/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_regfile.sv,1795553652,systemVerilog,,/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_immediate.sv,,rv32_regfile,,,,,,,,
+/home/perlin/Documents/DOOMed/rv32i_rtl_step5/tb/tb_mmio_cpu.sv,1795553856,systemVerilog,,,,tb_mmio_cpu;tb_mmio_cpu_wait,,,,,,,,
+/home/perlin/Documents/DOOMed/rv32i_rtl_step5/tb/tb_mmio_unit.sv,1795553774,systemVerilog,,/home/perlin/Documents/DOOMed/rv32i_rtl_step5/tb/tb_mmio_cpu.sv,,tb_mmio_unit;tb_mmio_unit_wait,,,,,,,,
