@@ -1,0 +1,6 @@
+jalr-low-bit: REJECTED (expected)
+FATAL: tb/tb_core.sv:161: unexpected trap 1; expected R
+       Time: 86000 Scope: tb_core
+ignore-memory-wait: REJECTED (expected)
+FATAL: tb/tb_core.sv:55: request changed before completion
+       Time: 35000 Scope: tb_core
