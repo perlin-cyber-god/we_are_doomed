@@ -1,0 +1,1 @@
+"work.tb_mmio_cpu_wait" -s "tb_mmio_cpu_wait" -debug "typical" 
