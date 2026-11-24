@@ -1,0 +1,2 @@
+$ /workspace/scratch/6bae74b1c81c/toolchains/rtl-step1-tools/local/usr/bin/vvp /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/tb_core.vvp +IMAGE=/workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/sh_misaligned.mem +TRACE=/workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/sh_misaligned.trace +RAM_BYTES=2048 +STALL=1
+PASS RTL_CORE retired=1 cycles=10 transactions=2 stores=0 checks=2226 stall=1 TRAP=6
