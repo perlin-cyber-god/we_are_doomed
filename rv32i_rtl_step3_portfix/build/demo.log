@@ -1,0 +1,20 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Tue Nov 24 22:56:05 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/rtl_step1_demo/xsim_script.tcl
+# xsim {rtl_step1_demo} -testplusarg VECTORS=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/vectors/alu_vectors.txt -testplusarg VCD=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/demo.vcd -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+DEMO t=16000 x6=40 ALU=39
+DEMO t=46000 x6=39 ALU=38 (combinational feedback)
+PASS RTL_DEMO: clocked write 40->39; disabled write holds state
+$finish called at time : 66 ns : File "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_demo.sv" Line 55
+exit
+INFO: xsimkernel Simulation Memory Usage: 289684 KB (Peak: 338244 KB), Simulation CPU Usage: 860 ms
+INFO: [Common 17-206] Exiting xsim at Tue Nov 24 22:56:07 2026...
