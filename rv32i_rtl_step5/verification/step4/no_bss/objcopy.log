@@ -1,0 +1,1 @@
+$ /workspace/scratch/6bae74b1c81c/toolchains/rv32i-local/usr/bin/riscv64-unknown-elf-objcopy -O binary /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/no_bss/guest.elf /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/no_bss/guest.bin
