@@ -1,0 +1,224 @@
+{
+  "backend": "vivado",
+  "cpu_runs": 18,
+  "unit_runs": 2,
+  "checks": 483693,
+  "results": [
+    {
+      "name": "O0-wait0",
+      "checks": 72071,
+      "signature": [
+        1146048069,
+        26,
+        2023,
+        146,
+        5616,
+        5682,
+        66,
+        1
+      ],
+      "retired": 1325,
+      "cycles": 5953,
+      "tx": 26,
+      "io": 55,
+      "wait": 0
+    },
+    {
+      "name": "O0-wait3",
+      "checks": 73583,
+      "signature": [
+        1146048069,
+        26,
+        2023,
+        252,
+        10644,
+        10763,
+        119,
+        1
+      ],
+      "retired": 1361,
+      "cycles": 11257,
+      "tx": 26,
+      "io": 64,
+      "wait": 3
+    },
+    {
+      "name": "O2-wait0",
+      "checks": 51827,
+      "signature": [
+        1146048069,
+        26,
+        2023,
+        158,
+        3425,
+        3547,
+        122,
+        1
+      ],
+      "retired": 843,
+      "cycles": 3703,
+      "tx": 26,
+      "io": 56,
+      "wait": 0
+    },
+    {
+      "name": "O2-wait3",
+      "checks": 54389,
+      "signature": [
+        1146048069,
+        26,
+        2023,
+        281,
+        6748,
+        6857,
+        109,
+        1
+      ],
+      "retired": 904,
+      "cycles": 7138,
+      "tx": 26,
+      "io": 80,
+      "wait": 3
+    },
+    {
+      "name": "tx_word-wait3",
+      "checks": 16505,
+      "signature": null,
+      "retired": 2,
+      "cycles": 21,
+      "tx": 0,
+      "io": 1,
+      "wait": 3
+    },
+    {
+      "name": "tx_read-wait3",
+      "checks": 16505,
+      "signature": null,
+      "retired": 2,
+      "cycles": 21,
+      "tx": 0,
+      "io": 1,
+      "wait": 3
+    },
+    {
+      "name": "status_write-wait3",
+      "checks": 16505,
+      "signature": null,
+      "retired": 2,
+      "cycles": 21,
+      "tx": 0,
+      "io": 1,
+      "wait": 3
+    },
+    {
+      "name": "timer_half-wait3",
+      "checks": 16505,
+      "signature": null,
+      "retired": 2,
+      "cycles": 21,
+      "tx": 0,
+      "io": 1,
+      "wait": 3
+    },
+    {
+      "name": "timer_write-wait3",
+      "checks": 16505,
+      "signature": null,
+      "retired": 2,
+      "cycles": 21,
+      "tx": 0,
+      "io": 1,
+      "wait": 3
+    },
+    {
+      "name": "unknown_load-wait3",
+      "checks": 16505,
+      "signature": null,
+      "retired": 2,
+      "cycles": 21,
+      "tx": 0,
+      "io": 1,
+      "wait": 3
+    },
+    {
+      "name": "unknown_store-wait3",
+      "checks": 16505,
+      "signature": null,
+      "retired": 2,
+      "cycles": 21,
+      "tx": 0,
+      "io": 1,
+      "wait": 3
+    },
+    {
+      "name": "fetch_io-wait3",
+      "checks": 16547,
+      "signature": null,
+      "retired": 3,
+      "cycles": 22,
+      "tx": 0,
+      "io": 1,
+      "wait": 3
+    },
+    {
+      "name": "misaligned_store-wait3",
+      "checks": 16505,
+      "signature": null,
+      "retired": 2,
+      "cycles": 17,
+      "tx": 0,
+      "io": 0,
+      "wait": 3
+    },
+    {
+      "name": "load_x0_bad-wait3",
+      "checks": 16505,
+      "signature": null,
+      "retired": 2,
+      "cycles": 21,
+      "tx": 0,
+      "io": 1,
+      "wait": 3
+    },
+    {
+      "name": "load_x0_timer-wait3",
+      "checks": 16547,
+      "signature": null,
+      "retired": 3,
+      "cycles": 29,
+      "tx": 0,
+      "io": 1,
+      "wait": 3
+    },
+    {
+      "name": "ram_limit-wait3",
+      "checks": 16463,
+      "signature": null,
+      "retired": 1,
+      "cycles": 14,
+      "tx": 0,
+      "io": 1,
+      "wait": 3
+    },
+    {
+      "name": "high_address-wait3",
+      "checks": 16463,
+      "signature": null,
+      "retired": 1,
+      "cycles": 14,
+      "tx": 0,
+      "io": 1,
+      "wait": 3
+    },
+    {
+      "name": "budget_prefix-wait3",
+      "checks": 17258,
+      "signature": null,
+      "retired": 20,
+      "cycles": 135,
+      "tx": 0,
+      "io": 0,
+      "wait": 3
+    }
+  ]
+}
