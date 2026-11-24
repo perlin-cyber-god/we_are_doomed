@@ -1,0 +1,2 @@
+$ /workspace/scratch/6bae74b1c81c/toolchains/rtl-step1-tools/local/usr/bin/vvp /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/tb_core_reset.vvp
+PASS RTL_CORE_RESET: canceled pending fetch/store; one store after restart
