@@ -1,0 +1,2 @@
+$ /home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/mmio-reference /home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/unknown_load-wait3.load.bin /home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/unknown_load-wait3.events 10000 /home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/unknown_load-wait3.expected.trace
+PASS C_MMIO_REPLAY events=1 terminal=trap PC=00000008
