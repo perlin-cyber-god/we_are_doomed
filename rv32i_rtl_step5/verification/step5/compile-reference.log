@@ -1,0 +1,1 @@
+$ gcc -std=c11 -Wall -Wextra -Wpedantic -Werror -Wconversion -Wshadow -O2 -Ireference reference/rv32i.c scripts/mmio_reference.c -o /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step5/build/io/mmio-reference
