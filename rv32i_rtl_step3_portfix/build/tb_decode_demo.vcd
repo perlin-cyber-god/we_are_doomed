@@ -1,0 +1,349 @@
+$date
+   Tue Nov 24 22:56:18 2026
+$end
+
+$version
+  2025.2
+  $dumpfile (path) 
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_decode_demo $end
+$var reg 1 ! clk $end
+$var reg 1 " reset $end
+$var reg 1 # commit $end
+$var reg 1 $ illegal $end
+$var reg 1 % can_execute $end
+$var reg 1 & write_enable $end
+$var reg 32 ' instruction [31:0] $end
+$var reg 32 ( pc [31:0] $end
+$var reg 32 ) imm [31:0] $end
+$var reg 32 * r1 [31:0] $end
+$var reg 32 + r2 [31:0] $end
+$var reg 32 , result [31:0] $end
+$var reg 5 - rs1 [4:0] $end
+$var reg 5 . rs2 [4:0] $end
+$var reg 5 / rd [4:0] $end
+$var reg 4 0 kind [3:0] $end
+$var reg 4 1 op [3:0] $end
+$var wire 32 2 x6_value [31:0] $end
+$scope module dut $end
+$var wire 1 3 clk_i $end
+$var wire 1 4 reset_i $end
+$var wire 1 5 commit_i $end
+$var wire 32 6 instruction_i [31:0] $end
+$var wire 32 7 pc_i [31:0] $end
+$var reg 4 0 kind_o [3:0] $end
+$var reg 4 1 alu_op_o [3:0] $end
+$var reg 1 $ illegal_o $end
+$var reg 1 % can_execute_o $end
+$var reg 1 & write_enable_o $end
+$var reg 5 - rs1_o [4:0] $end
+$var reg 5 . rs2_o [4:0] $end
+$var reg 5 / rd_o [4:0] $end
+$var reg 32 ) immediate_o [31:0] $end
+$var reg 32 * rs1_value_o [31:0] $end
+$var reg 32 + rs2_value_o [31:0] $end
+$var reg 32 , alu_result_o [31:0] $end
+$var reg 3 8 imm_format [2:0] $end
+$var reg 3 9 branch_f3 [2:0] $end
+$var reg 1 : use_rs1 $end
+$var reg 1 ; use_rs2 $end
+$var reg 1 < write_intent $end
+$var reg 1 = alu_immediate $end
+$var reg 1 > load_unsigned $end
+$var reg 2 ? memory_size [1:0] $end
+$var reg 32 @ alu_a [31:0] $end
+$var reg 32 A alu_b [31:0] $end
+$var reg 1 B alu_valid $end
+$var reg 1 C eq $end
+$var reg 1 D lts $end
+$var reg 1 E ltu $end
+$scope module u_decode $end
+$var wire 32 6 instruction_i [31:0] $end
+$var reg 4 0 kind_o [3:0] $end
+$var reg 1 $ illegal_o $end
+$var reg 5 - rs1_o [4:0] $end
+$var reg 5 . rs2_o [4:0] $end
+$var reg 5 / rd_o [4:0] $end
+$var reg 32 ) immediate_o [31:0] $end
+$var reg 3 8 immediate_format_o [2:0] $end
+$var reg 1 : uses_rs1_o $end
+$var reg 1 ; uses_rs2_o $end
+$var reg 1 < reg_write_o $end
+$var reg 1 = alu_immediate_o $end
+$var reg 4 1 alu_op_o [3:0] $end
+$var reg 2 ? memory_size_o [1:0] $end
+$var reg 1 > load_unsigned_o $end
+$var reg 3 9 branch_funct3_o [2:0] $end
+$var reg 7 F opcode [6:0] $end
+$var reg 7 G funct7 [6:0] $end
+$var reg 3 H funct3 [2:0] $end
+$var reg 1 I xilinx_isim_temp_2_ln12_blkAssignCaching $end
+$var reg 1 J xilinx_isim_temp_1_ln13_blkAssignCaching $end
+$var reg 1 K xilinx_isim_temp_0_ln12_blkAssignCaching $end
+$scope module u_immediate $end
+$var wire 32 6 instruction_i [31:0] $end
+$var wire 3 8 format_i [2:0] $end
+$var reg 32 ) immediate_o [31:0] $end
+$upscope $end
+$upscope $end
+$scope module u_rf $end
+$var wire 1 3 clk_i $end
+$var wire 1 4 reset_i $end
+$var wire 1 & write_i $end
+$var wire 5 / waddr_i [4:0] $end
+$var wire 32 , wdata_i [31:0] $end
+$var wire 5 - raddr_a_i [4:0] $end
+$var wire 5 . raddr_b_i [4:0] $end
+$var reg 32 * rdata_a_o [31:0] $end
+$var reg 32 + rdata_b_o [31:0] $end
+$scope begin Block23_3 $end
+$var reg 32 L index [31:0] $end
+$upscope $end
+$upscope $end
+$scope module u_alu $end
+$var wire 32 M a_i [31:0] $end
+$var wire 32 N b_i [31:0] $end
+$var wire 4 1 op_i [3:0] $end
+$var reg 32 , result_o [31:0] $end
+$var reg 1 B op_valid_o $end
+$var reg 1 C equal_o $end
+$var reg 1 D less_signed_o $end
+$var reg 1 E less_unsigned_o $end
+$var reg 5 O shift_amount [4:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+1"
+0#
+1$
+0%
+0&
+b0 '
+b1000000000000 (
+b0 )
+b0 *
+b0 +
+b0 ,
+b0 -
+b0 .
+b0 /
+b0 0
+b0 1
+bx 2
+03
+14
+05
+b0 6
+b1000000000000 7
+b0 8
+b0 9
+0:
+0;
+0<
+0=
+0>
+b0 ?
+b0 @
+b0 A
+1B
+1C
+0D
+0E
+b0 F
+b0 G
+b0 H
+0I
+0J
+0K
+b0 L
+b0 M
+b0 N
+b0 O
+$end
+
+#5000
+1!
+b0 2
+13
+
+#10000
+0!
+0"
+1#
+0$
+1%
+1&
+b10100000000000001100010011 '
+b101000 )
+b101000 ,
+b1000 .
+b110 /
+b1 0
+03
+04
+15
+b10100000000000001100010011 6
+b1 8
+1:
+1<
+1=
+b101000 A
+0C
+1D
+1E
+b10011 F
+b1 G
+1I
+1J
+b101000 N
+b1000 O
+
+#15000
+1!
+b101000 2
+13
+
+#20000
+0!
+0#
+0&
+b11111111111100110000001100010011 '
+b11111111111111111111111111111111 )
+b101000 *
+b100111 ,
+b110 -
+b11111 .
+b1 0
+03
+05
+b11111111111100110000001100010011 6
+b1 8
+1=
+b101000 @
+b11111111111111111111111111111111 A
+0D
+b1111111 G
+1I
+1J
+b101000 M
+b11111111111111111111111111111111 N
+b11111 O
+
+#25000
+1!
+13
+
+#30000
+0!
+03
+
+#35000
+1!
+13
+
+#40000
+0!
+1#
+1&
+03
+15
+
+#45000
+1!
+b100111 *
+b100110 ,
+b100111 2
+13
+b100111 @
+b100111 M
+
+#50000
+0!
+0%
+0&
+b10001100000011 '
+b0 )
+b0 *
+b0 ,
+b0 -
+b0 .
+b10 0
+03
+b10001100000011 6
+b1 8
+0=
+b10 ?
+b0 @
+b0 A
+1C
+0E
+b11 F
+b0 G
+b10 H
+1I
+1J
+b0 M
+b0 N
+b0 O
+
+#55000
+1!
+13
+
+#60000
+0!
+b1110011 '
+b0 /
+b1010 0
+03
+b1110011 6
+b0 8
+0:
+0<
+b0 ?
+b1110011 F
+b0 H
+0I
+0J
+
+#65000
+1!
+13
+
+#70000
+0!
+1$
+b10011000110000001100110011 '
+b100111 *
+b100111 +
+b1001110 ,
+b110 -
+b110 .
+b110 /
+b0 0
+03
+b10011000110000001100110011 6
+b100111 @
+b100111 A
+b110011 F
+b1 G
+b100111 M
+b100111 N
+b111 O
+
+#75000
+1!
+13
+
+#76000
+0#
