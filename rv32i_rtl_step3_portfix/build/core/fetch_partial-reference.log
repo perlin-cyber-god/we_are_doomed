@@ -1,0 +1,2 @@
+$ /home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/trace-reference /home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/fetch_partial.bin 2047 1000 /home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/fetch_partial.trace 2044
+reference retired=0 trap=2 pc=000007fc
