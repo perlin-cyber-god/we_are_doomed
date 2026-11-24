@@ -1,0 +1,4 @@
+VCD info: dumpfile /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step2/build/tb_decode_demo.vcd opened for output.
+DECODE DEMO word=02800313 -> ADDI x6,x0,40 -> x6=40
+DECODE DEMO word=fff30313 -> ADDI x6,x6,-1 -> x6=39
+PASS RTL_DECODE_DEMO: instruction bits drive ALU/registers; blocked words cannot write
