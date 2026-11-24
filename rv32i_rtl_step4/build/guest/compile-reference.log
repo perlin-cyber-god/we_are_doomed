@@ -1,0 +1,1 @@
+$ gcc -std=c11 -Wall -Wextra -Wpedantic -Werror -Wconversion -Wshadow -O2 -Ireference reference/rv32i.c scripts/trace_guest.c -o /home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/trace-guest
