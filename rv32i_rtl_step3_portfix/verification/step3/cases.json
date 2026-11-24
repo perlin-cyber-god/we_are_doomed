@@ -1,0 +1,254 @@
+[
+  {
+    "name": "demo",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 9
+  },
+  {
+    "name": "loop",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 9
+  },
+  {
+    "name": "arithmetic",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 9
+  },
+  {
+    "name": "random_arithmetic",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 9
+  },
+  {
+    "name": "memory_widths",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 9
+  },
+  {
+    "name": "branches",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 9
+  },
+  {
+    "name": "nested_calls",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 9
+  },
+  {
+    "name": "jalr_alias",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 9
+  },
+  {
+    "name": "fences",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 9
+  },
+  {
+    "name": "mul",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 3
+  },
+  {
+    "name": "shift_reserved",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 3
+  },
+  {
+    "name": "csr",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 3
+  },
+  {
+    "name": "fence_i",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 3
+  },
+  {
+    "name": "system_reserved",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 3
+  },
+  {
+    "name": "zero_word",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 3
+  },
+  {
+    "name": "ecall",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 8
+  },
+  {
+    "name": "ebreak",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 9
+  },
+  {
+    "name": "lw_misaligned",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 4
+  },
+  {
+    "name": "lh_misaligned",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 4
+  },
+  {
+    "name": "sw_misaligned",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 6
+  },
+  {
+    "name": "sh_misaligned",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 6
+  },
+  {
+    "name": "load_access",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 5
+  },
+  {
+    "name": "load_x0_access",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 5
+  },
+  {
+    "name": "store_access",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 7
+  },
+  {
+    "name": "fetch_access",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 2
+  },
+  {
+    "name": "jal_misaligned",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 1
+  },
+  {
+    "name": "jalr_misaligned",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 1
+  },
+  {
+    "name": "branch_misaligned",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 1
+  },
+  {
+    "name": "branch_untaken_misaligned",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 9
+  },
+  {
+    "name": "partial_sh_fault",
+    "ram": 2047,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 7
+  },
+  {
+    "name": "partial_lh_fault",
+    "ram": 2047,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 5
+  },
+  {
+    "name": "partial_sb_ok",
+    "ram": 2047,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 9
+  },
+  {
+    "name": "partial_lb_ok",
+    "ram": 2047,
+    "budget": 1000,
+    "reset": 0,
+    "expect": 9
+  },
+  {
+    "name": "reset_pc_misaligned",
+    "ram": 2048,
+    "budget": 1000,
+    "reset": 2,
+    "expect": 1
+  },
+  {
+    "name": "fetch_partial",
+    "ram": 2047,
+    "budget": 1000,
+    "reset": 2044,
+    "expect": 2
+  },
+  {
+    "name": "infinite_prefix",
+    "ram": 2048,
+    "budget": 20,
+    "reset": 0,
+    "expect": "budget"
+  }
+]
