@@ -1,0 +1,1 @@
+xsim {tb_core} -testplusarg IMAGE=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/infinite_prefix.mem -testplusarg TRACE=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/infinite_prefix.trace -testplusarg RAM_BYTES=2048 -testplusarg STALL=1 -autoloadwcfg -runall
