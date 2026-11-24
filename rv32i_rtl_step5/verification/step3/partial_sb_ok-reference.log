@@ -1,0 +1,2 @@
+$ /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/trace-reference /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/partial_sb_ok.bin 2047 1000 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/partial_sb_ok.trace 0
+reference retired=3 trap=9 pc=0000000c
