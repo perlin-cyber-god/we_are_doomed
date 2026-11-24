@@ -1,0 +1,7 @@
+$ /workspace/scratch/6bae74b1c81c/toolchains/rtl-step1-tools/local/usr/bin/vvp /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3_portfix/build/core/tb_core_demo.vvp +VCD=/workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3_portfix/build/core/tb_core_demo.vcd
+VCD info: dumpfile /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3_portfix/build/core/tb_core_demo.vcd opened for output.
+CORE DEMO pc=00000000 word=20000293 next=00000004 x6=0 RAM[512]=40 state=0
+CORE DEMO pc=00000004 word=0002a303 next=00000008 x6=40 RAM[512]=40 state=0
+CORE DEMO pc=00000008 word=fff30313 next=0000000c x6=39 RAM[512]=40 state=0
+CORE DEMO pc=0000000c word=0062a023 next=00000010 x6=39 RAM[512]=39 state=0
+PASS RTL_CORE_DEMO: fetched 4 instructions; x6=39 RAM[512]=39; explicit EBREAK trap
