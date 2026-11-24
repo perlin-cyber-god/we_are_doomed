@@ -1,0 +1,2 @@
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/scripts/make_core_programs.py
+Generated 36 bounded programs (including expected faults); seed=0x32a3
