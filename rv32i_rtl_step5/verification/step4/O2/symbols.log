@@ -1,0 +1,18 @@
+$ /workspace/scratch/6bae74b1c81c/toolchains/rv32i-local/usr/bin/riscv64-unknown-elf-nm -n /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.elf
+00000000 T _start
+00000060 T _guest_stop
+00000068 T inner
+000000b0 T outer
+000000dc T guest_main
+000001d0 D __data_start
+000001d0 D initialized_global
+000001d4 B __bss_start
+000001d4 D __data_end
+000001d4 B nested_count
+000001d8 B zero_global
+000001dc B values
+000001f4 B __bss_end
+000009d0 A __global_pointer$
+00002000 B __signature_start
+00003000 B __stack_bottom
+00004000 B __stack_top
