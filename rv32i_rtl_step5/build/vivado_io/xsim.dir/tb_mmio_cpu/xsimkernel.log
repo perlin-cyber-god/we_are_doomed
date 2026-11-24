@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_mmio_cpu/xsimk -runall -simmode gui -testplusarg IMAGE=/home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/O2-wait0.mem -testplusarg TRACE=/home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/O2-wait0.actual.trace -testplusarg EVENTS=/home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/O2-wait0.events -testplusarg CONSOLE=/home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/O2-wait0.console -testplusarg MAX_STEPS=10000 -wdb tb_mmio_cpu.wdb -simrunnum 0 -socket 48157
+Design successfully loaded
+Design Loading Memory Usage: 199144 KB (Peak: 199144 KB)
+Design Loading CPU Usage: 850 ms
+Simulation completed
+Simulation Memory Usage: 289852 KB (Peak: 338412 KB)
+Simulation CPU Usage: 900 ms
