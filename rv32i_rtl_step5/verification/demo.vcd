@@ -1,0 +1,129 @@
+$date
+	Sun Nov 22 23:27:38 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_demo $end
+$var wire 32 ! x6_value [31:0] $end
+$var wire 32 " x0_value [31:0] $end
+$var wire 1 # valid $end
+$var wire 1 $ ltu $end
+$var wire 1 % lts $end
+$var wire 1 & eq $end
+$var wire 32 ' alu_result [31:0] $end
+$var reg 1 ( clk $end
+$var reg 1 ) reset $end
+$var reg 32 * write_data [31:0] $end
+$var reg 1 + write_enable $end
+$scope module u_alu $end
+$var wire 32 , b_i [31:0] $end
+$var wire 4 - op_i [3:0] $end
+$var wire 5 . shift_amount [4:0] $end
+$var wire 1 $ less_unsigned_o $end
+$var wire 1 % less_signed_o $end
+$var wire 1 & equal_o $end
+$var wire 32 / a_i [31:0] $end
+$var reg 1 # op_valid_o $end
+$var reg 32 0 result_o [31:0] $end
+$upscope $end
+$scope module u_rf $end
+$var wire 1 ( clk_i $end
+$var wire 5 1 raddr_a_i [4:0] $end
+$var wire 5 2 raddr_b_i [4:0] $end
+$var wire 1 ) reset_i $end
+$var wire 5 3 waddr_i [4:0] $end
+$var wire 32 4 wdata_i [31:0] $end
+$var wire 1 + write_i $end
+$var wire 32 5 rdata_b_o [31:0] $end
+$var wire 32 6 rdata_a_o [31:0] $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 7 index [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 7
+bx 6
+b0 5
+b0 4
+b110 3
+b0 2
+b110 1
+bx 0
+bx /
+b11111 .
+b0 -
+b11111111111111111111111111111111 ,
+0+
+b0 *
+1)
+0(
+bx '
+x&
+x%
+x$
+1#
+b0 "
+bx !
+$end
+#5000
+b11111111111111111111111111111111 '
+b11111111111111111111111111111111 0
+1$
+0%
+0&
+b0 !
+b0 /
+b0 6
+b100000 7
+1(
+#10000
+b101000 *
+b101000 4
+1+
+0)
+0(
+#15000
+b100111 '
+b100111 0
+b101000 !
+b101000 /
+b101000 6
+1(
+#20000
+0+
+0(
+#25000
+1(
+#30000
+0(
+#35000
+1(
+#40000
+1+
+b100111 *
+b100111 4
+0(
+#45000
+b100110 '
+b100110 0
+b100111 !
+b100111 /
+b100111 6
+1(
+#50000
+0+
+0(
+#55000
+1(
+#60000
+0(
+#65000
+1(
+#66000
