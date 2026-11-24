@@ -1,0 +1,1 @@
+$ riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -mno-relax -c guest/start.S -o /home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/O2/start.o
