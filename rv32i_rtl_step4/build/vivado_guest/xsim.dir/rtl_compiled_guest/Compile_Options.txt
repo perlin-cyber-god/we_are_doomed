@@ -1,0 +1,1 @@
+"work.tb_compiled_guest" -s "rtl_compiled_guest" -debug "typical" 
