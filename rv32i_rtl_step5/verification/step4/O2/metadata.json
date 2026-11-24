@@ -1,0 +1,24 @@
+{
+  "symbols": {
+    "_start": 0,
+    "_guest_stop": 96,
+    "inner": 104,
+    "outer": 176,
+    "guest_main": 220,
+    "__data_start": 464,
+    "initialized_global": 464,
+    "__bss_start": 468,
+    "__data_end": 468,
+    "nested_count": 468,
+    "zero_global": 472,
+    "values": 476,
+    "__bss_end": 500,
+    "__global_pointer$": 2512,
+    "__signature_start": 8192,
+    "__stack_bottom": 12288,
+    "__stack_top": 16384
+  },
+  "code_words": 116,
+  "opt": "-O2",
+  "skip_bss": false
+}
