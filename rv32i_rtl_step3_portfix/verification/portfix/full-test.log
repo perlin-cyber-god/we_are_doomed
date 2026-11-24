@@ -1,0 +1,60 @@
+PASS 23783 decoder vectors; all 40 base instruction names covered
+PASS 7344 deterministic ALU vectors verified
+VCD info: dumpfile /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3_portfix/build/demo.vcd opened for output.
+DEMO t=16000 x6=40 ALU=39
+DEMO t=46000 x6=39 ALU=38 (combinational feedback)
+PASS RTL_DEMO: clocked write 40->39; disabled write holds state
+VCD info: dumpfile /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3_portfix/build/test.vcd opened for output.
+DEMO before write: x6=40 ALU(40 + -1)=39
+DEMO after rising-edge write: x6=39
+NOTE demo controls are driven by the testbench; no instruction decoder exists yet.
+PASS register file: both read ports, all addresses, clocked writes, enable, x0, reset priority
+PASS ALU: 7344 vectors, all operations, signedness, wrapping, shifts, invalid controls
+PASS RTL_STEP1 checks=18563 failures=0
+PASS bounded RTL milestone; no full CPU, guest program or GDS has been run.
+PASS C reference legality cross-check: 23783 words
+VCD info: dumpfile /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3_portfix/build/tb_decode_demo.vcd opened for output.
+DECODE DEMO word=02800313 -> ADDI x6,x0,40 -> x6=40
+DECODE DEMO word=fff30313 -> ADDI x6,x6,-1 -> x6=39
+PASS RTL_DECODE_DEMO: instruction bits drive ALU/registers; blocked words cannot write
+PASS RTL_DECODE rows=23783 failures=0
+PASS RTL_DECODE_SLICE issued=36 checks=1252 failures=0
+PASS RTL Step 2: decoder and externally driven arithmetic slice; no instruction fetch or full CPU yet.
+PASS demo: zero-wait and delayed memory
+PASS loop: zero-wait and delayed memory
+PASS arithmetic: zero-wait and delayed memory
+PASS random_arithmetic: zero-wait and delayed memory
+PASS memory_widths: zero-wait and delayed memory
+PASS branches: zero-wait and delayed memory
+PASS nested_calls: zero-wait and delayed memory
+PASS jalr_alias: zero-wait and delayed memory
+PASS fences: zero-wait and delayed memory
+PASS mul: zero-wait and delayed memory
+PASS shift_reserved: zero-wait and delayed memory
+PASS csr: zero-wait and delayed memory
+PASS fence_i: zero-wait and delayed memory
+PASS system_reserved: zero-wait and delayed memory
+PASS zero_word: zero-wait and delayed memory
+PASS ecall: zero-wait and delayed memory
+PASS ebreak: zero-wait and delayed memory
+PASS lw_misaligned: zero-wait and delayed memory
+PASS lh_misaligned: zero-wait and delayed memory
+PASS sw_misaligned: zero-wait and delayed memory
+PASS sh_misaligned: zero-wait and delayed memory
+PASS load_access: zero-wait and delayed memory
+PASS load_x0_access: zero-wait and delayed memory
+PASS store_access: zero-wait and delayed memory
+PASS fetch_access: zero-wait and delayed memory
+PASS jal_misaligned: zero-wait and delayed memory
+PASS jalr_misaligned: zero-wait and delayed memory
+PASS branch_misaligned: zero-wait and delayed memory
+PASS branch_untaken_misaligned: zero-wait and delayed memory
+PASS partial_sh_fault: zero-wait and delayed memory
+PASS partial_lh_fault: zero-wait and delayed memory
+PASS partial_sb_ok: zero-wait and delayed memory
+PASS partial_lb_ok: zero-wait and delayed memory
+PASS reset_pc_misaligned: zero-wait and delayed memory
+PASS fetch_partial: zero-wait and delayed memory
+PASS infinite_prefix: zero-wait and delayed memory
+PASS RTL Step 3: 72 differential runs; 201438 checks; all 40 base instruction names exercised (ECALL/EBREAK trap).
+PASS pending fetch/store reset cancellation; tiny self-fetching demo. No GUI, Doom or synthesis run.
