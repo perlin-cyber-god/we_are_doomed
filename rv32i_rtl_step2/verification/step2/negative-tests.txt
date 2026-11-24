@@ -1,0 +1,5 @@
+PASS checker rejects branch-bit11 mutant (exit 1)
+FATAL: /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step2/tb/tb_decode.sv:32: decode row=1228 word=800000e3 controls=0860018001 expected=0860018001 imm=fffff000 expected=fffff800
+
+PASS checker rejects blocked-write mutant (exit 1)
+FATAL: /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step2/tb/tb_decode_slice.sv:37: slice word=00002303 write-enable gating
