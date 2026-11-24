@@ -1,0 +1,4 @@
+Temporary build-only mutant: timer increments by2 instead of1.
+Expected rejection:
+FATAL: tb/tb_mmio_unit.sv:39: timer increment/wrap/reset mismatch
+       Time: 26000 Scope: tb_mmio_unit
