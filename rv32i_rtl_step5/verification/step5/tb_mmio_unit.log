@@ -1,0 +1,2 @@
+$ /workspace/scratch/6bae74b1c81c/toolchains/rtl-step1-tools/local/usr/bin/vvp /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step5/build/io/tb_mmio_unit.vvp
+PASS MMIO_UNIT wait=0 checks=64 outputs=2 wraps=1
