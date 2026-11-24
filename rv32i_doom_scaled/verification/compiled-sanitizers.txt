@@ -1,0 +1,34 @@
+gcc (Debian 14.2.0-19) 14.2.0
+Host flags: -std=c11 -Wall -Wextra -Wpedantic -Werror -O1 -g -fsanitize=address\,undefined -fno-omit-frame-pointer -fno-pie -no-pie
+cpu_step1.c: OK
+cpu_step2.c: OK
+cpu_step3.c: OK
+README.original.md: OK
+All checks passed
+All checks passed
+All checks passed
+step4: all nested-call and edge checks passed
+PASS arithmetic, logic, signedness, upper immediates, all shift counts, x0
+PASS all branches, JAL/JALR, link aliasing, immediate boundaries, fetch faults
+PASS all load/store widths, signed extension, bounds, atomic faults, configurable RAM
+PASS ECALL/EBREAK traps, FENCE semantics, extension and reserved-field rejection
+PASS step3 byte-copy loop and step4 nested-call regressions on the new core
+RV32I: 12711 checks, 0 failures
+PASS signature completion, exact budgets, infinite loop and traps
++ riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -mno-relax -msmall-data-limit=0 -ffreestanding -fno-builtin -fno-pic -fno-pie -fno-stack-protector -fno-omit-frame-pointer -O0 -g -Wall -Wextra -Wpedantic -Werror -Wconversion -Wshadow -std=c11 -c guest/guest.c -o build/guest.o
++ riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -mno-relax -c guest/start.S -o build/start.o
++ riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -nostdlib -nostartfiles -static -Wl,-T,guest/linker.ld -Wl,--no-relax -Wl,--build-id=none -Wl,-Map,build/guest.map build/start.o build/guest.o -o build/guest.elf
++ [[ riscv64-unknown-elf-gcc == *gcc ]]
++ copier=riscv64-unknown-elf-objcopy
++ riscv64-unknown-elf-objcopy -O binary build/guest.elf build/guest.bin
+loaded 596 bytes at 0; RAM=65536 budget=1000000 retired=565 PC=0x0000005c
+signature: checksum=90 count=6 initialized=7 BSS_before=0 nested_calls=6
+PASS compiled guest signature
+PASS real guest exact budget=565; budget=564 fails
+PASS changing guest data 7 -> 9 computes checksum 102; host rejects mismatch
+PASS missing guest BSS clear produces guest FAIL with poisoned host RAM
+cpu_step1.c: OK
+cpu_step2.c: OK
+cpu_step3.c: OK
+README.original.md: OK
+PASS all available checks (see guest status above).
