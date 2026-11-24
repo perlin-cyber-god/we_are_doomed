@@ -1,0 +1,2 @@
+$ /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/trace-reference /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/lh_misaligned.bin 2048 1000 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/lh_misaligned.trace 0
+reference retired=1 trap=4 pc=00000004
