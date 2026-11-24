@@ -1,0 +1,1 @@
+xsim {tb_decode_demo} -testplusarg DECODE_VECTORS=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/vectors/decode_vectors.txt -testplusarg VCD=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/tb_decode_demo.vcd -autoloadwcfg -runall
