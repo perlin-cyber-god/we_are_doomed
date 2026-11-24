@@ -1,0 +1,129 @@
+PASS 23783 decoder vectors; all 40 base instruction names covered
+PASS 7344 deterministic ALU vectors verified
+VCD info: dumpfile /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step5/build/demo.vcd opened for output.
+DEMO t=16000 x6=40 ALU=39
+DEMO t=46000 x6=39 ALU=38 (combinational feedback)
+PASS RTL_DEMO: clocked write 40->39; disabled write holds state
+VCD info: dumpfile /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step5/build/test.vcd opened for output.
+DEMO before write: x6=40 ALU(40 + -1)=39
+DEMO after rising-edge write: x6=39
+NOTE demo controls are driven by the testbench; no instruction decoder exists yet.
+PASS register file: both read ports, all addresses, clocked writes, enable, x0, reset priority
+PASS ALU: 7344 vectors, all operations, signedness, wrapping, shifts, invalid controls
+PASS RTL_STEP1 checks=18563 failures=0
+PASS bounded RTL milestone; no full CPU, guest program or GDS has been run.
+PASS C reference legality cross-check: 23783 words
+VCD info: dumpfile /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step5/build/tb_decode_demo.vcd opened for output.
+DECODE DEMO word=02800313 -> ADDI x6,x0,40 -> x6=40
+DECODE DEMO word=fff30313 -> ADDI x6,x6,-1 -> x6=39
+PASS RTL_DECODE_DEMO: instruction bits drive ALU/registers; blocked words cannot write
+PASS RTL_DECODE rows=23783 failures=0
+PASS RTL_DECODE_SLICE issued=36 checks=1252 failures=0
+PASS RTL Step 2: decoder and externally driven arithmetic slice; no instruction fetch or full CPU yet.
+PASS demo: zero-wait and delayed memory
+PASS loop: zero-wait and delayed memory
+PASS arithmetic: zero-wait and delayed memory
+PASS random_arithmetic: zero-wait and delayed memory
+PASS memory_widths: zero-wait and delayed memory
+PASS branches: zero-wait and delayed memory
+PASS nested_calls: zero-wait and delayed memory
+PASS jalr_alias: zero-wait and delayed memory
+PASS fences: zero-wait and delayed memory
+PASS mul: zero-wait and delayed memory
+PASS shift_reserved: zero-wait and delayed memory
+PASS csr: zero-wait and delayed memory
+PASS fence_i: zero-wait and delayed memory
+PASS system_reserved: zero-wait and delayed memory
+PASS zero_word: zero-wait and delayed memory
+PASS ecall: zero-wait and delayed memory
+PASS ebreak: zero-wait and delayed memory
+PASS lw_misaligned: zero-wait and delayed memory
+PASS lh_misaligned: zero-wait and delayed memory
+PASS sw_misaligned: zero-wait and delayed memory
+PASS sh_misaligned: zero-wait and delayed memory
+PASS load_access: zero-wait and delayed memory
+PASS load_x0_access: zero-wait and delayed memory
+PASS store_access: zero-wait and delayed memory
+PASS fetch_access: zero-wait and delayed memory
+PASS jal_misaligned: zero-wait and delayed memory
+PASS jalr_misaligned: zero-wait and delayed memory
+PASS branch_misaligned: zero-wait and delayed memory
+PASS branch_untaken_misaligned: zero-wait and delayed memory
+PASS partial_sh_fault: zero-wait and delayed memory
+PASS partial_lh_fault: zero-wait and delayed memory
+PASS partial_sb_ok: zero-wait and delayed memory
+PASS partial_lb_ok: zero-wait and delayed memory
+PASS reset_pc_misaligned: zero-wait and delayed memory
+PASS fetch_partial: zero-wait and delayed memory
+PASS infinite_prefix: zero-wait and delayed memory
+PASS RTL Step 3: 72 differential runs; 201438 checks; all 40 base instruction names exercised (ECALL/EBREAK trap).
+PASS pending fetch/store reset cancellation; tiny self-fetching demo. No GUI, Doom or synthesis run.
+BUILT O0: 150 executable RV32I words; no M/RVC
+BUILT O2: 116 executable RV32I words; no M/RVC
+BUILT no_bss: 146 executable RV32I words; no M/RVC
+RUN O0 memory=zero-wait budget=567
+PASS O0: RTL signature checksum=90 status=444f4e45; accepted
+RUN O0 memory=delayed budget=567
+PASS O0: RTL signature checksum=90 status=444f4e45; accepted
+RUN O2 memory=zero-wait budget=372
+PASS O2: RTL signature checksum=90 status=444f4e45; accepted
+RUN O2 memory=delayed budget=372
+PASS O2: RTL signature checksum=90 status=444f4e45; accepted
+RUN changed_data memory=zero-wait budget=567
+PASS changed_data: RTL signature checksum=102 status=444f4e45; expected protocol rejection
+RUN changed_data memory=delayed budget=567
+PASS changed_data: RTL signature checksum=102 status=444f4e45; expected protocol rejection
+RUN no_bss memory=zero-wait budget=533
+PASS no_bss: RTL signature checksum=90 status=4641494c; expected protocol rejection
+RUN no_bss memory=delayed budget=533
+PASS no_bss: RTL signature checksum=90 status=4641494c; expected protocol rejection
+RUN budget_prefix: intentional insufficient host budget
+PASS insufficient budget rejected as incomplete, not guest success
+PASS RTL_COMPILED_C: O0/O2 arrays, nested calls, initialized globals, BSS; changed data/BSS/budget negatives
+BUILT MMIO O0: 147 RV32I code words; CPU unchanged
+BUILT MMIO O2: 108 RV32I code words; CPU unchanged
+RUN tb_mmio_unit
+wait=0 checks=64 outputs=2 wraps=1
+RUN tb_mmio_unit_wait
+wait=3 checks=105 outputs=2 wraps=2
+RUN O0-wait0: normal
+CONSOLE: Hello from our RV32I CPU!
+PASS O0-wait0: C replay, registers, memory events and final RAM agree
+RUN O0-wait3: normal
+CONSOLE: Hello from our RV32I CPU!
+PASS O0-wait3: C replay, registers, memory events and final RAM agree
+RUN O2-wait0: normal
+CONSOLE: Hello from our RV32I CPU!
+PASS O2-wait0: C replay, registers, memory events and final RAM agree
+RUN O2-wait3: normal
+CONSOLE: Hello from our RV32I CPU!
+PASS O2-wait3: C replay, registers, memory events and final RAM agree
+RUN tx_word-wait3: fault
+PASS tx_word-wait3: C replay, registers, memory events and final RAM agree
+RUN tx_read-wait3: fault
+PASS tx_read-wait3: C replay, registers, memory events and final RAM agree
+RUN status_write-wait3: fault
+PASS status_write-wait3: C replay, registers, memory events and final RAM agree
+RUN timer_half-wait3: fault
+PASS timer_half-wait3: C replay, registers, memory events and final RAM agree
+RUN timer_write-wait3: fault
+PASS timer_write-wait3: C replay, registers, memory events and final RAM agree
+RUN unknown_load-wait3: fault
+PASS unknown_load-wait3: C replay, registers, memory events and final RAM agree
+RUN unknown_store-wait3: fault
+PASS unknown_store-wait3: C replay, registers, memory events and final RAM agree
+RUN fetch_io-wait3: fault
+PASS fetch_io-wait3: C replay, registers, memory events and final RAM agree
+RUN misaligned_store-wait3: fault
+PASS misaligned_store-wait3: C replay, registers, memory events and final RAM agree
+RUN load_x0_bad-wait3: fault
+PASS load_x0_bad-wait3: C replay, registers, memory events and final RAM agree
+RUN load_x0_timer-wait3: fault
+PASS load_x0_timer-wait3: C replay, registers, memory events and final RAM agree
+RUN ram_limit-wait3: fault
+PASS ram_limit-wait3: C replay, registers, memory events and final RAM agree
+RUN high_address-wait3: fault
+PASS high_address-wait3: C replay, registers, memory events and final RAM agree
+RUN budget_prefix-wait3: budget
+PASS budget_prefix-wait3: C replay, registers, memory events and final RAM agree
+PASS RTL_MMIO: 18 CPU runs + 2 device unit runs; 483693 replay fields; console/timer/faults/reset/wrap
