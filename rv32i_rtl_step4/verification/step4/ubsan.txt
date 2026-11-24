@@ -1,0 +1,2 @@
+$ gcc -std=c11 -Wall -Wextra -Wpedantic -Werror -Wconversion -Wshadow -O1 -g -fsanitize=undefined -fno-sanitize-recover=all -Ireference reference/rv32i.c scripts/trace_guest.c -o /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/trace-guest-ubsan
+PASS five guest traces under UBSan, byte-identical to normal trace output.
