@@ -1,0 +1,659 @@
+{
+  "backend": "iverilog",
+  "programs": 36,
+  "runs": 72,
+  "instruction_names": 40,
+  "checks": 201438,
+  "retired": 1034,
+  "cycles": 5874,
+  "results": [
+    {
+      "name": "demo",
+      "stall": 0,
+      "retired": 4,
+      "cycles": 21,
+      "transactions": 7,
+      "stores": 1,
+      "checks": 2355
+    },
+    {
+      "name": "demo",
+      "stall": 1,
+      "retired": 4,
+      "cycles": 37,
+      "transactions": 7,
+      "stores": 1,
+      "checks": 2355
+    },
+    {
+      "name": "loop",
+      "stall": 0,
+      "retired": 13,
+      "cycles": 61,
+      "transactions": 20,
+      "stores": 3,
+      "checks": 2742
+    },
+    {
+      "name": "loop",
+      "stall": 1,
+      "retired": 13,
+      "cycles": 111,
+      "transactions": 20,
+      "stores": 3,
+      "checks": 2742
+    },
+    {
+      "name": "arithmetic",
+      "stall": 0,
+      "retired": 157,
+      "cycles": 631,
+      "transactions": 158,
+      "stores": 0,
+      "checks": 8934
+    },
+    {
+      "name": "arithmetic",
+      "stall": 1,
+      "retired": 157,
+      "cycles": 1024,
+      "transactions": 158,
+      "stores": 0,
+      "checks": 8934
+    },
+    {
+      "name": "random_arithmetic",
+      "stall": 0,
+      "retired": 231,
+      "cycles": 927,
+      "transactions": 232,
+      "stores": 0,
+      "checks": 12116
+    },
+    {
+      "name": "random_arithmetic",
+      "stall": 1,
+      "retired": 231,
+      "cycles": 1507,
+      "transactions": 232,
+      "stores": 0,
+      "checks": 12116
+    },
+    {
+      "name": "memory_widths",
+      "stall": 0,
+      "retired": 33,
+      "cycles": 164,
+      "transactions": 63,
+      "stores": 8,
+      "checks": 3602
+    },
+    {
+      "name": "memory_widths",
+      "stall": 1,
+      "retired": 33,
+      "cycles": 320,
+      "transactions": 63,
+      "stores": 8,
+      "checks": 3602
+    },
+    {
+      "name": "branches",
+      "stall": 0,
+      "retired": 20,
+      "cycles": 83,
+      "transactions": 21,
+      "stores": 0,
+      "checks": 3043
+    },
+    {
+      "name": "branches",
+      "stall": 1,
+      "retired": 20,
+      "cycles": 134,
+      "transactions": 21,
+      "stores": 0,
+      "checks": 3043
+    },
+    {
+      "name": "nested_calls",
+      "stall": 0,
+      "retired": 13,
+      "cycles": 57,
+      "transactions": 16,
+      "stores": 1,
+      "checks": 2742
+    },
+    {
+      "name": "nested_calls",
+      "stall": 1,
+      "retired": 13,
+      "cycles": 97,
+      "transactions": 16,
+      "stores": 1,
+      "checks": 2742
+    },
+    {
+      "name": "jalr_alias",
+      "stall": 0,
+      "retired": 3,
+      "cycles": 15,
+      "transactions": 4,
+      "stores": 0,
+      "checks": 2312
+    },
+    {
+      "name": "jalr_alias",
+      "stall": 1,
+      "retired": 3,
+      "cycles": 25,
+      "transactions": 4,
+      "stores": 0,
+      "checks": 2312
+    },
+    {
+      "name": "fences",
+      "stall": 0,
+      "retired": 3,
+      "cycles": 15,
+      "transactions": 4,
+      "stores": 0,
+      "checks": 2312
+    },
+    {
+      "name": "fences",
+      "stall": 1,
+      "retired": 3,
+      "cycles": 25,
+      "transactions": 4,
+      "stores": 0,
+      "checks": 2312
+    },
+    {
+      "name": "mul",
+      "stall": 0,
+      "retired": 0,
+      "cycles": 3,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "mul",
+      "stall": 1,
+      "retired": 0,
+      "cycles": 4,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "shift_reserved",
+      "stall": 0,
+      "retired": 0,
+      "cycles": 3,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "shift_reserved",
+      "stall": 1,
+      "retired": 0,
+      "cycles": 4,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "csr",
+      "stall": 0,
+      "retired": 0,
+      "cycles": 3,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "csr",
+      "stall": 1,
+      "retired": 0,
+      "cycles": 4,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "fence_i",
+      "stall": 0,
+      "retired": 0,
+      "cycles": 3,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "fence_i",
+      "stall": 1,
+      "retired": 0,
+      "cycles": 4,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "system_reserved",
+      "stall": 0,
+      "retired": 0,
+      "cycles": 3,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "system_reserved",
+      "stall": 1,
+      "retired": 0,
+      "cycles": 4,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "zero_word",
+      "stall": 0,
+      "retired": 0,
+      "cycles": 3,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "zero_word",
+      "stall": 1,
+      "retired": 0,
+      "cycles": 4,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "ecall",
+      "stall": 0,
+      "retired": 0,
+      "cycles": 3,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "ecall",
+      "stall": 1,
+      "retired": 0,
+      "cycles": 4,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "ebreak",
+      "stall": 0,
+      "retired": 0,
+      "cycles": 3,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "ebreak",
+      "stall": 1,
+      "retired": 0,
+      "cycles": 4,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "lw_misaligned",
+      "stall": 0,
+      "retired": 1,
+      "cycles": 7,
+      "transactions": 2,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "lw_misaligned",
+      "stall": 1,
+      "retired": 1,
+      "cycles": 10,
+      "transactions": 2,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "lh_misaligned",
+      "stall": 0,
+      "retired": 1,
+      "cycles": 7,
+      "transactions": 2,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "lh_misaligned",
+      "stall": 1,
+      "retired": 1,
+      "cycles": 10,
+      "transactions": 2,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "sw_misaligned",
+      "stall": 0,
+      "retired": 1,
+      "cycles": 7,
+      "transactions": 2,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "sw_misaligned",
+      "stall": 1,
+      "retired": 1,
+      "cycles": 10,
+      "transactions": 2,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "sh_misaligned",
+      "stall": 0,
+      "retired": 1,
+      "cycles": 7,
+      "transactions": 2,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "sh_misaligned",
+      "stall": 1,
+      "retired": 1,
+      "cycles": 10,
+      "transactions": 2,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "load_access",
+      "stall": 0,
+      "retired": 1,
+      "cycles": 8,
+      "transactions": 3,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "load_access",
+      "stall": 1,
+      "retired": 1,
+      "cycles": 14,
+      "transactions": 3,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "load_x0_access",
+      "stall": 0,
+      "retired": 1,
+      "cycles": 8,
+      "transactions": 3,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "load_x0_access",
+      "stall": 1,
+      "retired": 1,
+      "cycles": 14,
+      "transactions": 3,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "store_access",
+      "stall": 0,
+      "retired": 1,
+      "cycles": 8,
+      "transactions": 3,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "store_access",
+      "stall": 1,
+      "retired": 1,
+      "cycles": 14,
+      "transactions": 3,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "fetch_access",
+      "stall": 0,
+      "retired": 1,
+      "cycles": 5,
+      "transactions": 2,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "fetch_access",
+      "stall": 1,
+      "retired": 1,
+      "cycles": 8,
+      "transactions": 2,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "jal_misaligned",
+      "stall": 0,
+      "retired": 0,
+      "cycles": 3,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "jal_misaligned",
+      "stall": 1,
+      "retired": 0,
+      "cycles": 4,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "jalr_misaligned",
+      "stall": 0,
+      "retired": 1,
+      "cycles": 7,
+      "transactions": 2,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "jalr_misaligned",
+      "stall": 1,
+      "retired": 1,
+      "cycles": 10,
+      "transactions": 2,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "branch_misaligned",
+      "stall": 0,
+      "retired": 0,
+      "cycles": 3,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "branch_misaligned",
+      "stall": 1,
+      "retired": 0,
+      "cycles": 4,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "branch_untaken_misaligned",
+      "stall": 0,
+      "retired": 1,
+      "cycles": 7,
+      "transactions": 2,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "branch_untaken_misaligned",
+      "stall": 1,
+      "retired": 1,
+      "cycles": 10,
+      "transactions": 2,
+      "stores": 0,
+      "checks": 2226
+    },
+    {
+      "name": "partial_sh_fault",
+      "stall": 0,
+      "retired": 2,
+      "cycles": 12,
+      "transactions": 4,
+      "stores": 0,
+      "checks": 2269
+    },
+    {
+      "name": "partial_sh_fault",
+      "stall": 1,
+      "retired": 2,
+      "cycles": 22,
+      "transactions": 4,
+      "stores": 0,
+      "checks": 2269
+    },
+    {
+      "name": "partial_lh_fault",
+      "stall": 0,
+      "retired": 2,
+      "cycles": 12,
+      "transactions": 4,
+      "stores": 0,
+      "checks": 2269
+    },
+    {
+      "name": "partial_lh_fault",
+      "stall": 1,
+      "retired": 2,
+      "cycles": 22,
+      "transactions": 4,
+      "stores": 0,
+      "checks": 2269
+    },
+    {
+      "name": "partial_sb_ok",
+      "stall": 0,
+      "retired": 3,
+      "cycles": 16,
+      "transactions": 5,
+      "stores": 1,
+      "checks": 2312
+    },
+    {
+      "name": "partial_sb_ok",
+      "stall": 1,
+      "retired": 3,
+      "cycles": 27,
+      "transactions": 5,
+      "stores": 1,
+      "checks": 2312
+    },
+    {
+      "name": "partial_lb_ok",
+      "stall": 0,
+      "retired": 3,
+      "cycles": 16,
+      "transactions": 5,
+      "stores": 0,
+      "checks": 2312
+    },
+    {
+      "name": "partial_lb_ok",
+      "stall": 1,
+      "retired": 3,
+      "cycles": 27,
+      "transactions": 5,
+      "stores": 0,
+      "checks": 2312
+    },
+    {
+      "name": "reset_pc_misaligned",
+      "stall": 0,
+      "retired": 0,
+      "cycles": 1,
+      "transactions": 0,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "reset_pc_misaligned",
+      "stall": 1,
+      "retired": 0,
+      "cycles": 1,
+      "transactions": 0,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "fetch_partial",
+      "stall": 0,
+      "retired": 0,
+      "cycles": 1,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "fetch_partial",
+      "stall": 1,
+      "retired": 0,
+      "cycles": 2,
+      "transactions": 1,
+      "stores": 0,
+      "checks": 2183
+    },
+    {
+      "name": "infinite_prefix",
+      "stall": 0,
+      "retired": 20,
+      "cycles": 80,
+      "transactions": 20,
+      "stores": 0,
+      "checks": 2943
+    },
+    {
+      "name": "infinite_prefix",
+      "stall": 1,
+      "retired": 20,
+      "cycles": 130,
+      "transactions": 20,
+      "stores": 0,
+      "checks": 2943
+    }
+  ]
+}
