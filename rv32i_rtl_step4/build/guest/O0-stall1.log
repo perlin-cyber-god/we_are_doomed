@@ -1,0 +1,19 @@
+$ xsim rtl_compiled_guest -runall -testplusarg IMAGE=/home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/O0.mem -testplusarg TRACE=/home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/O0.trace -testplusarg DUMP=/home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/O0-stall1.rtl.mem -testplusarg RAM_BYTES=16384 -testplusarg STALL=1 -testplusarg MAX_STEPS=567
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Tue Nov 24 23:46:21 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/rtl_compiled_guest/xsim_script.tcl
+# xsim {rtl_compiled_guest} -testplusarg IMAGE=/home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/O0.mem -testplusarg TRACE=/home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/O0.trace -testplusarg DUMP=/home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/O0-stall1.rtl.mem -testplusarg RAM_BYTES=16384 -testplusarg STALL=1 -testplusarg MAX_STEPS=567 -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS RTL_COMPILED_TRACE retired=566 cycles=4486 transactions=796 stores=93 checks=40857 stall=1 TRAP=9
+$finish called at time : 44906 ns : File "/home/perlin/Documents/DOOMed/rv32i_rtl_step4/tb/tb_compiled_guest.sv" Line 123
+exit
+INFO: xsimkernel Simulation Memory Usage: 289836 KB (Peak: 338396 KB), Simulation CPU Usage: 900 ms
+INFO: [Common 17-206] Exiting xsim at Tue Nov 24 23:46:23 2026...
