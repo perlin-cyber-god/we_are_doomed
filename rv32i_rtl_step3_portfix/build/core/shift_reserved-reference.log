@@ -1,0 +1,2 @@
+$ /home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/trace-reference /home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/shift_reserved.bin 2048 1000 /home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/shift_reserved.trace 0
+reference retired=0 trap=3 pc=00000000
