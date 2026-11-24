@@ -1,0 +1,1 @@
+"work.tb_demo" -s "rtl_step1_demo" -debug "typical" 
