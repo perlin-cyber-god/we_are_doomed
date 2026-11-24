@@ -1,0 +1,18 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_alu.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_regfile.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_immediate.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_immediate
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_decode.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_core.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_core.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_core
+INFO: [VRFC 10-311] analyzing module tb_core_reset2
+INFO: [VRFC 10-311] analyzing module tb_core_reset2044
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_core_demo.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_core_demo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_core_reset.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_core_reset
