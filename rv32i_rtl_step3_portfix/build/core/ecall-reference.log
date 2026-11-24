@@ -1,0 +1,2 @@
+$ /home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/trace-reference /home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/ecall.bin 2048 1000 /home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/ecall.trace 0
+reference retired=0 trap=8 pc=00000000
