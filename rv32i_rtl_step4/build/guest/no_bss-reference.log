@@ -1,0 +1,2 @@
+$ /home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/trace-guest /home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/no_bss.load.bin 16384 10000 /home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/no_bss.trace 0
+reference retired=532 trap=9 pc=00000050
