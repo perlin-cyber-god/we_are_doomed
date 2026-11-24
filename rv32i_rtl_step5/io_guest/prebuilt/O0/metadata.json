@@ -1,0 +1,21 @@
+{
+  "symbols": {
+    "_start": 0,
+    "_guest_stop": 96,
+    "console_putc": 104,
+    "timer_read": 244,
+    "guest_main": 292,
+    "__bss_start": 616,
+    "__data_end": 616,
+    "__data_start": 616,
+    "bytes_sent": 616,
+    "byte_sum": 620,
+    "__bss_end": 624,
+    "__global_pointer$": 2664,
+    "__signature_start": 8192,
+    "__stack_bottom": 12288,
+    "__stack_top": 16384
+  },
+  "code_words": 147,
+  "opt": "-O0"
+}
