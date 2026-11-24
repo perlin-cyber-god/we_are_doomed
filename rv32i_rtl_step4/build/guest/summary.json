@@ -1,0 +1,171 @@
+{
+  "backend": "vivado",
+  "runs": 9,
+  "positive_runs": 4,
+  "negative_runs": 5,
+  "differential_checks": 347876,
+  "results": [
+    {
+      "name": "O0",
+      "stall": 0,
+      "accepted": true,
+      "signature": [
+        1146048069,
+        90,
+        6,
+        7,
+        0,
+        6
+      ],
+      "retired": 566,
+      "cycles": 2496,
+      "transactions": 796,
+      "stores": 93,
+      "checks": 40857
+    },
+    {
+      "name": "O0",
+      "stall": 1,
+      "accepted": true,
+      "signature": [
+        1146048069,
+        90,
+        6,
+        7,
+        0,
+        6
+      ],
+      "retired": 566,
+      "cycles": 4486,
+      "transactions": 796,
+      "stores": 93,
+      "checks": 40857
+    },
+    {
+      "name": "O2",
+      "stall": 0,
+      "accepted": true,
+      "signature": [
+        1146048069,
+        90,
+        6,
+        7,
+        0,
+        6
+      ],
+      "retired": 371,
+      "cycles": 1605,
+      "transactions": 490,
+      "stores": 58,
+      "checks": 32472
+    },
+    {
+      "name": "O2",
+      "stall": 1,
+      "accepted": true,
+      "signature": [
+        1146048069,
+        90,
+        6,
+        7,
+        0,
+        6
+      ],
+      "retired": 371,
+      "cycles": 2828,
+      "transactions": 490,
+      "stores": 58,
+      "checks": 32472
+    },
+    {
+      "name": "changed_data",
+      "stall": 0,
+      "accepted": false,
+      "signature": [
+        1146048069,
+        102,
+        6,
+        9,
+        0,
+        6
+      ],
+      "retired": 566,
+      "cycles": 2496,
+      "transactions": 796,
+      "stores": 93,
+      "checks": 40857
+    },
+    {
+      "name": "changed_data",
+      "stall": 1,
+      "accepted": false,
+      "signature": [
+        1146048069,
+        102,
+        6,
+        9,
+        0,
+        6
+      ],
+      "retired": 566,
+      "cycles": 4486,
+      "transactions": 796,
+      "stores": 93,
+      "checks": 40857
+    },
+    {
+      "name": "no_bss",
+      "stall": 0,
+      "accepted": false,
+      "signature": [
+        1178683724,
+        90,
+        6,
+        7,
+        2779096485,
+        2779096491
+      ],
+      "retired": 532,
+      "cycles": 2352,
+      "transactions": 754,
+      "stores": 85,
+      "checks": 39395
+    },
+    {
+      "name": "no_bss",
+      "stall": 1,
+      "accepted": false,
+      "signature": [
+        1178683724,
+        90,
+        6,
+        7,
+        2779096485,
+        2779096491
+      ],
+      "retired": 532,
+      "cycles": 4235,
+      "transactions": 754,
+      "stores": 85,
+      "checks": 39395
+    },
+    {
+      "name": "budget_prefix",
+      "stall": 1,
+      "accepted": false,
+      "signature": [
+        2779096485,
+        90,
+        6,
+        7,
+        0,
+        6
+      ],
+      "retired": 565,
+      "cycles": 4469,
+      "transactions": 793,
+      "stores": 92,
+      "checks": 40714
+    }
+  ]
+}
