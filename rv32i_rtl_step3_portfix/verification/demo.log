@@ -1,0 +1,4 @@
+VCD info: dumpfile /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step1/build/demo.vcd opened for output.
+DEMO t=16000 x6=40 ALU=39
+DEMO t=46000 x6=39 ALU=38 (combinational feedback)
+PASS RTL_DEMO: clocked write 40->39; disabled write holds state
