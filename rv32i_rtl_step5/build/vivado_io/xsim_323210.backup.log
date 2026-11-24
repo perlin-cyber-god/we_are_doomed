@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Nov 25 02:40:39 2026
+# Process ID         : 323210
+# Current directory  : /home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/vivado_io
+# Command line       : xsim -mode tcl -source {xsim.dir/tb_mmio_cpu_wait/xsim_script.tcl}
+# Log file           : /home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/vivado_io/xsim.log
+# Journal file       : /home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/vivado_io/xsim.jou
+# Running On         : perlin
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04 LTS
+# Processor Detail   : AMD Ryzen 7 260 w/ Radeon 780M Graphics
+# CPU Frequency      : 1505.191 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 32374 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 40964 MB
+# Available Virtual  : 24536 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_mmio_cpu_wait/xsim_script.tcl
+# xsim {tb_mmio_cpu_wait} -testplusarg IMAGE=/home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/load_x0_bad-wait3.mem -testplusarg TRACE=/home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/load_x0_bad-wait3.actual.trace -testplusarg EVENTS=/home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/load_x0_bad-wait3.events -testplusarg CONSOLE=/home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/load_x0_bad-wait3.console -testplusarg MAX_STEPS=10000 -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS MMIO_CPU retired=2 cycles=21 tx=0 io=1 wait=3 TRAP=5
+$finish called at time : 226 ns : File "/home/perlin/Documents/DOOMed/rv32i_rtl_step5/tb/tb_mmio_cpu.sv" Line 118
+exit
+INFO: xsimkernel Simulation Memory Usage: 289852 KB (Peak: 338412 KB), Simulation CPU Usage: 880 ms
+INFO: [Common 17-206] Exiting xsim at Wed Nov 25 02:40:42 2026...
