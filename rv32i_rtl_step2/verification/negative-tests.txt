@@ -1,0 +1,5 @@
+PASS testbench rejects arithmetic-shift mutation (exit 1):
+FATAL: /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step1/tb/tb_rtl_step1.sv:133: ALU row=418 op=7 a=80000000 b=00000001 y=40000000 want=c0000000 flags=1010 want=1010
+
+PASS testbench rejects write-enable mutation (exit 1):
+FATAL: /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step1/tb/tb_rtl_step1.sv:33: after rising edge: ra=6 got=deadbeef expected=00000027 rb=25 got=00000000 expected=00000000
