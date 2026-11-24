@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_alu.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_regfile.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_immediate.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_immediate
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_decode.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_decode_slice.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_decode_slice
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_decode_demo.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_decode_demo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_decode.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_decode_slice.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_decode_slice
