@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_decode/xsimk -runall -simmode gui -testplusarg DECODE_VECTORS=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/vectors/decode_vectors.txt -testplusarg VCD=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/tb_decode.vcd -wdb tb_decode.wdb -simrunnum 0 -socket 40463
+Design successfully loaded
+Design Loading Memory Usage: 198980 KB (Peak: 199036 KB)
+Design Loading CPU Usage: 880 ms
+Simulation completed
+Simulation Memory Usage: 289428 KB (Peak: 338248 KB)
+Simulation CPU Usage: 940 ms
