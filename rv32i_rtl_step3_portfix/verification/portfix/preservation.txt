@@ -1,0 +1,13 @@
+Compared complete original Step3 ZIP against corrected project.
+Only existing files changed:
+README.md
+VERIFICATION.md
+VIVADO.md
+rtl/rv32_alu.sv
+rtl/rv32_core.sv
+rtl/rv32_decode.sv
+rtl/rv32_decode_slice.sv
+rtl/rv32_immediate.sv
+rtl/rv32_regfile.sv
+RTL token comparison after removing the added input wire keyword: identical.
+All earlier folders/archives remain untouched. All other shipped files identical.
