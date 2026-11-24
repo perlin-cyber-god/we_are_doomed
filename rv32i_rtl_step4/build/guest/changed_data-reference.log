@@ -1,0 +1,2 @@
+$ /home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/trace-guest /home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/changed_data.load.bin 16384 10000 /home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/changed_data.trace 0
+reference retired=566 trap=9 pc=00000060
