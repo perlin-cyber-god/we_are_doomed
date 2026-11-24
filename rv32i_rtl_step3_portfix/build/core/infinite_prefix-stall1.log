@@ -1,0 +1,19 @@
+$ xsim tb_core -runall -testplusarg IMAGE=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/infinite_prefix.mem -testplusarg TRACE=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/infinite_prefix.trace -testplusarg RAM_BYTES=2048 -testplusarg STALL=1
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Tue Nov 24 23:30:13 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_core/xsim_script.tcl
+# xsim {tb_core} -testplusarg IMAGE=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/infinite_prefix.mem -testplusarg TRACE=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/infinite_prefix.trace -testplusarg RAM_BYTES=2048 -testplusarg STALL=1 -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS RTL_CORE retired=20 cycles=130 transactions=20 stores=0 checks=2943 stall=1 BUDGET_PREFIX (not guest HALT)
+$finish called at time : 1316 ns : File "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_core.sv" Line 119
+exit
+INFO: xsimkernel Simulation Memory Usage: 289808 KB (Peak: 338368 KB), Simulation CPU Usage: 850 ms
+INFO: [Common 17-206] Exiting xsim at Tue Nov 24 23:30:15 2026...
