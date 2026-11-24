@@ -1,0 +1,7 @@
+Command: bash ./test_controls.sh
+Flags: -std=c11 -Wall -Wextra -Wpedantic -Werror -Wconversion -Wshadow -O2
+PASS all 21 key press/release IDs, including engine FIRE=0xa3 and USE=0xa2
+PASS Doom host loader bounds, input encoding, ECALL errors, timer wrap and bounded execution
+PASS desktop fire/use aliases, all weapon bits, combinations and releases
+Negative regression: original adapter fails expanded key-ID assertion, return code -6.
+No GUI or long tests executed.
