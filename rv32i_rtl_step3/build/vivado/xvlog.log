@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step3/rtl/rv32_alu.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_alu
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'a_i' when default_nettype is none [/home/perlin/Documents/DOOMed/rv32i_rtl_step3/rtl/rv32_alu.sv:7]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'b_i' when default_nettype is none [/home/perlin/Documents/DOOMed/rv32i_rtl_step3/rtl/rv32_alu.sv:8]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'op_i' when default_nettype is none [/home/perlin/Documents/DOOMed/rv32i_rtl_step3/rtl/rv32_alu.sv:9]
+ERROR: [VRFC 10-8530] module 'rv32_alu' is ignored due to previous errors [/home/perlin/Documents/DOOMed/rv32i_rtl_step3/rtl/rv32_alu.sv:6]
