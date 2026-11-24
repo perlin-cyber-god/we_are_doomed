@@ -1,0 +1,197 @@
+$ riscv64-unknown-elf-objdump -d -S -M no-aliases /home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/O0/guest.elf
+
+/home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/O0/guest.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	00004117          	auipc	sp,0x4
+   4:	00010113          	addi	sp,sp,0 # 4000 <__stack_top>
+   8:	00001197          	auipc	gp,0x1
+   c:	a5018193          	addi	gp,gp,-1456 # a58 <__global_pointer$>
+  10:	00000297          	auipc	t0,0x0
+  14:	24c28293          	addi	t0,t0,588 # 25c <zero_global>
+  18:	00000317          	auipc	t1,0x0
+  1c:	26430313          	addi	t1,t1,612 # 27c <__bss_end>
+  20:	0062f863          	bgeu	t0,t1,30 <_start+0x30>
+  24:	0002a023          	sw	zero,0(t0)
+  28:	00428293          	addi	t0,t0,4
+  2c:	ff5ff06f          	jal	zero,20 <_start+0x20>
+  30:	00000097          	auipc	ra,0x0
+  34:	0c4080e7          	jalr	ra,196(ra) # f4 <guest_main>
+  38:	00051863          	bne	a0,zero,48 <_start+0x48>
+  3c:	444f5337          	lui	t1,0x444f5
+  40:	e4530313          	addi	t1,t1,-443 # 444f4e45 <__stack_top+0x444f0e45>
+  44:	00c0006f          	jal	zero,50 <_start+0x50>
+  48:	46415337          	lui	t1,0x46415
+  4c:	94c30313          	addi	t1,t1,-1716 # 4641494c <__stack_top+0x4641094c>
+  50:	00002297          	auipc	t0,0x2
+  54:	fb028293          	addi	t0,t0,-80 # 2000 <__signature_start>
+  58:	0330000f          	fence	rw,rw
+  5c:	0062a023          	sw	t1,0(t0)
+
+00000060 <_guest_stop>:
+  60:	00100073          	ebreak
+  64:	0000006f          	jal	zero,64 <_guest_stop+0x4>
+
+00000068 <inner>:
+volatile uint32_t zero_global;         /* Startup, not the host, must clear .bss. */
+volatile uint32_t values[COUNT];
+volatile uint32_t nested_count;
+
+__attribute__((noinline)) uint32_t inner(uint32_t value)
+{
+  68:	fe010113          	addi	sp,sp,-32
+  6c:	00112e23          	sw	ra,28(sp)
+  70:	00812c23          	sw	s0,24(sp)
+  74:	02010413          	addi	s0,sp,32
+  78:	fea42623          	sw	a0,-20(s0)
+    ++nested_count;
+  7c:	000007b7          	lui	a5,0x0
+  80:	2787a783          	lw	a5,632(a5) # 278 <nested_count>
+  84:	00178713          	addi	a4,a5,1
+  88:	000007b7          	lui	a5,0x0
+  8c:	26e7ac23          	sw	a4,632(a5) # 278 <nested_count>
+    return (value<<1)+initialized_global;
+  90:	fec42783          	lw	a5,-20(s0)
+  94:	00179713          	slli	a4,a5,0x1
+  98:	000007b7          	lui	a5,0x0
+  9c:	2587a783          	lw	a5,600(a5) # 258 <initialized_global>
+  a0:	00f707b3          	add	a5,a4,a5
+}
+  a4:	00078513          	addi	a0,a5,0
+  a8:	01c12083          	lw	ra,28(sp)
+  ac:	01812403          	lw	s0,24(sp)
+  b0:	02010113          	addi	sp,sp,32
+  b4:	00008067          	jalr	zero,0(ra)
+
+000000b8 <outer>:
+__attribute__((noinline)) uint32_t outer(uint32_t value)
+{
+  b8:	fe010113          	addi	sp,sp,-32
+  bc:	00112e23          	sw	ra,28(sp)
+  c0:	00812c23          	sw	s0,24(sp)
+  c4:	02010413          	addi	s0,sp,32
+  c8:	fea42623          	sw	a0,-20(s0)
+    return inner(value)+1u;
+  cc:	fec42503          	lw	a0,-20(s0)
+  d0:	00000097          	auipc	ra,0x0
+  d4:	f98080e7          	jalr	ra,-104(ra) # 68 <inner>
+  d8:	00050793          	addi	a5,a0,0
+  dc:	00178793          	addi	a5,a5,1
+}
+  e0:	00078513          	addi	a0,a5,0
+  e4:	01c12083          	lw	ra,28(sp)
+  e8:	01812403          	lw	s0,24(sp)
+  ec:	02010113          	addi	sp,sp,32
+  f0:	00008067          	jalr	zero,0(ra)
+
+000000f4 <guest_main>:
+uint32_t guest_main(void)
+{
+  f4:	fd010113          	addi	sp,sp,-48
+  f8:	02112623          	sw	ra,44(sp)
+  fc:	02812423          	sw	s0,40(sp)
+ 100:	03010413          	addi	s0,sp,48
+    uint32_t before=zero_global | nested_count;
+ 104:	000007b7          	lui	a5,0x0
+ 108:	25c7a703          	lw	a4,604(a5) # 25c <zero_global>
+ 10c:	000007b7          	lui	a5,0x0
+ 110:	2787a783          	lw	a5,632(a5) # 278 <nested_count>
+ 114:	00f767b3          	or	a5,a4,a5
+ 118:	fef42623          	sw	a5,-20(s0)
+    for(uint32_t i=0;i<COUNT;++i) before |= values[i];
+ 11c:	fe042423          	sw	zero,-24(s0)
+ 120:	0340006f          	jal	zero,154 <guest_main+0x60>
+ 124:	000007b7          	lui	a5,0x0
+ 128:	26078713          	addi	a4,a5,608 # 260 <values>
+ 12c:	fe842783          	lw	a5,-24(s0)
+ 130:	00279793          	slli	a5,a5,0x2
+ 134:	00f707b3          	add	a5,a4,a5
+ 138:	0007a783          	lw	a5,0(a5)
+ 13c:	fec42703          	lw	a4,-20(s0)
+ 140:	00f767b3          	or	a5,a4,a5
+ 144:	fef42623          	sw	a5,-20(s0)
+ 148:	fe842783          	lw	a5,-24(s0)
+ 14c:	00178793          	addi	a5,a5,1
+ 150:	fef42423          	sw	a5,-24(s0)
+ 154:	fe842703          	lw	a4,-24(s0)
+ 158:	00500793          	addi	a5,zero,5
+ 15c:	fce7f4e3          	bgeu	a5,a4,124 <guest_main+0x30>
+    uint32_t checksum=0;
+ 160:	fe042223          	sw	zero,-28(s0)
+    for(uint32_t i=0;i<COUNT;++i) {
+ 164:	fe042023          	sw	zero,-32(s0)
+ 168:	0640006f          	jal	zero,1cc <guest_main+0xd8>
+        values[i]=outer(i+1u); /* guest_main -> outer -> inner */
+ 16c:	fe042783          	lw	a5,-32(s0)
+ 170:	00178793          	addi	a5,a5,1
+ 174:	00078513          	addi	a0,a5,0
+ 178:	00000097          	auipc	ra,0x0
+ 17c:	f40080e7          	jalr	ra,-192(ra) # b8 <outer>
+ 180:	00050693          	addi	a3,a0,0
+ 184:	000007b7          	lui	a5,0x0
+ 188:	26078713          	addi	a4,a5,608 # 260 <values>
+ 18c:	fe042783          	lw	a5,-32(s0)
+ 190:	00279793          	slli	a5,a5,0x2
+ 194:	00f707b3          	add	a5,a4,a5
+ 198:	00d7a023          	sw	a3,0(a5)
+        checksum+=values[i];
+ 19c:	000007b7          	lui	a5,0x0
+ 1a0:	26078713          	addi	a4,a5,608 # 260 <values>
+ 1a4:	fe042783          	lw	a5,-32(s0)
+ 1a8:	00279793          	slli	a5,a5,0x2
+ 1ac:	00f707b3          	add	a5,a4,a5
+ 1b0:	0007a783          	lw	a5,0(a5)
+ 1b4:	fe442703          	lw	a4,-28(s0)
+ 1b8:	00f707b3          	add	a5,a4,a5
+ 1bc:	fef42223          	sw	a5,-28(s0)
+    for(uint32_t i=0;i<COUNT;++i) {
+ 1c0:	fe042783          	lw	a5,-32(s0)
+ 1c4:	00178793          	addi	a5,a5,1
+ 1c8:	fef42023          	sw	a5,-32(s0)
+ 1cc:	fe042703          	lw	a4,-32(s0)
+ 1d0:	00500793          	addi	a5,zero,5
+ 1d4:	f8e7fce3          	bgeu	a5,a4,16c <guest_main+0x78>
+    }
+    volatile uint32_t *const signature=(volatile uint32_t *)(uintptr_t)SIGNATURE_ADDRESS;
+ 1d8:	000027b7          	lui	a5,0x2
+ 1dc:	fcf42e23          	sw	a5,-36(s0)
+    signature[1]=checksum;
+ 1e0:	fdc42783          	lw	a5,-36(s0)
+ 1e4:	00478793          	addi	a5,a5,4 # 2004 <__signature_start+0x4>
+ 1e8:	fe442703          	lw	a4,-28(s0)
+ 1ec:	00e7a023          	sw	a4,0(a5)
+    signature[2]=COUNT;
+ 1f0:	fdc42783          	lw	a5,-36(s0)
+ 1f4:	00878793          	addi	a5,a5,8
+ 1f8:	00600713          	addi	a4,zero,6
+ 1fc:	00e7a023          	sw	a4,0(a5)
+    signature[3]=initialized_global;
+ 200:	fdc42783          	lw	a5,-36(s0)
+ 204:	00c78793          	addi	a5,a5,12
+ 208:	00000737          	lui	a4,0x0
+ 20c:	25872703          	lw	a4,600(a4) # 258 <initialized_global>
+ 210:	00e7a023          	sw	a4,0(a5)
+    signature[4]=before;
+ 214:	fdc42783          	lw	a5,-36(s0)
+ 218:	01078793          	addi	a5,a5,16
+ 21c:	fec42703          	lw	a4,-20(s0)
+ 220:	00e7a023          	sw	a4,0(a5)
+    signature[5]=nested_count;
+ 224:	fdc42783          	lw	a5,-36(s0)
+ 228:	01478793          	addi	a5,a5,20
+ 22c:	00000737          	lui	a4,0x0
+ 230:	27872703          	lw	a4,632(a4) # 278 <nested_count>
+ 234:	00e7a023          	sw	a4,0(a5)
+    return before==0u ? 0u : 1u; /* Assembly publishes DONE or FAIL last. */
+ 238:	fec42783          	lw	a5,-20(s0)
+ 23c:	00f037b3          	sltu	a5,zero,a5
+ 240:	0ff7f793          	andi	a5,a5,255
+}
+ 244:	00078513          	addi	a0,a5,0
+ 248:	02c12083          	lw	ra,44(sp)
+ 24c:	02812403          	lw	s0,40(sp)
+ 250:	03010113          	addi	sp,sp,48
+ 254:	00008067          	jalr	zero,0(ra)
