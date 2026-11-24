@@ -1,0 +1,2 @@
+$ /home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/trace-guest /home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/budget_prefix.load.bin 16384 565 /home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/budget_prefix.trace 0
+reference budget-prefix=565 pc=0000005c (not guest HALT)
