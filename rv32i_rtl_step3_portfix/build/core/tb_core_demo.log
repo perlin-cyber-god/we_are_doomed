@@ -1,0 +1,23 @@
+$ xsim tb_core_demo -runall -testplusarg VCD=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/tb_core_demo.vcd
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Tue Nov 24 23:25:55 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_core_demo/xsim_script.tcl
+# xsim {tb_core_demo} -testplusarg VCD=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/tb_core_demo.vcd -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+CORE DEMO pc=00000000 word=20000293 next=00000004 x6=0 RAM[512]=40 state=0
+CORE DEMO pc=00000004 word=0002a303 next=00000008 x6=40 RAM[512]=40 state=0
+CORE DEMO pc=00000008 word=fff30313 next=0000000c x6=39 RAM[512]=40 state=0
+CORE DEMO pc=0000000c word=0062a023 next=00000010 x6=39 RAM[512]=39 state=0
+PASS RTL_CORE_DEMO: fetched 4 instructions; x6=39 RAM[512]=39; explicit EBREAK trap
+$finish called at time : 226 ns : File "/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_core_demo.sv" Line 48
+exit
+INFO: xsimkernel Simulation Memory Usage: 289764 KB (Peak: 338324 KB), Simulation CPU Usage: 850 ms
+INFO: [Common 17-206] Exiting xsim at Tue Nov 24 23:25:57 2026...
