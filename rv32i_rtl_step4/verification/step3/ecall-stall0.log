@@ -1,0 +1,2 @@
+$ /workspace/scratch/6bae74b1c81c/toolchains/rtl-step1-tools/local/usr/bin/vvp /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/tb_core.vvp +IMAGE=/workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/ecall.mem +TRACE=/workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/ecall.trace +RAM_BYTES=2048 +STALL=0
+PASS RTL_CORE retired=0 cycles=3 transactions=1 stores=0 checks=2183 stall=0 TRAP=8
