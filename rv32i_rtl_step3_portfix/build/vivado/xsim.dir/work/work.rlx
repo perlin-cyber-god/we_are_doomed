@@ -1,0 +1,14 @@
+0.7
+2020.2
+Nov 14 2025
+12:36:23
+/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_alu.sv,1795540450,systemVerilog,,/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_regfile.sv,,rv32_alu,,,,,,,,
+/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_decode.sv,1795540450,systemVerilog,,/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_decode_slice.sv,,rv32_decode,,,,,,,,
+/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_decode_slice.sv,1795540450,systemVerilog,,/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_decode_demo.sv,,rv32_decode_slice,,,,,,,,
+/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_immediate.sv,1795540450,systemVerilog,,/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_decode.sv,,rv32_immediate,,,,,,,,
+/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_regfile.sv,1795540450,systemVerilog,,/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/rtl/rv32_immediate.sv,,rv32_regfile,,,,,,,,
+/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_decode.sv,1795540450,systemVerilog,,/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_decode_slice.sv,,tb_decode,,,,,,,,
+/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_decode_demo.sv,1795540450,systemVerilog,,/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_decode.sv,,tb_decode_demo,,,,,,,,
+/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_decode_slice.sv,1795540450,systemVerilog,,,,tb_decode_slice,,,,,,,,
+/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_demo.sv,1795540450,systemVerilog,,/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_rtl_step1.sv,,tb_demo,,,,,,,,
+/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/tb/tb_rtl_step1.sv,1795540450,systemVerilog,,,,tb_rtl_step1,,,,,,,,
