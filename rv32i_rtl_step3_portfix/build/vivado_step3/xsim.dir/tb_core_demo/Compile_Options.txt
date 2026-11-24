@@ -1,0 +1,1 @@
+"work.tb_core_demo" -s "tb_core_demo" -debug "typical" 
