@@ -1,0 +1,1 @@
+xsim {tb_core_reset2044} -testplusarg IMAGE=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/fetch_partial.mem -testplusarg TRACE=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/fetch_partial.trace -testplusarg RAM_BYTES=2047 -testplusarg STALL=1 -autoloadwcfg -runall
