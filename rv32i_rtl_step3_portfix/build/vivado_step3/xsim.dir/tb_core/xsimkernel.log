@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_core/xsimk -runall -simmode gui -testplusarg IMAGE=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/infinite_prefix.mem -testplusarg TRACE=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/infinite_prefix.trace -testplusarg RAM_BYTES=2048 -testplusarg STALL=1 -wdb tb_core.wdb -simrunnum 0 -socket 33061
+Design successfully loaded
+Design Loading Memory Usage: 199100 KB (Peak: 199100 KB)
+Design Loading CPU Usage: 850 ms
+Simulation completed
+Simulation Memory Usage: 289808 KB (Peak: 338368 KB)
+Simulation CPU Usage: 850 ms
