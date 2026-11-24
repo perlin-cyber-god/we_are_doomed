@@ -1,0 +1,16 @@
+$ riscv64-unknown-elf-nm -n /home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/O2/guest.elf
+00000000 T _start
+00000060 T _guest_stop
+00000068 T console_putc
+000000c4 T timer_read
+000000ec T guest_main
+000001cc B __bss_start
+000001cc B bytes_sent
+000001cc D __data_end
+000001cc D __data_start
+000001d0 B byte_sum
+000001d4 B __bss_end
+000009cc A __global_pointer$
+00002000 B __signature_start
+00003000 B __stack_bottom
+00004000 B __stack_top
