@@ -1,0 +1,7 @@
+VCD info: dumpfile /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step1/build/test.vcd opened for output.
+DEMO before write: x6=40 ALU(40 + -1)=39
+DEMO after rising-edge write: x6=39
+NOTE demo controls are driven by the testbench; no instruction decoder exists yet.
+PASS register file: both read ports, all addresses, clocked writes, enable, x0, reset priority
+PASS ALU: 7344 vectors, all operations, signedness, wrapping, shifts, invalid controls
+PASS RTL_STEP1 checks=18563 failures=0
