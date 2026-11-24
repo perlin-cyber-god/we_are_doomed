@@ -1,0 +1,2 @@
+$ /usr/bin/python3 /home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/scripts/make_core_programs.py
+Generated 36 bounded programs (including expected faults); seed=0x32a3
