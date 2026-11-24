@@ -1,0 +1,2 @@
+$ /home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/mmio-reference /home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/budget_prefix-wait3.load.bin /home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/budget_prefix-wait3.events 20 /home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/io/budget_prefix-wait3.expected.trace
+PASS C_MMIO_REPLAY events=0 terminal=budget PC=00000128
