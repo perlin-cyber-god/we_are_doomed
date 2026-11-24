@@ -1,0 +1,2 @@
+$ gcc -std=c11 -Wall -Wextra -Wpedantic -Werror -Wconversion -Wshadow -O1 -g -fsanitize=undefined -fno-sanitize-recover=all -Ireference reference/rv32i.c scripts/trace_reference.c -o /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/trace-reference-ubsan
+PASS all 36 C trace-generator cases under undefined-behaviour sanitizer.
