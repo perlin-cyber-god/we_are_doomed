@@ -1,0 +1,26 @@
+[
+  {
+    "file": "rtl/rv32_alu.sv",
+    "input_declaration_lines": 3
+  },
+  {
+    "file": "rtl/rv32_core.sv",
+    "input_declaration_lines": 3
+  },
+  {
+    "file": "rtl/rv32_decode.sv",
+    "input_declaration_lines": 1
+  },
+  {
+    "file": "rtl/rv32_decode_slice.sv",
+    "input_declaration_lines": 2
+  },
+  {
+    "file": "rtl/rv32_immediate.sv",
+    "input_declaration_lines": 2
+  },
+  {
+    "file": "rtl/rv32_regfile.sv",
+    "input_declaration_lines": 7
+  }
+]
