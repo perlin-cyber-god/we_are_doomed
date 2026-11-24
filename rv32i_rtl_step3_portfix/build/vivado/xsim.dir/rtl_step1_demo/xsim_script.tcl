@@ -1,0 +1,1 @@
+xsim {rtl_step1_demo} -testplusarg VECTORS=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/vectors/alu_vectors.txt -testplusarg VCD=/home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/demo.vcd -autoloadwcfg -runall
