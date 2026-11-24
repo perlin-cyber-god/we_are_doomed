@@ -1,0 +1,2 @@
+$ /home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/trace-reference /home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/memory_widths.bin 2048 1000 /home/perlin/Documents/DOOMed/rv32i_rtl_step3_portfix/build/core/memory_widths.trace 0
+reference retired=33 trap=9 pc=00000084
