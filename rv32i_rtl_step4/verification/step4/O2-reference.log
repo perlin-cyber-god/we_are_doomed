@@ -1,0 +1,2 @@
+$ /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/trace-guest /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2.load.bin 16384 372 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2.trace 0
+reference retired=371 trap=9 pc=00000060
