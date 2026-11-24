@@ -1,0 +1,121 @@
+
+Discarded input sections
+
+ .comment       0x00000000       0x19 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.o
+ .note.GNU-stack
+                0x00000000        0x0 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+APP              0x00000000         0x00001800         xrw
+SIGNATURE        0x00002000         0x00000040         rw
+STACK            0x00003000         0x00001000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x00000000      0x1d0
+ *(.text.start)
+ .text.start    0x00000000       0x68 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/start.o
+                0x00000000                _start
+                0x00000060                _guest_stop
+ *(.text .text.*)
+ .text          0x00000068        0x0 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/start.o
+ .text          0x00000068      0x168 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.o
+                0x00000068                inner
+                0x000000b0                outer
+                0x000000dc                guest_main
+
+.rela.dyn       0x000001d0        0x0
+ .rela.text.start
+                0x000001d0        0x0 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/start.o
+
+.rodata
+ *(.rodata .rodata.*)
+
+.data           0x000001d0        0x4
+                0x000001d0                        . = ALIGN (0x4)
+                0x000001d0                        __data_start = .
+ *(.sdata .sdata.* .data .data.*)
+ .data          0x000001d0        0x0 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/start.o
+ .data          0x000001d0        0x4 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.o
+                0x000001d0                initialized_global
+                0x000001d4                        __data_end = .
+                0x000009d0                        __global_pointer$ = (__data_start + 0x800)
+
+.bss            0x000001d4       0x20
+                0x000001d4                        . = ALIGN (0x4)
+                0x000001d4                        __bss_start = .
+ *(.sbss .sbss.* .bss .bss.*)
+ .bss           0x000001d4        0x0 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/start.o
+ .bss           0x000001d4       0x20 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.o
+                0x000001d4                nested_count
+                0x000001d8                zero_global
+                0x000001dc                values
+ *(COMMON)
+                0x000001f4                        . = ALIGN (0x4)
+                0x000001f4                        __bss_end = .
+
+.signature      0x00002000       0x40
+                0x00002000                        __signature_start = .
+                0x00002040                        . = (. + 0x40)
+ *fill*         0x00002000       0x40 
+
+.stack          0x00003000     0x1000
+                0x00003000                        __stack_bottom = .
+                0x00004000                        . = (. + 0x1000)
+ *fill*         0x00003000     0x1000 
+                0x00004000                        __stack_top = .
+
+/DISCARD/
+ *(.comment .note.* .eh_frame .eh_frame.*)
+                0x00000001                        ASSERT ((__bss_end <= 0x1800), application overlaps guard)
+                0x00000001                        ASSERT ((__stack_top == 0x4000), stack placement wrong)
+LOAD /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/start.o
+LOAD /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.o
+OUTPUT(/workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x1c
+ .riscv.attributes
+                0x00000000       0x1a /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/start.o
+ .riscv.attributes
+                0x0000001a       0x1c /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.o
+
+.debug_info     0x00000000      0x1e4
+ .debug_info    0x00000000      0x1e4 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.o
+
+.debug_abbrev   0x00000000      0x142
+ .debug_abbrev  0x00000000      0x142 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.o
+
+.debug_loclists
+                0x00000000       0x72
+ .debug_loclists
+                0x00000000       0x72 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.o
+
+.debug_aranges  0x00000000       0x20
+ .debug_aranges
+                0x00000000       0x20 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.o
+
+.debug_rnglists
+                0x00000000       0x22
+ .debug_rnglists
+                0x00000000       0x22 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.o
+
+.debug_line     0x00000000      0x2bc
+ .debug_line    0x00000000      0x2bc /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.o
+
+.debug_str      0x00000000      0x204
+ .debug_str     0x00000000      0x204 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.o
+                                0x238 (size before relaxing)
+
+.debug_line_str
+                0x00000000       0xba
+ .debug_line_str
+                0x00000000       0xba /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.o
+                                0x101 (size before relaxing)
+
+.debug_frame    0x00000000       0xa0
+ .debug_frame   0x00000000       0xa0 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/O2/guest.o
