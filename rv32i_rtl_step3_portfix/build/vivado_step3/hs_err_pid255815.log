@@ -1,0 +1,22 @@
+#
+# An unexpected error has occurred (11) Segmentation fault
+#
+Stack:
+/usr/lib/x86_64-linux-gnu/libc.so.6(+0x45cb0) [0x79345e245cb0]
+/home/perlin/Documents/projects/2025.2/Vivado/lib/lnx64.o/libxv_simtcltasks.so(+0x1e9916) [0x79345cde9916]
+/home/perlin/Documents/projects/2025.2/Vivado/lib/lnx64.o/libxv_common.so(+0x81e9c4) [0x79346a41e9c4]
+/home/perlin/Documents/projects/2025.2/Vivado/lib/lnx64.o/libtcl8.6.so(TclNRRunCallbacks+0x47) [0x793465a84497]
+/home/perlin/Documents/projects/2025.2/Vivado/lib/lnx64.o/libtcl8.6.so(+0x45309) [0x793465a86309]
+/home/perlin/Documents/projects/2025.2/Vivado/lib/lnx64.o/libtcl8.6.so(Tcl_FSEvalFileEx+0x1f8) [0x793465b3bae8]
+/home/perlin/Documents/projects/2025.2/Vivado/lib/lnx64.o/libxv_commontasks.so(+0x48349d) [0x79346ba8349d]
+/home/perlin/Documents/projects/2025.2/Vivado/lib/lnx64.o/libxv_common.so(+0x81e9c4) [0x79346a41e9c4]
+/home/perlin/Documents/projects/2025.2/Vivado/lib/lnx64.o/libtcl8.6.so(TclNRRunCallbacks+0x47) [0x793465a84497]
+/home/perlin/Documents/projects/2025.2/Vivado/lib/lnx64.o/libxv_commontasks.so(+0x45b5f8) [0x79346ba5b5f8]
+/home/perlin/Documents/projects/2025.2/Vivado/lib/lnx64.o/libxv_commontasks.so(+0x45caed) [0x79346ba5caed]
+/home/perlin/Documents/projects/2025.2/Vivado/lib/lnx64.o/libxv_common.so(+0x81e9c4) [0x79346a41e9c4]
+/home/perlin/Documents/projects/2025.2/Vivado/lib/lnx64.o/libtcl8.6.so(TclNRRunCallbacks+0x47) [0x793465a84497]
+/home/perlin/Documents/projects/2025.2/Vivado/lib/lnx64.o/libxv_commonmain.so(+0x12dfb) [0x79346b5eedfb]
+/home/perlin/Documents/projects/2025.2/Vivado/lib/lnx64.o/libtcl8.6.so(Tcl_MainEx+0x1a8) [0x793465b43038]
+/home/perlin/Documents/projects/2025.2/Vivado/lib/lnx64.o/libxv_common.so(+0xada064) [0x79346a6da064]
+/usr/lib/x86_64-linux-gnu/libc.so.6(+0xa3dba) [0x79345e2a3dba]
+/usr/lib/x86_64-linux-gnu/libc.so.6(+0x13758c) [0x79345e33758c]
