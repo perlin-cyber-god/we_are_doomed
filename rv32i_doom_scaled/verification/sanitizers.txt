@@ -1,0 +1,24 @@
+gcc (Debian 14.2.0-19) 14.2.0
+Host flags: -std=c11 -Wall -Wextra -Wpedantic -Werror -O1 -g -fsanitize=address\,undefined -fno-omit-frame-pointer -fno-pie -no-pie
+cpu_step1.c: OK
+cpu_step2.c: OK
+cpu_step3.c: OK
+README.original.md: OK
+All checks passed
+All checks passed
+All checks passed
+step4: all nested-call and edge checks passed
+PASS arithmetic, logic, signedness, upper immediates, all shift counts, x0
+PASS all branches, JAL/JALR, link aliasing, immediate boundaries, fetch faults
+PASS all load/store widths, signed extension, bounds, atomic faults, configurable RAM
+PASS ECALL/EBREAK traps, FENCE semantics, extension and reserved-field rejection
+PASS step3 byte-copy loop and step4 nested-call regressions on the new core
+RV32I: 12711 checks, 0 failures
+PASS signature completion, exact budgets, infinite loop and traps
+SKIP: no installed RISC-V GCC, or Clang RISC-V backend with ld.lld.
+The bare-metal C guest was NOT compiled or executed.
+cpu_step1.c: OK
+cpu_step2.c: OK
+cpu_step3.c: OK
+README.original.md: OK
+PASS all available checks (see guest status above).
