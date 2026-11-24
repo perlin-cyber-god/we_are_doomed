@@ -1,0 +1,2 @@
+$ /workspace/scratch/6bae74b1c81c/toolchains/rtl-step1-tools/local/usr/bin/vvp /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/guest.vvp +IMAGE=/workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/no_bss.mem +TRACE=/workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/no_bss.trace +DUMP=/workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step4/build/guest/no_bss-stall1.rtl.mem +RAM_BYTES=16384 +STALL=1 +MAX_STEPS=533
+PASS RTL_COMPILED_TRACE retired=532 cycles=4235 transactions=754 stores=85 checks=39395 stall=1 TRAP=9
