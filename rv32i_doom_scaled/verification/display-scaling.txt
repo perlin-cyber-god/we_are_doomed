@@ -1,0 +1,5 @@
+PASS display --help advertises scale 1..6, default 3 (960x600).
+PASS invalid scale 0 and 7 rejected before Tk/window creation.
+PASS Python and launcher syntax.
+PASS CPU, native adapter, keys, guest image and WAD unchanged.
+No GUI, engine startup or long tests executed for display scaling.
