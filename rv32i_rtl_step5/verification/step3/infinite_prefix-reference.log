@@ -1,0 +1,2 @@
+$ /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/trace-reference /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/infinite_prefix.bin 2048 20 /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step3/build/core/infinite_prefix.trace 0
+reference budget-prefix=20 pc=00000000 (not guest HALT)
