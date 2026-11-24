@@ -1,0 +1,7 @@
+Running: xsim.dir/rtl_compiled_guest/xsimk -runall -simmode gui -testplusarg IMAGE=/home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/budget_prefix.mem -testplusarg TRACE=/home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/budget_prefix.trace -testplusarg DUMP=/home/perlin/Documents/DOOMed/rv32i_rtl_step4/build/guest/budget_prefix-stall1.rtl.mem -testplusarg RAM_BYTES=16384 -testplusarg STALL=1 -testplusarg MAX_STEPS=565 -wdb rtl_compiled_guest.wdb -simrunnum 0 -socket 37767
+Design successfully loaded
+Design Loading Memory Usage: 199128 KB (Peak: 199128 KB)
+Design Loading CPU Usage: 850 ms
+Simulation completed
+Simulation Memory Usage: 289836 KB (Peak: 338396 KB)
+Simulation CPU Usage: 910 ms
