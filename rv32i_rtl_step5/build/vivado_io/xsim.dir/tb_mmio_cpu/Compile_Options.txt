@@ -1,0 +1,1 @@
+"work.tb_mmio_cpu" -s "tb_mmio_cpu" -debug "typical" 
