@@ -1,0 +1,203 @@
+$ /workspace/scratch/6bae74b1c81c/toolchains/rv32i-local/usr/bin/riscv64-unknown-elf-objdump -d -S -M no-aliases /workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step5/build/io/O0/guest.elf
+
+/workspace/scratch/6bae74b1c81c/output/rv32i_rtl_step5/build/io/O0/guest.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	00004117          	auipc	sp,0x4
+   4:	00010113          	addi	sp,sp,0 # 4000 <__stack_top>
+   8:	00001197          	auipc	gp,0x1
+   c:	a6018193          	addi	gp,gp,-1440 # a68 <__global_pointer$>
+  10:	00000297          	auipc	t0,0x0
+  14:	25828293          	addi	t0,t0,600 # 268 <bytes_sent>
+  18:	00000317          	auipc	t1,0x0
+  1c:	25830313          	addi	t1,t1,600 # 270 <__bss_end>
+  20:	0062f863          	bgeu	t0,t1,30 <_start+0x30>
+  24:	0002a023          	sw	zero,0(t0)
+  28:	00428293          	addi	t0,t0,4
+  2c:	ff5ff06f          	jal	zero,20 <_start+0x20>
+  30:	00000097          	auipc	ra,0x0
+  34:	0f4080e7          	jalr	ra,244(ra) # 124 <guest_main>
+  38:	00051863          	bne	a0,zero,48 <_start+0x48>
+  3c:	444f5337          	lui	t1,0x444f5
+  40:	e4530313          	addi	t1,t1,-443 # 444f4e45 <__stack_top+0x444f0e45>
+  44:	00c0006f          	jal	zero,50 <_start+0x50>
+  48:	46415337          	lui	t1,0x46415
+  4c:	94c30313          	addi	t1,t1,-1716 # 4641494c <__stack_top+0x4641094c>
+  50:	00002297          	auipc	t0,0x2
+  54:	fb028293          	addi	t0,t0,-80 # 2000 <__signature_start>
+  58:	0330000f          	fence	rw,rw
+  5c:	0062a023          	sw	t1,0(t0)
+
+00000060 <_guest_stop>:
+  60:	00100073          	ebreak
+  64:	0000006f          	jal	zero,64 <_guest_stop+0x4>
+
+00000068 <console_putc>:
+enum { TX_DATA=0x10000000,TX_STATUS=0x10000004,TIMER=0x10000010,SIGNATURE=0x2000 };
+volatile uint32_t bytes_sent;
+volatile uint32_t byte_sum;
+
+__attribute__((noinline)) void console_putc(uint8_t ch)
+{
+  68:	fd010113          	addi	sp,sp,-48
+  6c:	02112623          	sw	ra,44(sp)
+  70:	02812423          	sw	s0,40(sp)
+  74:	03010413          	addi	s0,sp,48
+  78:	00050793          	addi	a5,a0,0
+  7c:	fcf40fa3          	sb	a5,-33(s0)
+    volatile uint32_t *const status=(volatile uint32_t *)(uintptr_t)TX_STATUS;
+  80:	100007b7          	lui	a5,0x10000
+  84:	00478793          	addi	a5,a5,4 # 10000004 <__stack_top+0xfffc004>
+  88:	fef42623          	sw	a5,-20(s0)
+    volatile uint8_t *const data=(volatile uint8_t *)(uintptr_t)TX_DATA;
+  8c:	100007b7          	lui	a5,0x10000
+  90:	fef42423          	sw	a5,-24(s0)
+    while((*status & 1u)==0u) { /* Poll readiness; the actual SB can still wait. */ }
+  94:	00000013          	addi	zero,zero,0
+  98:	fec42783          	lw	a5,-20(s0)
+  9c:	0007a783          	lw	a5,0(a5) # 10000000 <__stack_top+0xfffc000>
+  a0:	0017f793          	andi	a5,a5,1
+  a4:	fe078ae3          	beq	a5,zero,98 <console_putc+0x30>
+    *data=ch;
+  a8:	fe842783          	lw	a5,-24(s0)
+  ac:	fdf44703          	lbu	a4,-33(s0)
+  b0:	00e78023          	sb	a4,0(a5)
+    ++bytes_sent;
+  b4:	000007b7          	lui	a5,0x0
+  b8:	2687a783          	lw	a5,616(a5) # 268 <bytes_sent>
+  bc:	00178713          	addi	a4,a5,1
+  c0:	000007b7          	lui	a5,0x0
+  c4:	26e7a423          	sw	a4,616(a5) # 268 <bytes_sent>
+    byte_sum+=ch;
+  c8:	fdf44703          	lbu	a4,-33(s0)
+  cc:	000007b7          	lui	a5,0x0
+  d0:	26c7a783          	lw	a5,620(a5) # 26c <byte_sum>
+  d4:	00f70733          	add	a4,a4,a5
+  d8:	000007b7          	lui	a5,0x0
+  dc:	26e7a623          	sw	a4,620(a5) # 26c <byte_sum>
+}
+  e0:	00000013          	addi	zero,zero,0
+  e4:	02c12083          	lw	ra,44(sp)
+  e8:	02812403          	lw	s0,40(sp)
+  ec:	03010113          	addi	sp,sp,48
+  f0:	00008067          	jalr	zero,0(ra)
+
+000000f4 <timer_read>:
+__attribute__((noinline)) uint32_t timer_read(void)
+{
+  f4:	ff010113          	addi	sp,sp,-16
+  f8:	00112623          	sw	ra,12(sp)
+  fc:	00812423          	sw	s0,8(sp)
+ 100:	01010413          	addi	s0,sp,16
+    return *(volatile uint32_t *)(uintptr_t)TIMER;
+ 104:	100007b7          	lui	a5,0x10000
+ 108:	01078793          	addi	a5,a5,16 # 10000010 <__stack_top+0xfffc010>
+ 10c:	0007a783          	lw	a5,0(a5)
+}
+ 110:	00078513          	addi	a0,a5,0
+ 114:	00c12083          	lw	ra,12(sp)
+ 118:	00812403          	lw	s0,8(sp)
+ 11c:	01010113          	addi	sp,sp,16
+ 120:	00008067          	jalr	zero,0(ra)
+
+00000124 <guest_main>:
+uint32_t guest_main(void)
+{
+ 124:	fd010113          	addi	sp,sp,-48
+ 128:	02112623          	sw	ra,44(sp)
+ 12c:	02812423          	sw	s0,40(sp)
+ 130:	03010413          	addi	s0,sp,48
+    const char *text="Hello from our RV32I CPU!\n";
+ 134:	000007b7          	lui	a5,0x0
+ 138:	24c78793          	addi	a5,a5,588 # 24c <guest_main+0x128>
+ 13c:	fef42623          	sw	a5,-20(s0)
+    const uint32_t first=timer_read();
+ 140:	00000097          	auipc	ra,0x0
+ 144:	fb4080e7          	jalr	ra,-76(ra) # f4 <timer_read>
+ 148:	fea42423          	sw	a0,-24(s0)
+    while(*text!='\0') {
+ 14c:	0240006f          	jal	zero,170 <guest_main+0x4c>
+        console_putc((uint8_t)*text);
+ 150:	fec42783          	lw	a5,-20(s0)
+ 154:	0007c783          	lbu	a5,0(a5)
+ 158:	00078513          	addi	a0,a5,0
+ 15c:	00000097          	auipc	ra,0x0
+ 160:	f0c080e7          	jalr	ra,-244(ra) # 68 <console_putc>
+        ++text;
+ 164:	fec42783          	lw	a5,-20(s0)
+ 168:	00178793          	addi	a5,a5,1
+ 16c:	fef42623          	sw	a5,-20(s0)
+    while(*text!='\0') {
+ 170:	fec42783          	lw	a5,-20(s0)
+ 174:	0007c783          	lbu	a5,0(a5)
+ 178:	fc079ce3          	bne	a5,zero,150 <guest_main+0x2c>
+    }
+    __asm__ volatile("fence iorw,iorw" ::: "memory");
+ 17c:	0ff0000f          	fence	iorw,iorw
+    const uint32_t before=timer_read();
+ 180:	00000097          	auipc	ra,0x0
+ 184:	f74080e7          	jalr	ra,-140(ra) # f4 <timer_read>
+ 188:	fea42223          	sw	a0,-28(s0)
+    uint32_t after;
+    do { after=timer_read(); } while((uint32_t)(after-before)<64u);
+ 18c:	00000097          	auipc	ra,0x0
+ 190:	f68080e7          	jalr	ra,-152(ra) # f4 <timer_read>
+ 194:	fea42023          	sw	a0,-32(s0)
+ 198:	fe042703          	lw	a4,-32(s0)
+ 19c:	fe442783          	lw	a5,-28(s0)
+ 1a0:	40f70733          	sub	a4,a4,a5
+ 1a4:	03f00793          	addi	a5,zero,63
+ 1a8:	fee7f2e3          	bgeu	a5,a4,18c <guest_main+0x68>
+    volatile uint32_t *const signature=(volatile uint32_t *)(uintptr_t)SIGNATURE;
+ 1ac:	000027b7          	lui	a5,0x2
+ 1b0:	fcf42e23          	sw	a5,-36(s0)
+    signature[1]=bytes_sent;
+ 1b4:	fdc42783          	lw	a5,-36(s0)
+ 1b8:	00478793          	addi	a5,a5,4 # 2004 <__signature_start+0x4>
+ 1bc:	00000737          	lui	a4,0x0
+ 1c0:	26872703          	lw	a4,616(a4) # 268 <bytes_sent>
+ 1c4:	00e7a023          	sw	a4,0(a5)
+    signature[2]=byte_sum;
+ 1c8:	fdc42783          	lw	a5,-36(s0)
+ 1cc:	00878793          	addi	a5,a5,8
+ 1d0:	00000737          	lui	a4,0x0
+ 1d4:	26c72703          	lw	a4,620(a4) # 26c <byte_sum>
+ 1d8:	00e7a023          	sw	a4,0(a5)
+    signature[3]=first;
+ 1dc:	fdc42783          	lw	a5,-36(s0)
+ 1e0:	00c78793          	addi	a5,a5,12
+ 1e4:	fe842703          	lw	a4,-24(s0)
+ 1e8:	00e7a023          	sw	a4,0(a5)
+    signature[4]=before;
+ 1ec:	fdc42783          	lw	a5,-36(s0)
+ 1f0:	01078793          	addi	a5,a5,16
+ 1f4:	fe442703          	lw	a4,-28(s0)
+ 1f8:	00e7a023          	sw	a4,0(a5)
+    signature[5]=after;
+ 1fc:	fdc42783          	lw	a5,-36(s0)
+ 200:	01478793          	addi	a5,a5,20
+ 204:	fe042703          	lw	a4,-32(s0)
+ 208:	00e7a023          	sw	a4,0(a5)
+    signature[6]=after-before; // Unsigned subtraction also works across wrap.
+ 20c:	fdc42783          	lw	a5,-36(s0)
+ 210:	01878793          	addi	a5,a5,24
+ 214:	fe042683          	lw	a3,-32(s0)
+ 218:	fe442703          	lw	a4,-28(s0)
+ 21c:	40e68733          	sub	a4,a3,a4
+ 220:	00e7a023          	sw	a4,0(a5)
+    signature[7]=1;
+ 224:	fdc42783          	lw	a5,-36(s0)
+ 228:	01c78793          	addi	a5,a5,28
+ 22c:	00100713          	addi	a4,zero,1
+ 230:	00e7a023          	sw	a4,0(a5)
+    return 0; // Startup publishes DONE last, then explicit EBREAK.
+ 234:	00000793          	addi	a5,zero,0
+}
+ 238:	00078513          	addi	a0,a5,0
+ 23c:	02c12083          	lw	ra,44(sp)
+ 240:	02812403          	lw	s0,40(sp)
+ 244:	03010113          	addi	sp,sp,48
+ 248:	00008067          	jalr	zero,0(ra)
