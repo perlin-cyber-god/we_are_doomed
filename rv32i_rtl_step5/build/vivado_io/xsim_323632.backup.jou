@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Nov 25 02:40:51 2026
+# Process ID         : 323632
+# Current directory  : /home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/vivado_io
+# Command line       : xsim -mode tcl -source {xsim.dir/tb_mmio_cpu_wait/xsim_script.tcl}
+# Log file           : /home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/vivado_io/xsim.log
+# Journal file       : /home/perlin/Documents/DOOMed/rv32i_rtl_step5/build/vivado_io/xsim.jou
+# Running On         : perlin
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04 LTS
+# Processor Detail   : AMD Ryzen 7 260 w/ Radeon 780M Graphics
+# CPU Frequency      : 2863.319 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 32374 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 40964 MB
+# Available Virtual  : 24685 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_mmio_cpu_wait/xsim_script.tcl
+run -all
