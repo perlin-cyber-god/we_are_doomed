@@ -1,0 +1,1 @@
+"work.tb_core_reset2044" -s "tb_core_reset2044" -debug "typical" 
