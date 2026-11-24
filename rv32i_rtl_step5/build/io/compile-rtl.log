@@ -1,0 +1,19 @@
+$ xvlog -sv /home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_alu.sv /home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_regfile.sv /home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_immediate.sv /home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_decode.sv /home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_core.sv /home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_mmio.sv /home/perlin/Documents/DOOMed/rv32i_rtl_step5/tb/tb_mmio_unit.sv /home/perlin/Documents/DOOMed/rv32i_rtl_step5/tb/tb_mmio_cpu.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_alu.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_regfile.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_regfile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_immediate.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_immediate
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_decode.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_core.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step5/rtl/rv32_mmio.sv" into library work
+INFO: [VRFC 10-311] analyzing module rv32_mmio
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step5/tb/tb_mmio_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_mmio_unit
+INFO: [VRFC 10-311] analyzing module tb_mmio_unit_wait
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/perlin/Documents/DOOMed/rv32i_rtl_step5/tb/tb_mmio_cpu.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_mmio_cpu
+INFO: [VRFC 10-311] analyzing module tb_mmio_cpu_wait
